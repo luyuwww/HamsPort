@@ -33,13 +33,7 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>thirdparty</id>
-            <name>lams full Repository</name>
-            <url>http://thams.cn:8081/nexus/content/repositories/public</url>
-        </repository>
-    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>com.alibaba</groupId>
