@@ -66,7 +66,7 @@ public class XmlUtil {
         return null;
     }
 
-    public void generatorXmlByTableName(String tableName, String chName) throws IOException {
+    public void generatorXmlByTableName(String tableName, String chName)  {
         File folder = new File(GlobalFinalAttr.XML_PATH);
         if (!folder.exists()) {
             folder.mkdir();
@@ -75,7 +75,11 @@ public class XmlUtil {
         if (targetFile.exists()) {
             return;
         } else {
-            targetFile.createNewFile();
+            try {
+                targetFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         OutputStreamWriter writer = null;
         try {
@@ -121,7 +125,11 @@ public class XmlUtil {
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         } finally {
-            writer.close();
+            try {
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
