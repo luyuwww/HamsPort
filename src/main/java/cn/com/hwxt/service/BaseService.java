@@ -7,6 +7,8 @@ import cn.com.hwxt.dao.i.SQzhMapper;
 import cn.com.hwxt.dao.i.SUserMapper;
 import cn.com.hwxt.dao.i.SUserroleMapper;
 import cn.com.hwxt.pojo.*;
+import cn.com.hwxt.pojo.jaxb.Field;
+import cn.com.hwxt.pojo.jaxb.Table;
 import cn.com.hwxt.util.*;
 import cn.com.hwxt.pojo.*;
 import cn.com.hwxt.util.CommonUtil;
@@ -22,6 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.io.Reader;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -966,6 +969,93 @@ public class BaseService {
         String sql = "select qzh from s_qzh where primarykey = " + key;
         String qzh = jdbcDao.query4String(sql);
         return qzh;
+    }
+
+    protected Integer gdData(List<Field> xmlField , Map<String, Object> vars ,
+                             String xmlName , String gdrCode) throws RuntimeException{
+        Integer maxdid = 0;
+        String SQL = "";
+        String bmid = "";
+        String qzh = "";
+        Integer resultInteger = -1;
+        StringBuffer fields = new StringBuffer();
+        StringBuffer values = new StringBuffer();
+        String xmlPath = xmlName.toUpperCase().contains(".XML") ?
+                GlobalFinalAttr.XML_PATH + xmlName : GlobalFinalAttr.XML_PATH + xmlName + ".XML";
+        File xmlFile = new File(xmlPath);
+        if (!xmlFile.exists()) {
+            log.error("请检查传入的xmlName");
+            new RuntimeException("请检查传入的xmlName");
+        }
+        if (StringUtils.isBlank(gdrCode)) {
+            log.error("请检查传入的gdrCode 为空");
+            new RuntimeException("请检查传入的gdrCode 为空");
+        } else {
+            bmid = getBmidByuserCode(gdrCode);
+            qzh = getQzhByUserCode(gdrCode);
+        }
+        String tablename = xmlName.toUpperCase().replace(".XML", "");
+        try {
+            maxdid = getMaxDid(tablename);
+            if(maxdid == -1){
+                throw new RuntimeException("获取did错误");
+            }
+            for (Field field : xmlField) {//循环字段
+                //var如果是null是 xml直接
+                String theValue = (vars == null ?
+                        (StringUtils.isBlank(field.getThevalue()) ? "" : field.getThevalue())
+                        :  (vars.get(field.getFieldname()) == null ? "" : vars.get(field.getFieldname()).toString()));
+                theValue = theValue.contains("'") ? theValue.replace("'", "''") : theValue;
+                fields.append(field.getFieldname()).append(",");
+                switch (field.getFieldtype()) {
+                    case 11:
+                        if (theValue.equals("")) {
+                            values.append(getSysdate() + ",");
+                        } else {
+                            values.append(generateTimeToSQLDate(theValue)).append(",");
+                        }
+                        break;
+                    case 1:
+                        values.append("'").append(theValue).append("',");
+                        break;
+                    case 3:
+                        if (org.apache.commons.lang.StringUtils.isBlank(theValue)) {
+                            values.append("null ,");
+                        } else {
+                            values.append(Integer.parseInt(theValue)).append(",");
+                        }
+                        break;
+                    default:
+                        values.append("'").append(theValue).append("',");
+                        break;
+                }
+            }
+            if (xmlName.toUpperCase().contains("E_FILE")) {
+                fields.append("status, attr,attrex,creator,did ");
+                values.append("0,").append(attr).append(",").append(attrex).append(",'").append(gdrCode);
+                values.append("',").append(maxdid);
+            } else {
+                fields.append("status, attr,attrex,qzh,bmid,creator,did ");
+                values.append("0,").append(attr).append(",").append(attrex).append(",'");
+                values.append(qzh).append("','").append(bmid).append("','").append(gdrCode);
+                values.append("',").append(maxdid);
+            }
+
+            SQL = "insert into " + tablename + " (" + fields.toString() + ") values ( " + values.toString() + " )";
+            execSql(SQL);
+            resultInteger = maxdid;
+            log.error("插入一条数据成功.fileReciveTxt: " + SQL);
+            fields.setLength(0);
+            values.setLength(0);
+        } catch (Exception e) {
+            log.error("插入一条数据错误.gdData:", e);
+            log.error(SQL);
+            throw new RuntimeException("插入数据错误.gdData:"+e.getMessage()+" SQL:"+SQL  , e);
+        } finally {
+            fields.setLength(0);
+            values.setLength(0);
+        }
+        return resultInteger;
     }
 
     /**
