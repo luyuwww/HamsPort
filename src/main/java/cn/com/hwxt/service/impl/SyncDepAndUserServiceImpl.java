@@ -8,7 +8,9 @@ import cn.com.hwxt.dao.i.SUserroleMapper;
 import cn.com.hwxt.pojo.*;
 import cn.com.hwxt.service.BaseService;
 import cn.com.hwxt.service.i.SyncDepAndUserService;
+import cn.com.hwxt.util.CommonUtil;
 import cn.com.hwxt.util.DateUtil;
+import cn.com.hwxt.util.XmlObjUtil;
 import com.sun.xml.xsom.impl.EmptyImpl;
 import localhost.services.hrmservice.HrmService;
 import localhost.services.hrmservice.HrmServicePortType;
@@ -17,6 +19,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import weaver.hrm.jaxb.DepartmentBeanArray;
+import weaver.hrm.jaxb.SubCompanyBeanArray;
+import weaver.hrm.jaxb.UserBeanArray;
 import weaver.hrm.webservice.*;
 
 import java.net.MalformedURLException;
@@ -47,9 +52,9 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
             if (StringUtils.isBlank(sQzh.getBz())) {
                 continue;
             }else {
-                List<DepartmentBean> deptList = oaDeptListByOrgID(sQzh.getBz());
+                List<DepartmentBeanArray.DepartmentBean>  deptList = oaDeptListByOrgID(sQzh.getBz());
                 if (deptList != null && deptList.size() > 0) {
-                    for (DepartmentBean dept : deptList) {
+                    for (DepartmentBeanArray.DepartmentBean dept : deptList) {
                         if(!dept.getCanceled().equals("1")){
                             dualOneDept(dept , sQzh.getQzh());
                         }
@@ -69,60 +74,53 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
             if (StringUtils.isBlank(sQzh.getBz())) {
                 continue;
             }else {
-                List<UserBean> userList = oaUserListByOrgIDAndDeptID(sQzh.getBz() , null);
-                if (userList != null && userList.size() > 0) {
-                    for (UserBean ub : userList) {
-                        //accounttype Null:主账号,1:次账号  只统统不主的
-                        if(ub.getAccounttype().intValue() == 1 || StringUtils.isBlank(ub.getLoginid().getValue())){
-                            continue;
-                        }else{
-                            dualOnOrgUser(ub);
+                List<SGroup> groupList = sGroupMapper.listGroupByQzh(sQzh.getQzh());
+                for (SGroup sGroup : groupList) {
+                    List<UserBeanArray.UserBean> userList = oaUserListByOrgIDAndDeptID(sQzh.getBz() , sGroup.getDepid());
+                    if (userList != null && userList.size() > 0) {
+                        for (UserBeanArray.UserBean ub : userList) {
+                            //accounttype Null:主账号,1:次账号  只统统不主的
+                            if(ub.getAccounttype().intValue() == 1 || StringUtils.isBlank(ub.getLoginid())){
+                                continue;
+                            }else{
+                                dualOnOrgUser(ub);
+                            }
                         }
                     }
                 }
+
             }
         }
+        CommonUtil.syncActivitUser(lamsIP);
     }
-
-    @Override
-    public void syncDept(String orgId) {
-        List<DepartmentBean> deptList = oaDeptListByOrgID(orgId);
-    }
-
-    @Override
-    public void syncUser(String orgId) {
-
-    }
-
-
     /**
      * 得到所有子公司
      * @return
      */
-    public List<SubCompanyBean> oaOrgList(){
-        ArrayOfSubCompanyBean arrayOfSubCompanyBean = getHrmServicePortType().getHrmSubcompanyInfo(ip);
-        List<SubCompanyBean> sbList = arrayOfSubCompanyBean.getSubCompanyBean();
-        return sbList;
+    public List<SubCompanyBeanArray.SubCompanyBean> oaOrgList(){
+        String orgXml = getHrmServicePortType().getHrmSubcompanyInfoXML(ip);
+        SubCompanyBeanArray subCompanyBeanArray = XmlObjUtil.xml2Obj(orgXml, SubCompanyBeanArray.class);
+        return subCompanyBeanArray.getSubCompanyBean();
     }
 
     /**
      * 得到所子公司下所有部门
      * @return
      */
-    private List<DepartmentBean> oaDeptListByOrgID(String orgID){
-        ArrayOfDepartmentBean arrayOfDepartmentBean = getHrmServicePortType().getHrmDepartmentInfo(ip , orgID);
-        List<DepartmentBean> sbList = arrayOfDepartmentBean.getDepartmentBean();
-        return sbList;
+    public List<DepartmentBeanArray.DepartmentBean> oaDeptListByOrgID(String orgID){
+        String deptXml = getHrmServicePortType().getHrmDepartmentInfoXML(ip , orgID);
+        DepartmentBeanArray departmentBeanArray =  XmlObjUtil.xml2Obj(deptXml, DepartmentBeanArray.class);
+        return departmentBeanArray.getDepartmentBean();
     }
 
     /**
      * 得到子公司某部门下所有用户 如果depID为空就会得到该公司下所有用户
      * @return
      */
-    private List<UserBean> oaUserListByOrgIDAndDeptID(String orgID , String deptID){
-        ArrayOfUserBean arrayOfUserBean = getHrmServicePortType().getHrmUserInfo(ip , null, orgID , deptID, null, null);
-        List<UserBean> sbList = arrayOfUserBean.getUserBean();
-        return sbList;
+    public  List<UserBeanArray.UserBean> oaUserListByOrgIDAndDeptID(String orgID , String deptID){
+        String userXML = getHrmServicePortType().getHrmUserInfoXML(ip , null, orgID , deptID, null, null);
+        UserBeanArray ua = XmlObjUtil.xml2Obj(userXML, UserBeanArray.class);
+        return ua.getUserBean();
     }
 
     /**
@@ -141,7 +139,7 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
         return hrmServicePortType;
     }
 
-    private void dualOneDept(DepartmentBean dept , String qzh){
+    private void dualOneDept(DepartmentBeanArray.DepartmentBean dept , String qzh){
         //<result column="DEPCODE" property="depcode" jdbcType="VARCHAR"/>code
         //<result column="DEPID" property="depid" jdbcType="VARCHAR"/> departmentid
         //<result column="GFZJ" property="gfzj" jdbcType="VARCHAR"/> getShoworder 排序字段
@@ -149,19 +147,19 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
         Integer pid = -1;
         Integer did = -1;
         try {
-            String gname = dept.getShortname().getValue();
-            String bh = dept.getSupdepartmentid().getValue();
+            String gname = dept.getShortname();
+            String bh = null != dept.getSupdepartmentid() ? dept.getSupdepartmentid().toString():"";
             //作为排序字段
-            String gfzj = dept.getShoworder().getValue();
-            String depid = dept.getDepartmentid().getValue();
-            String deptcode = dept.getCode().getValue();
-            SGroup parentGroup = sGroupMapper.getGroupByDepID(bh);
+            String gfzj = null != dept.getShoworder() ? dept.getShoworder().toString() : "";
+            String depid = null != dept.getDepartmentid()? dept.getDepartmentid().toString() : "";
+            String deptcode = dept.getCode();
+            SGroup parentGroup = sGroupMapper.getGroupByDepID(bh!=null? bh.toString() : "");
             if(null != parentGroup){
                 pid = parentGroup.getDid();
             }else{
                 pid = 0;
             }
-            SGroup group = sGroupMapper.getGroupByDepID(depid);
+            SGroup group = sGroupMapper.getGroupByDepID(depid.toString());
             if(group == null){
                 group = new SGroup();
                 group.setDid(getMaxDid("S_GROUP"));
@@ -170,10 +168,10 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
                 group.setGid(0);
                 group.setGname(gname);
                 group.setDepcode(deptcode);
-                group.setDepid(depid);
-                group.setBh(bh);//oa中的superdeptid
+                group.setDepid(depid.toString());
+                group.setBh(bh.toString());//oa中的superdeptid
                 group.setBz(bz);
-                group.setGfzj(gfzj);
+                group.setGfzj(gfzj.toString());
                 sGroupMapper.insert(group);
                 log.error("add group:" + group.toString());
             }else{
@@ -185,10 +183,10 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
                     group.setGid(0);
                     group.setGname(gname);
                     group.setDepcode(deptcode);
-                    group.setDepid(depid);
-                    group.setBh(bh);//oa中的superdeptid
+                    group.setDepid(depid.toString());
+                    group.setBh(bh.toString());//oa中的superdeptid
                     group.setBz(bz);
-                    group.setGfzj(gfzj);
+                    group.setGfzj(gfzj.toString());
                     sGroupMapper.updateByPrimaryKey(group);
                     log.error("update group:" + group.toString());
                 }else{
@@ -199,19 +197,19 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
             log.error(e.getMessage(),e);
         }
     }
-    private void dualOnOrgUser(UserBean ub){
+    private void dualOnOrgUser(UserBeanArray.UserBean ub){
         //<result column="ESBID" property="esbid" jdbcType="VARCHAR"/>  userid
         //<result column="ESBCODE" property="esbcode" jdbcType="VARCHAR"/> departmentid
         //status  0：试用  1：正式  2：临时  3：试用延期  4：解聘  5：离职  6：退休  7：无效
         Integer pid = -1;
         Integer did = -1;
         try {
-            String username = ub.getLastname().getValue();
-            String usercode = ub.getLoginid().getValue();
-            String email = ub.getEmail().getValue();
-            String esbID = ub.getUserid().intValue()+"";
-            String esbcode = ub.getDepartmentid().getValue();
-            Integer islsyh = getLamsStatus(ub.getStatus().getValue());
+            String username = ub.getLastname();
+            String usercode = ub.getLoginid();
+            String email = ub.getEmail();
+            String esbID = null != ub.getUserid() ? ub.getUserid().toString() : "";
+            String esbcode = null != ub.getDepartmentid() ? ub.getDepartmentid().toString() : "";
+            Integer islsyh = getLamsStatus(ub.getStatus());
 
             SGroup group = sGroupMapper.getGroupByDepID(esbcode);
             if(null != group){
@@ -259,8 +257,8 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
 
     //judge user is lock  status  0：试用  1：正式  2：临时  3：试用延期  4：解聘  5：离职  6：退休  7：无效
     //档案系统 0可用   -1锁定
-    private int getLamsStatus(String status){
-        if(StringUtils.isNotBlank(status) && status.equals("1")){
+    private int getLamsStatus(Integer status){
+        if(null != status && status.equals(1)){
             return 0;
         }else{
             return -1;

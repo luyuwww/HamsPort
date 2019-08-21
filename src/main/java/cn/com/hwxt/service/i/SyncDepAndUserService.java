@@ -1,6 +1,10 @@
 package cn.com.hwxt.service.i;
 
 import cn.com.hwxt.pojo.SBacklog;
+import cn.com.hwxt.util.XmlObjUtil;
+import weaver.hrm.jaxb.DepartmentBeanArray;
+import weaver.hrm.jaxb.SubCompanyBeanArray;
+import weaver.hrm.jaxb.UserBeanArray;
 import weaver.hrm.webservice.SubCompanyBean;
 
 import java.util.List;
@@ -22,9 +26,17 @@ public interface SyncDepAndUserService {
      */
     public void syncAllUser();
 
-    public void syncDept(String orgId);
+    public List<SubCompanyBeanArray.SubCompanyBean> oaOrgList();
+    /**
+     * 得到所子公司下所有部门
+     * @return
+     */
+    public List<DepartmentBeanArray.DepartmentBean> oaDeptListByOrgID(String orgID);
 
-    public void syncUser(String orgId);
-    public List<SubCompanyBean> oaOrgList();
+    /**
+     * 得到子公司某部门下所有用户 如果depID为空就会得到该公司下所有用户
+     * @return
+     */
+    public  List<UserBeanArray.UserBean> oaUserListByOrgIDAndDeptID(String orgID , String deptID);
 
 }

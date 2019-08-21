@@ -68,5 +68,8 @@ public interface SGroupMapper extends BaseDao {
     @Select("SELECT * FROM S_GROUP WHERE BH = '${bh}'")
     SGroup getGroupByBh(@Param("bh") String bh);
 
+    @Select("SELECT * FROM S_GROUP WHERE QZH = '${QZH}'")
+    List<SGroup> listGroupByQzh(@Param("QZH") String QZH);
+
 
 }

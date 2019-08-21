@@ -54,19 +54,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetHrmDepartmentInfo }
-     * 
-     */
-    public GetHrmDepartmentInfo createGetHrmDepartmentInfo() {
-        return new GetHrmDepartmentInfo();
-    }
-
-    /**
      * Create an instance of {@link GetHrmUserInfo }
      * 
      */
     public GetHrmUserInfo createGetHrmUserInfo() {
         return new GetHrmUserInfo();
+    }
+
+    /**
+     * Create an instance of {@link GetHrmDepartmentInfo }
+     * 
+     */
+    public GetHrmDepartmentInfo createGetHrmDepartmentInfo() {
+        return new GetHrmDepartmentInfo();
     }
 
     /**
@@ -110,22 +110,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetHrmUserInfoWithPageResponse }
-     * 
-     */
-    public GetHrmUserInfoWithPageResponse createGetHrmUserInfoWithPageResponse() {
-        return new GetHrmUserInfoWithPageResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetHrmUserInfoWithPage }
-     * 
-     */
-    public GetHrmUserInfoWithPage createGetHrmUserInfoWithPage() {
-        return new GetHrmUserInfoWithPage();
-    }
-
-    /**
      * Create an instance of {@link SynDepartment }
      * 
      */
@@ -166,14 +150,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetHrmSubcompanyInfoWithPageResponse }
-     * 
-     */
-    public GetHrmSubcompanyInfoWithPageResponse createGetHrmSubcompanyInfoWithPageResponse() {
-        return new GetHrmSubcompanyInfoWithPageResponse();
-    }
-
-    /**
      * Create an instance of {@link GetHrmJobTitleInfoXML }
      * 
      */
@@ -195,14 +171,6 @@ public class ObjectFactory {
      */
     public GetHrmDepartmentInfoXMLResponse createGetHrmDepartmentInfoXMLResponse() {
         return new GetHrmDepartmentInfoXMLResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetDepartmentInfoWithPageResponse }
-     * 
-     */
-    public GetDepartmentInfoWithPageResponse createGetDepartmentInfoWithPageResponse() {
-        return new GetDepartmentInfoWithPageResponse();
     }
 
     /**
@@ -238,59 +206,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetDepartmentInfoWithPage }
-     * 
-     */
-    public GetDepartmentInfoWithPage createGetDepartmentInfoWithPage() {
-        return new GetDepartmentInfoWithPage();
-    }
-
-    /**
-     * Create an instance of {@link GetJobtitleInfoWithPage }
-     * 
-     */
-    public GetJobtitleInfoWithPage createGetJobtitleInfoWithPage() {
-        return new GetJobtitleInfoWithPage();
-    }
-
-    /**
-     * Create an instance of {@link SycHrmUserImage }
-     * 
-     */
-    public SycHrmUserImage createSycHrmUserImage() {
-        return new SycHrmUserImage();
-    }
-
-    /**
-     * Create an instance of {@link GetHrmSubcompanyInfoWithPage }
-     * 
-     */
-    public GetHrmSubcompanyInfoWithPage createGetHrmSubcompanyInfoWithPage() {
-        return new GetHrmSubcompanyInfoWithPage();
-    }
-
-    /**
-     * Create an instance of {@link GetHrmUserImageResponse }
-     * 
-     */
-    public GetHrmUserImageResponse createGetHrmUserImageResponse() {
-        return new GetHrmUserImageResponse();
-    }
-
-    /**
      * Create an instance of {@link GetHrmUserInfoResponse }
      * 
      */
     public GetHrmUserInfoResponse createGetHrmUserInfoResponse() {
         return new GetHrmUserInfoResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetJobtitleInfoWithPageResponse }
-     * 
-     */
-    public GetJobtitleInfoWithPageResponse createGetJobtitleInfoWithPageResponse() {
-        return new GetJobtitleInfoWithPageResponse();
     }
 
     /**
@@ -315,22 +235,6 @@ public class ObjectFactory {
      */
     public GetHrmSubcompanyInfo createGetHrmSubcompanyInfo() {
         return new GetHrmSubcompanyInfo();
-    }
-
-    /**
-     * Create an instance of {@link GetHrmUserImage }
-     * 
-     */
-    public GetHrmUserImage createGetHrmUserImage() {
-        return new GetHrmUserImage();
-    }
-
-    /**
-     * Create an instance of {@link SycHrmUserImageResponse }
-     * 
-     */
-    public SycHrmUserImageResponse createSycHrmUserImageResponse() {
-        return new SycHrmUserImageResponse();
     }
 
     /**

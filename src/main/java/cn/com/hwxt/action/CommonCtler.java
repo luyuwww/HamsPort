@@ -16,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import weaver.hrm.jaxb.SubCompanyBeanArray;
 import weaver.hrm.webservice.SubCompanyBean;
 
 import javax.servlet.http.HttpServletRequest;
@@ -151,25 +152,8 @@ public class CommonCtler {
     @RequestMapping(value = "/listAllOrg", method = RequestMethod.GET)
     public String listAllOrg(Model model) {
         List<OaCompany> oaCompanies = new ArrayList<>();
-        List<SubCompanyBean> list = syncDepAndUserService.oaOrgList();
-        for (SubCompanyBean sb : list) {
-            if(sb.getCanceled().getValue().equals("1")){
-                continue;
-            }
-            OaCompany company = new OaCompany();
-            company.setCanceled(sb.getCanceled().getValue());
-            company.setCode(sb.getCode().getValue());
-            company.setFullname(sb.getFullname().getValue());
-            company.setShortname(sb.getShortname().getValue());
-            company.setShoworder(sb.getShoworder().getValue());
-            company.setSubcompanyid(sb.getSubcompanyid().getValue());
-            company.setSupsubcompanyid(sb.getSupsubcompanyid().getValue());
-            company.setWebsite(sb.getWebsite().getValue());
-            company.setAction(sb.getAction().getValue());
-            company.setLastChangdate(sb.getLastChangdate().getValue());
-            oaCompanies.add(company);
-        }
-        model.addAttribute("orgList", oaCompanies);
+        List<SubCompanyBeanArray.SubCompanyBean> list = syncDepAndUserService.oaOrgList();
+        model.addAttribute("orgList", list);
         return "orgList.jsp";
     }
 

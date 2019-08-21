@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "HrmService", targetNamespace = "http://localhost/services/HrmService", wsdlLocation = "http://183.64.63.155:83/services/HrmService?wsdl")
+@WebServiceClient(name = "HrmService", targetNamespace = "http://localhost/services/HrmService", wsdlLocation = "http://oa.szcgc.com:18088/services/HrmService?wsdl")
 public class HrmService
     extends Service
 {
@@ -30,7 +30,7 @@ public class HrmService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://183.64.63.155:83/services/HrmService?wsdl");
+            url = new URL("http://oa.szcgc.com:18088/services/HrmService?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
@@ -75,7 +75,7 @@ public class HrmService
     /**
      * 
      * @param features
-     *     A list of {@link WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
+     *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
      * @return
      *     returns HrmServicePortType
      */
