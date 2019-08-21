@@ -48,6 +48,15 @@ public interface SUserMapper extends BaseDao {
     @Select("SELECT * FROM S_USER WHERE ESBID = '${ESBID}'")
     SUser getUserByEsbid(@Param("ESBID") String ESBID);
 
+
+    /**
+     * esbcode存放部门id
+     * @param ESBCODE
+     * @return
+     */
+    @Select("SELECT * FROM S_USER WHERE ESBCODE = '${ESBCODE}'")
+    SUser getUserByEsbCode(@Param("ESBCODE") String ESBCODE);
+
     @Select("SELECT * FROM S_USER WHERE USERCODE = '${usercode}'")
     SUser getUserByUsercode(@Param("usercode") String usercode);
 

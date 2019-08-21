@@ -11,8 +11,6 @@ public class SQzh {
 
     private String bz;
 
-    private String primarykey;
-
     public Integer getDid() {
         return did;
     }
@@ -53,11 +51,4 @@ public class SQzh {
         this.bz = bz == null ? null : bz.trim();
     }
 
-    public String getPrimarykey() {
-        return primarykey;
-    }
-
-    public void setPrimarykey(String primarykey) {
-        this.primarykey = primarykey == null ? null : primarykey.trim();
-    }
 }

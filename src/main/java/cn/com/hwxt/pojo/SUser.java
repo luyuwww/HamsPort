@@ -254,4 +254,17 @@ public class SUser implements Serializable {
     public void setEsbcode(String esbcode) {
         this.esbcode = esbcode == null ? null : esbcode.trim();
     }
+
+    @Override
+    public String toString() {
+        return "SUser{" +
+                "did=" + did +
+                ", pid=" + pid +
+                ", usercode='" + usercode + '\'' +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", esbid='" + esbid + '\'' +
+                ", esbcode='" + esbcode + '\'' +
+                '}';
+    }
 }

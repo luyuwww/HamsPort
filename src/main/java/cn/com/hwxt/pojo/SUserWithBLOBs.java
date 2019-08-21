@@ -26,7 +26,7 @@ public class SUserWithBLOBs extends SUser implements Serializable {
     }
 
     public String toString() {
-        return super.getDid() + " : " + super.getUsercode() + " : " + super.getUsername() + " : " + super.getPid();
+        return super.toString();
     }
 
 

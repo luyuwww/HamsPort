@@ -1,10 +1,14 @@
 package cn.com.hwxt.pojo;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class SGroup implements Serializable {
     private static final long serialVersionUID = 7668913055238566167L;
-
+    //<result column="DEPCODE" property="depcode" jdbcType="VARCHAR"/>code
+    //<result column="DEPID" property="depid" jdbcType="VARCHAR"/> departmentid
+    //<result column="GFZJ" property="gfzj" jdbcType="VARCHAR"/> getSubcompanyid
+    //<result column="BH" property="bh" jdbcType="VARCHAR"/>    getSupdepartmentid
     private Integer did;
 
     private Integer pid;
@@ -17,13 +21,13 @@ public class SGroup implements Serializable {
 
     private String bz;
 
-    private String depcode;
+    private String depcode;//oa中code
 
-    private String depid;
+    private String depid;//oa中departmentid
 
-    private String gfzj;//数据供应方主键
+    private String gfzj;//oa中companyid
 
-    private String bh; //部门编号
+    private String bh; //oa中supdepartmentid
 
     public Integer getDid() {
         return did;
@@ -105,5 +109,38 @@ public class SGroup implements Serializable {
         this.bh = bh;
     }
 
+    @Override
+    public String toString() {
+        return "SGroup{" +
+                "did=" + did +
+                ", pid=" + pid +
+                ", qzh='" + qzh + '\'' +
+                ", gid=" + gid +
+                ", gname='" + gname + '\'' +
+                ", bz='" + bz + '\'' +
+                ", depcode='" + depcode + '\'' +
+                ", depid='" + depid + '\'' +
+                ", gfzj='" + gfzj + '\'' +
+                ", bh='" + bh + '\'' +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SGroup sGroup = (SGroup) o;
+        return pid.equals(sGroup.pid) &&
+                qzh.equals(sGroup.qzh) &&
+                gname.equals(sGroup.gname) &&
+                depcode.equals(sGroup.depcode) &&
+                depid.equals(sGroup.depid) &&
+                gfzj.equals(sGroup.gfzj) &&
+                bh.equals(sGroup.bh);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(pid, qzh, gname, depcode, depid, gfzj, bh);
+    }
 }

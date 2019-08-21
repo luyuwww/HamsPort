@@ -1,8 +1,10 @@
 package cn.com.hwxt.action;
 
 import ch.qos.logback.classic.Logger;
+import cn.com.hwxt.pojo.OaCompany;
 import cn.com.hwxt.service.i.ArcService;
 import cn.com.hwxt.service.i.NoticeService;
+import cn.com.hwxt.service.i.SyncDepAndUserService;
 import cn.com.hwxt.util.GlobalFinalAttr;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
@@ -14,11 +16,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import weaver.hrm.webservice.SubCompanyBean;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -114,6 +118,60 @@ public class CommonCtler {
         model.addAttribute("userlist", arcServcieImpl.listAllUser());
         return "userlist.jsp";
     }
+    /**
+     * 列出所有用户 测试方法
+     */
+    @RequestMapping(value = "/syncAll", method = RequestMethod.GET)
+    public void syncAll(HttpServletResponse response){
+        PrintWriter out = null;
+        try {
+            response.setContentType("text/html;charset=GBK ");
+            out = response.getWriter();
+            out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
+            out.println("<HTML>");
+            out.println("<BODY>");
+            out.println("<XMP>");
+            out.println("OK");
+            syncDepAndUserService.sync();
+            out.println("</XMP>");
+            out.println("</BODY>");
+            out.println("</HTML>");
+        } catch (Exception e) {
+            out.println("读取日志错误" + e.getMessage());
+            log.error("读取日志错误" + e.getMessage());
+        } finally {
+            out.flush();
+            out.close();
+        }
+    }
+
+    /**
+     * 列出所有子单位
+     */
+    @RequestMapping(value = "/listAllOrg", method = RequestMethod.GET)
+    public String listAllOrg(Model model) {
+        List<OaCompany> oaCompanies = new ArrayList<>();
+        List<SubCompanyBean> list = syncDepAndUserService.oaOrgList();
+        for (SubCompanyBean sb : list) {
+            if(sb.getCanceled().getValue().equals("1")){
+                continue;
+            }
+            OaCompany company = new OaCompany();
+            company.setCanceled(sb.getCanceled().getValue());
+            company.setCode(sb.getCode().getValue());
+            company.setFullname(sb.getFullname().getValue());
+            company.setShortname(sb.getShortname().getValue());
+            company.setShoworder(sb.getShoworder().getValue());
+            company.setSubcompanyid(sb.getSubcompanyid().getValue());
+            company.setSupsubcompanyid(sb.getSupsubcompanyid().getValue());
+            company.setWebsite(sb.getWebsite().getValue());
+            company.setAction(sb.getAction().getValue());
+            company.setLastChangdate(sb.getLastChangdate().getValue());
+            oaCompanies.add(company);
+        }
+        model.addAttribute("orgList", oaCompanies);
+        return "orgList.jsp";
+    }
 
     /**
      * 单点登录
@@ -180,6 +238,8 @@ public class CommonCtler {
     private ArcService arcServcieImpl;
     @Autowired
     private NoticeService noticeServiceImpl;
+    @Autowired
+    private SyncDepAndUserService syncDepAndUserService;
     @Autowired
     @Value("${interface.log.home.address}")
     private String logHomeAdd;

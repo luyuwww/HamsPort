@@ -48,7 +48,7 @@
 
     <!-- Hikari Datasource -->
     <bean id="dataSource4DataIF" class="com.zaxxer.hikari.HikariDataSource" destroy-method="shutdown">
-        <!-- <property name="driverClassName" value="${db.driverClass}" /> --> <!-- 无需指定，除非系统无法自动识别 -->
+        <property name="driverClassName" value="${HiKari.driverClass}" /><!-- 无需指定，除非系统无法自动识别 -->
         <property name="jdbcUrl" value="${HiKari.datasource.url}" />
         <property name="username" value="${HiKari.datasource.username}" />
         <property name="password" value="${HiKari.datasource.password}" />
