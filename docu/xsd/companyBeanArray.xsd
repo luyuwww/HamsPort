@@ -1,0 +1,24 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SubCompanyBean-array">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SubCompanyBean" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="subcompanyid"/>
+              <xs:element type="xs:string" name="shortname"/>
+              <xs:element type="xs:string" name="fullname"/>
+              <xs:element type="xs:byte" name="supsubcompanyid"/>
+              <xs:element type="xs:string" name="website"/>
+              <xs:element type="xs:string" name="showorder"/>
+              <xs:element type="xs:string" name="code"/>
+              <xs:element type="xs:string" name="canceled"/>
+              <xs:element type="xs:string" name="action"/>
+              <xs:element type="xs:string" name="lastChangdate"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

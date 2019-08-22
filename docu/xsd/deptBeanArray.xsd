@@ -1,0 +1,24 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DepartmentBean-array">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DepartmentBean" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="departmentid"/>
+              <xs:element type="xs:string" name="shortname"/>
+              <xs:element type="xs:string" name="fullname"/>
+              <xs:element type="xs:byte" name="subcompanyid"/>
+              <xs:element type="xs:byte" name="supdepartmentid"/>
+              <xs:element type="xs:byte" name="showorder"/>
+              <xs:element type="xs:string" name="code"/>
+              <xs:element type="xs:string" name="action"/>
+              <xs:element type="xs:byte" name="lastChangdate"/>
+              <xs:element type="xs:string" name="canceled"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

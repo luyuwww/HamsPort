@@ -1,0 +1,64 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UserBean-array">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="UserBean" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:short" name="userid"/>
+              <xs:element type="xs:byte" name="subcompanyid1"/>
+              <xs:element type="xs:byte" name="departmentid"/>
+              <xs:element type="xs:string" name="subcompanyname"/>
+              <xs:element type="xs:string" name="departmentname"/>
+              <xs:element type="xs:string" name="workcode"/>
+              <xs:element type="xs:string" name="lastname"/>
+              <xs:element type="xs:string" name="loginid"/>
+              <xs:element type="xs:string" name="password"/>
+              <xs:element type="xs:byte" name="seclevel"/>
+              <xs:element type="xs:string" name="sex"/>
+              <xs:element type="xs:byte" name="jobtitle"/>
+              <xs:element type="xs:byte" name="jobcall"/>
+              <xs:element type="xs:byte" name="joblevel"/>
+              <xs:element type="xs:string" name="jobactivitydesc"/>
+              <xs:element type="xs:short" name="managerid"/>
+              <xs:element type="xs:byte" name="assistantid"/>
+              <xs:element type="xs:byte" name="status"/>
+              <xs:element type="xs:byte" name="locationid"/>
+              <xs:element type="xs:string" name="workroom"/>
+              <xs:element type="xs:string" name="telephone"/>
+              <xs:element type="xs:string" name="mobile"/>
+              <xs:element type="xs:string" name="mobilecall"/>
+              <xs:element type="xs:string" name="fax"/>
+              <xs:element type="xs:string" name="email"/>
+              <xs:element type="xs:string" name="systemlanguage"/>
+              <xs:element type="xs:string" name="birthday"/>
+              <xs:element type="xs:string" name="folk"/>
+              <xs:element type="xs:string" name="nativeplace"/>
+              <xs:element type="xs:string" name="regresidentplace"/>
+              <xs:element type="xs:string" name="certificatenum"/>
+              <xs:element type="xs:string" name="maritalstatus"/>
+              <xs:element type="xs:string" name="policy"/>
+              <xs:element type="xs:string" name="bememberdate"/>
+              <xs:element type="xs:string" name="bepartydate"/>
+              <xs:element type="xs:byte" name="islabouunion"/>
+              <xs:element type="xs:byte" name="educationlevel"/>
+              <xs:element type="xs:string" name="degree"/>
+              <xs:element type="xs:string" name="healthinfo"/>
+              <xs:element type="xs:string" name="height"/>
+              <xs:element type="xs:string" name="weight"/>
+              <xs:element type="xs:string" name="residentplace"/>
+              <xs:element type="xs:string" name="homeaddress"/>
+              <xs:element type="xs:string" name="tempresidentnumber"/>
+              <xs:element type="xs:string" name="startdate"/>
+              <xs:element type="xs:string" name="enddate"/>
+              <xs:element type="xs:date" name="createdate"/>
+              <xs:element type="xs:date" name="lastChangdate"/>
+              <xs:element type="xs:byte" name="accounttype"/>
+              <xs:element type="xs:float" name="dsporder"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

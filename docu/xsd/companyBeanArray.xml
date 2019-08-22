@@ -1,0 +1,26 @@
+<SubCompanyBean-array>
+    <SubCompanyBean>
+        <subcompanyid>1</subcompanyid>
+        <shortname>Default</shortname>
+        <fullname>Default</fullname>
+        <supsubcompanyid>0</supsubcompanyid>
+        <website></website>
+        <showorder></showorder>
+        <code></code>
+        <canceled>1</canceled>
+        <action></action>
+        <lastChangdate>2018-05-29 19:24:47</lastChangdate>
+    </SubCompanyBean>
+    <SubCompanyBean>
+        <subcompanyid>5</subcompanyid>
+        <shortname>中小担集团</shortname>
+        <fullname>中小担集团</fullname>
+        <supsubcompanyid>0</supsubcompanyid>
+        <website></website>
+        <showorder></showorder>
+        <code></code>
+        <canceled></canceled>
+        <action></action>
+        <lastChangdate></lastChangdate>
+    </SubCompanyBean>
+</SubCompanyBean-array>
