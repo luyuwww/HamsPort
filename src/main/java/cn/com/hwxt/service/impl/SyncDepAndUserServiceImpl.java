@@ -40,6 +40,8 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
     public void sync() {
         syncAllDept();
         syncAllUser();
+        execSql("DELETE FROM S_USERROLE WHERE YHID NOT IN (SELECT DID FROM S_USER)");
+        CommonUtil.syncActivitUser(lamsIP);
     }
 
     /**
@@ -91,7 +93,6 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
 
             }
         }
-        CommonUtil.syncActivitUser(lamsIP);
     }
     /**
      * 得到所有子公司
