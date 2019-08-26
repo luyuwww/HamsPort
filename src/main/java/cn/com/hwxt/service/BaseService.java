@@ -990,6 +990,9 @@ public class BaseService {
         if (StringUtils.isBlank(gdrCode)) {
             log.error("请检查传入的gdrCode 为空");
             new RuntimeException("请检查传入的gdrCode 为空");
+        }else if(gdrCode.startsWith("QZH:")){
+            bmid = gdrCode.replace("QZH:" ,"");
+            qzh = gdrCode.replace("QZH:" ,"");
         } else {
             bmid = getBmidByuserCode(gdrCode);
             qzh = getQzhByUserCode(gdrCode);
