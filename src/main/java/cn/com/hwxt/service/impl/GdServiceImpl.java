@@ -26,7 +26,7 @@ import java.util.Map;
 @WebService(name = "GdDataWs", targetNamespace = "http://service.hwxt.com.cn/")
 public class GdServiceImpl extends BaseService implements GdService {
     private String rsltMsg = "<?xml version='1.0' encoding='UTF-8'?><rslt><flag value='#DID#'/><msg value='#MSG#'/></rslt>";
-
+    private String rsltJson ="{\"DID\":\"#DID#\",\"MSG\":\"#MSG#\"}";
     @WebMethod
     public String dataReciveXml(@WebParam(name = "xmlName") String xmlName
             , @WebParam(name = "dataXml") String dataXml, @WebParam(name = "gdrCode") String gdrCode) {
@@ -67,19 +67,18 @@ public class GdServiceImpl extends BaseService implements GdService {
             vars = mapper.readValue(dataJson, Map.class);
 
             did = super.gdData(xmlfields , vars , xmlName , gdrCode);
-            rsltStr = rsltMsg.replace("#DID#" , did.toString());
+            rsltStr = rsltJson.replace("#DID#" , did.toString());
             if(did > -1){
-                rsltStr = rsltStr.replace("#MSG#" , "");
+                rsltStr = rsltJson.replace("#MSG#" , "");
             }else{
-                rsltStr = rsltStr.replace("#MSG#" , "未捕获，请查看日志。");
+                rsltStr = rsltJson.replace("#MSG#" , "未捕获，请查看日志。");
             }
         } catch (Exception e) {
             log.error(e.getMessage() , e);
-            rsltStr = rsltMsg.replace("#DID#" , "-1").replace("#MSG#" , e.getMessage());
+            rsltStr = rsltJson.replace("#DID#" , "-1").replace("#MSG#" , e.getMessage());
         }
         return rsltStr;
     }
-
 
     @WebMethod
     public Integer fileReciveXml(@WebParam(name = "xmlName") String xmlName
