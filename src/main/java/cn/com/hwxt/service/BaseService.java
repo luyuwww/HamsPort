@@ -1138,10 +1138,6 @@ public class BaseService {
     protected String lamsIP;
 
     @Autowired
-    @Value("${HamsPortIP}")
-    protected String HamsPortIP;
-
-    @Autowired
     @Value("${lams.dfile.status}")
     protected Integer status;//状态
 
