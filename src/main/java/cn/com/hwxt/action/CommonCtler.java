@@ -1,11 +1,15 @@
 package cn.com.hwxt.action;
 
 import ch.qos.logback.classic.Logger;
+import cn.com.hwxt.dao.i.SUserMapper;
 import cn.com.hwxt.pojo.OaCompany;
+import cn.com.hwxt.pojo.SUser;
 import cn.com.hwxt.service.i.ArcService;
 import cn.com.hwxt.service.i.NoticeService;
 import cn.com.hwxt.service.i.SyncDepAndUserService;
+import cn.com.hwxt.util.CommonUtil;
 import cn.com.hwxt.util.GlobalFinalAttr;
+import net.sf.json.JSONObject;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.LoggerFactory;
@@ -119,11 +123,12 @@ public class CommonCtler {
         model.addAttribute("userlist", arcServcieImpl.listAllUser());
         return "userlist.jsp";
     }
+
     /**
      * 列出所有用户 测试方法
      */
     @RequestMapping(value = "/syncAll", method = RequestMethod.GET)
-    public void syncAll(HttpServletResponse response){
+    public void syncAll(HttpServletResponse response) {
         PrintWriter out = null;
         try {
             response.setContentType("text/html;charset=GBK ");
@@ -177,6 +182,7 @@ public class CommonCtler {
     /**
      * 流程过来的消息 需要发送到 邮件和待办
      */
+
     @RequestMapping(value = "/sendMsg", method = RequestMethod.POST)
     public void sendMsg(@RequestParam String userCodes, @RequestParam String varsJson, @RequestParam String actTaskID) {
         if (StringUtils.isNotEmpty(varsJson) && StringUtils.isNotEmpty(actTaskID)) {
@@ -185,10 +191,17 @@ public class CommonCtler {
     }
 
     /**
-     * 查看日志
+     * 当流程结束 申请人或者流程管理员销毁流程的时候 调用销毁待办
      */
+    @RequestMapping(value = "/sendDestoryMsg", method = RequestMethod.POST)
+    public void sendDestoryMsg(@RequestParam String operUserCode, @RequestParam String actTaskId) {
+        if (StringUtils.isNotEmpty(operUserCode) && StringUtils.isNotEmpty(actTaskId)) {
+            noticeServiceImpl.sendDestoryMsg(actTaskId, operUserCode);
+        }
+    }
+
     @RequestMapping("/syncDclassfy")
-    public void syncDclassfy(@RequestParam Integer libcode ,  HttpServletResponse response) {
+    public void syncDclassfy(@RequestParam Integer libcode, HttpServletResponse response) {
         PrintWriter out = null;
         try {
             response.setContentType("text/html;charset=GBK ");
@@ -225,7 +238,12 @@ public class CommonCtler {
     @Autowired
     private SyncDepAndUserService syncDepAndUserService;
     @Autowired
+    protected SUserMapper sUserMapper;
+    @Autowired
     @Value("${interface.log.home.address}")
     private String logHomeAdd;
+    @Autowired
+    @Value("${lams.ip}")
+    private String lamsIP;
     private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
 }

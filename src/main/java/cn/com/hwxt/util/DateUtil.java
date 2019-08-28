@@ -116,6 +116,17 @@ public class DateUtil {
     }
 
     /**
+     * 将date返回 yyyy-MM-dd str
+     */
+    public static String dateToStr4Time(Date date) {
+        if (date == null) {
+            return "";
+        } else {
+            return FastDateFormat.getInstance(DEFAULT_TIME_FORMAT).format(date);
+        }
+    }
+
+    /**
      * 字符串转换成日期 自定义格式
      */
     public static Date strToDate(String dateStr, String format) {

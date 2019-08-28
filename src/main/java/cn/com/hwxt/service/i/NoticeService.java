@@ -29,4 +29,6 @@ public interface NoticeService {
      * @param usercode
      */
     public List<SBacklog> allBacklog(String usercode);
+
+    public void sendDestoryMsg(String actTaskId , String  fqr);
 }

@@ -31,6 +31,18 @@ public class CommonUtil {
     }
 
     /**
+     * 得到登录Lams的应用端并且进入待办列表
+     * @param user 用户
+     *
+     */
+    public static String generat2WebUrl(SUser user , String taskid){
+        StringBuffer sb = new StringBuffer();
+        sb.append("Lams/autoLogin4Web?card=").append(SeriKeyOper.encrypt(user.getUsercode()));
+        sb.append("&serikey=").append(SeriKeyOper.encrypt(user.getPasswd())).append("&_url=/web/todoList&taskid="+taskid);
+        sb.append("&random=").append(Math.random());
+        return sb.toString();
+    }
+    /**
      * 发送get请求不需要返回参数
      */
     public static void doHttpGet(String urlString) {
