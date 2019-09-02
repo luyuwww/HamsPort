@@ -2,6 +2,7 @@ package cn.com.hwxt.action;
 
 import ch.qos.logback.classic.Logger;
 import cn.com.hwxt.service.i.ArcService;
+import cn.com.hwxt.service.i.LscPostService;
 import cn.com.hwxt.service.i.NoticeService;
 import cn.com.hwxt.util.GlobalFinalAttr;
 import org.apache.commons.io.FileUtils;
@@ -114,6 +115,32 @@ public class CommonCtler {
         model.addAttribute("userlist", arcServcieImpl.listAllUser());
         return "userlist.jsp";
     }
+    /**
+     * 列出所有用户 测试方法
+     */
+    @RequestMapping(value = "/callLsc", method = RequestMethod.GET)
+    public void callLsc(HttpServletResponse response) {
+        PrintWriter out = null;
+        try {
+            response.setContentType("text/html;charset=GBK ");
+            out = response.getWriter();
+            out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
+            out.println("<HTML>");
+            out.println("<BODY>");
+            out.println("<XMP>");
+            postLscService.checkBarCodeIsRecive();
+            out.println("OK");
+            out.println("</XMP>");
+            out.println("</BODY>");
+            out.println("</HTML>");
+        } catch (Exception e) {
+            out.println("读取日志错误" + e.getMessage());
+            log.error("读取日志错误" + e.getMessage());
+        } finally {
+            out.flush();
+            out.close();
+        }
+    }
 
     /**
      * 单点登录
@@ -183,5 +210,8 @@ public class CommonCtler {
     @Autowired
     @Value("${interface.log.home.address}")
     private String logHomeAdd;
+
+    @Autowired
+    private LscPostService postLscService;
     private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
 }

@@ -982,6 +982,10 @@ public class BaseService {
         return null == fwqpz ? sGroupMapper.getDefaultFwqpz() : fwqpz;
     }
 
+    protected <T> List<T>  quert4List(String sql , Class<T> elementType){
+        return jdbcDao.quert4List(sql , elementType);
+    }
+
     public String getLamsIP() {
         return lamsIP;
     }

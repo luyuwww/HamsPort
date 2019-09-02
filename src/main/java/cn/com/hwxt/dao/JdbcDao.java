@@ -39,7 +39,7 @@ public interface JdbcDao {
     public List<Map<String, Object>> quertListMap(String sql);
 
     public List<String> quert4List(String sql);
-
+    public  <T> List<T>  quert4List(String sql , Class<T> elementType);
     /**
      * 查新表2列 第一列是key第二列是value的一个map
      */

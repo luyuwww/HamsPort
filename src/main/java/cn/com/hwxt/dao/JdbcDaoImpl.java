@@ -100,6 +100,15 @@ public class JdbcDaoImpl implements JdbcDao {
         }
     }
 
+    public  <T> List<T>  quert4List(String sql , Class<T> elementType) {
+        try {
+            return jdbcTemplate.queryForList(sql, elementType);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return null;
+        }
+    }
+
     public Connection getConn() {
         try {
             return jdbcTemplate.getDataSource().getConnection();
