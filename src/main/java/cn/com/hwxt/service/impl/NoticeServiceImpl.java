@@ -11,8 +11,6 @@ import cn.com.hwxt.service.i.NoticeService;
 import cn.com.hwxt.util.CommonUtil;
 import cn.com.hwxt.util.DateUtil;
 import cn.com.hwxt.util.SeriKeyOper;
-import localhost.services.hrmservice.HrmService;
-import localhost.services.hrmservice.HrmServicePortType;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.codehaus.jackson.map.ObjectMapper;
