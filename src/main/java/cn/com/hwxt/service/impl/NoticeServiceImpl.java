@@ -4,14 +4,17 @@ import ch.qos.logback.classic.Logger;
 import cn.com.hwxt.dao.i.SBacklogMapper;
 import cn.com.hwxt.dao.i.SUserMapper;
 import cn.com.hwxt.pojo.SBacklog;
+import cn.com.hwxt.pojo.SGroup;
 import cn.com.hwxt.pojo.SUser;
 import cn.com.hwxt.pojo.SBacklogExample;
 import cn.com.hwxt.service.BaseService;
 import cn.com.hwxt.service.i.NoticeService;
 import cn.com.hwxt.util.CommonUtil;
 import cn.com.hwxt.util.DateUtil;
+import cn.com.hwxt.util.GlobalFinalAttr;
 import cn.com.hwxt.util.SeriKeyOper;
 import net.sf.json.JSONObject;
+import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang.StringUtils;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.LoggerFactory;
@@ -21,20 +24,290 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.EncodedResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileCopyUtils;
+import weaver.flow.*;
 import weaver.todo.webservice.OfsTodoDataWebService;
 import weaver.todo.webservice.OfsTodoDataWebServicePortType;
 
+import javax.xml.bind.JAXBElement;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.RemoteException;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @Service("noticeServiceImpl")
 public class NoticeServiceImpl extends BaseService implements NoticeService {
 
     public void sendActivitiMsg(String userCodes, String varsJson, String actTaskID) {
+        if(isDebug){
+            log.error(varsJson);
+        }
+        if(goToOutSystem){
+            toOutSysFlow(userCodes , varsJson , actTaskID);
+        }else{
+            toToDo(userCodes , varsJson , actTaskID);
+        }
+
+    }
+    //star out system flow
+    private void toOutSysFlow(String userCodes, String varsJson, String actTaskID){
+        String sqrbm = "";
+        String lymd = "";
+        String sqrdm = "";
+        String sqrxm = "";
+        String sqyy = "";
+        String sqtype = "";
+        String lylx = "";
+        Integer lylxNum = 1;//默认时间段
+        Integer times = 0;
+        String starTime = "";
+        String endTime = "";
+        String requestTime = "";
+        String mj = "";
+        SUser user = null;
+
+        ObjectMapper mapper = new ObjectMapper();
+        Map<String, Object> vars = null;
+        try {
+            String[] userCodeList = StringUtils.split(userCodes, "[,]");
+            vars = mapper.readValue(varsJson, Map.class);
+            sqrxm = (vars.get("sqrxm") == null ? "" : vars.get("sqrxm").toString());
+            lymd = (vars.get("lymd") == null ? "" : vars.get("lymd").toString());
+            sqrdm = (vars.get("sqrdm") == null ? "" : vars.get("sqrdm").toString());
+            sqrbm = (vars.get("sqrbm") == null ? "" : vars.get("sqrbm").toString());
+            sqyy = (vars.get("sqyy") == null ? "" : vars.get("sqyy").toString());
+            sqtype = (vars.get("sqtype") == null ? "" : vars.get("sqtype").toString());
+
+            if(sqtype.equals("下载") || sqtype.equals("2")){
+                sqtype = "浏览、下载";
+            }else if(sqtype.equals("借阅")|| sqtype.equals("3")){
+                sqtype = "实物借阅";
+            }
+
+            lylx = (vars.get("timeortimes") == null ? "" : vars.get("timeortimes").toString());
+            requestTime = (vars.get("sqrq") == null ? "" : vars.get("sqrq").toString());
+            if (lylx.equals("次数")) {
+                lylxNum = 0;
+                times = MapUtils.getInteger(vars, "times");
+            } else {
+                starTime = (vars.get("startime") == null ? "" : vars.get("startime").toString());
+                endTime = (vars.get("endtime") == null ? "" : vars.get("endtime").toString());
+            }
+
+            mj = (vars.get("mj") == null ? "" : vars.get("mj").toString());
+            List<Map<String, Object>> dataList = (List<Map<String, Object>>) vars.get("dataList");
+
+            if (null == dataList || dataList.size() < 1) {
+                log.error("档案系统发送了错误数.dataList为空");
+                return;
+            }
+            for (String userCode : userCodeList) {
+                SUser sqrUser = sUserMapper.getUserByUsercode(sqrdm);
+                if (sqrUser != null && StringUtils.isNotBlank(sqrUser.getEsbid())) {
+                    WorkflowServicePortType service = getFlowWebService();
+                    ObjectFactory of = new ObjectFactory();
+                    WorkflowRequestInfo wi = of.createWorkflowRequestInfo();
+                    wi.setCanView(true);
+                    wi.setCanEdit(true);
+                    wi.setRequestId(of.createWorkflowRequestInfoRequestId(actTaskID));
+                    wi.setRequestName(of.createWorkflowRequestInfoRequestName(sqTitle));
+                    wi.setRequestLevel(of.createWorkflowRequestInfoRequestLevel(theFlowRqsLevel));
+                    //        wi.setMessageType();
+                    //        wi.setStatus();
+                    //        wi.setCreateTime();
+                    //组织机构同步的时候注意需要吧oa的userid放入档案系统的s_user.esbid
+                    wi.setCreatorId(of.createWorkflowRequestInfoCreatorId(sqrUser.getEsbid()));
+                    wi.setCreatorName(of.createWorkflowRequestInfoCreatorName(sqrUser.getUsername()));
+                    WorkflowBaseInfo wfBaseInfo = of.createWorkflowBaseInfo();
+                    wfBaseInfo.setWorkflowId(of.createWorkflowBaseInfoWorkflowId(defFlowID));
+                    wfBaseInfo.setWorkflowName(of.createWorkflowBaseInfoWorkflowName(defFlowName));
+                    wfBaseInfo.setWorkflowTypeId(of.createWorkflowBaseInfoWorkflowTypeId(defFlowTypeID));
+                    wfBaseInfo.setWorkflowTypeName(of.createWorkflowBaseInfoWorkflowTypeName(defFlowTypeName));
+                    JAXBElement<WorkflowBaseInfo> wfbiJAXBE = of.createWorkflowRequestInfoWorkflowBaseInfo(wfBaseInfo);
+                    wi.setWorkflowBaseInfo(wfbiJAXBE);
+
+                    /****************main table start*************/
+                    WorkflowMainTableInfo mainTableInfo = of.createWorkflowMainTableInfo();
+                    mainTableInfo.setTableDBName(of.createWorkflowMainTableInfoTableDBName(mainTbName));
+                    ArrayOfWorkflowRequestTableRecord arrayOfWorkflowRequestTableRecord = of.createArrayOfWorkflowRequestTableRecord();
+                    List<WorkflowRequestTableRecord> recodeList = arrayOfWorkflowRequestTableRecord.getWorkflowRequestTableRecord();
+
+                    WorkflowRequestTableRecord theRecode = of.createWorkflowRequestTableRecord();
+                    ArrayOfWorkflowRequestTableField mainFieldArray = of.createArrayOfWorkflowRequestTableField();
+                    List<WorkflowRequestTableField> workflowRequestTableFields = mainFieldArray.getWorkflowRequestTableField();
+
+                    Integer mainFieldIndex = 0;
+                    //申请人部门
+                    WorkflowRequestTableField mainField00 = of.createWorkflowRequestTableField();
+                    mainField00.setFieldName(of.createWorkflowRequestTableFieldFieldName("sqrbm"));
+                    mainField00.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("申请人部门"));
+                    mainField00.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(sqrbm));
+                    mainField00.setView(true);
+                    mainField00.setEdit(false);
+                    mainField00.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                    workflowRequestTableFields.add(mainFieldIndex++ , mainField00);
+                    //申请人姓名
+                    WorkflowRequestTableField mainField01 = of.createWorkflowRequestTableField();
+                    mainField01.setFieldName(of.createWorkflowRequestTableFieldFieldName("sqrxm"));
+                    mainField01.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("申请人姓名"));
+                    mainField01.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(sqrxm));
+                    mainField01.setView(true);
+                    mainField01.setEdit(false);
+                    mainField01.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                    workflowRequestTableFields.add(mainFieldIndex++ , mainField01);
+                    //利用目的
+                    WorkflowRequestTableField mainField02 = of.createWorkflowRequestTableField();
+                    mainField02.setFieldName(of.createWorkflowRequestTableFieldFieldName("lymd"));
+                    mainField02.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("利用目的"));
+                    mainField02.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(lymd));
+                    mainField02.setView(true);
+                    mainField02.setEdit(false);
+                    mainField02.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                    workflowRequestTableFields.add(mainFieldIndex++ , mainField02);
+                    //申请人代码
+                    WorkflowRequestTableField mainField03 = of.createWorkflowRequestTableField();
+                    mainField03.setFieldName(of.createWorkflowRequestTableFieldFieldName("sqrdm"));
+                    mainField03.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("申请人登录名"));
+                    mainField03.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(sqrdm));
+                    mainField03.setView(true);
+                    mainField03.setEdit(false);
+                    mainField03.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                    workflowRequestTableFields.add(mainFieldIndex++ , mainField03);
+                    //申请缘由
+                    WorkflowRequestTableField mainField04 = of.createWorkflowRequestTableField();
+                    mainField04.setFieldName(of.createWorkflowRequestTableFieldFieldName("sqyy"));
+                    mainField04.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("申请缘由"));
+                    mainField04.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(sqyy));
+                    mainField04.setView(true);
+                    mainField04.setEdit(false);
+                    mainField04.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                    workflowRequestTableFields.add(mainFieldIndex++ , mainField04);
+                    //申请操作类型 sqtype
+                    WorkflowRequestTableField mainField05 = of.createWorkflowRequestTableField();
+                    mainField05.setFieldName(of.createWorkflowRequestTableFieldFieldName("sqtype"));
+                    mainField05.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("申请操作类型"));
+                    mainField05.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(sqtype));
+                    mainField05.setView(true);
+                    mainField05.setEdit(false);
+                    mainField05.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                    workflowRequestTableFields.add(mainFieldIndex++ , mainField05);
+                    //利用类型
+                    WorkflowRequestTableField mainField06 = of.createWorkflowRequestTableField();
+                    mainField06.setFieldName(of.createWorkflowRequestTableFieldFieldName("lylx"));
+                    mainField06.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("利用类型"));
+                    mainField06.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(lylx));
+                    mainField06.setView(true);
+                    mainField06.setEdit(false);
+                    mainField06.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                    workflowRequestTableFields.add(mainFieldIndex++ , mainField06);
+                    if (lylx.equals("次数")) {
+                        //申请次数
+                        WorkflowRequestTableField mainField07 = of.createWorkflowRequestTableField();
+                        mainField07.setFieldName(of.createWorkflowRequestTableFieldFieldName("times"));
+                        mainField07.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("申请次数"));
+                        mainField07.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(times+""));
+                        mainField07.setView(true);
+                        mainField07.setEdit(false);
+                        mainField07.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                        workflowRequestTableFields.add(mainFieldIndex++ , mainField07);
+                    }else{
+                        //开始时间
+                        WorkflowRequestTableField mainField08 = of.createWorkflowRequestTableField();
+                        mainField08.setFieldName(of.createWorkflowRequestTableFieldFieldName("starTime"));
+                        mainField08.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("开始时间"));
+                        mainField08.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(starTime));
+                        mainField08.setView(true);
+                        mainField08.setEdit(false);
+                        mainField08.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                        workflowRequestTableFields.add(mainFieldIndex++ , mainField08);
+                        //结束时间
+                        WorkflowRequestTableField mainField09 = of.createWorkflowRequestTableField();
+                        mainField09.setFieldName(of.createWorkflowRequestTableFieldFieldName("endTime"));
+                        mainField09.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("结束时间"));
+                        mainField09.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(endTime));
+                        mainField09.setView(true);
+                        mainField09.setEdit(false);
+                        mainField09.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                        workflowRequestTableFields.add(mainFieldIndex++ , mainField09);
+                    }
+                    //申请时间
+                    WorkflowRequestTableField mainField10 = of.createWorkflowRequestTableField();
+                    mainField10.setFieldName(of.createWorkflowRequestTableFieldFieldName("requestTime"));
+                    mainField10.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("申请时间"));
+                    mainField10.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(requestTime));
+                    mainField10.setView(true);
+                    mainField10.setEdit(false);
+                    mainField10.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                    workflowRequestTableFields.add(mainFieldIndex++ , mainField10);
+                    //密级
+                    WorkflowRequestTableField mainField11 = of.createWorkflowRequestTableField();
+                    mainField11.setFieldName(of.createWorkflowRequestTableFieldFieldName("mj"));
+                    mainField11.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("密级"));
+                    mainField11.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(mj));
+                    mainField11.setView(true);
+                    mainField11.setEdit(false);
+                    mainField11.setFieldType(of.createWorkflowRequestTableFieldFieldType("String"));
+                    workflowRequestTableFields.add(mainFieldIndex++ , mainField11);
+
+                    JAXBElement<ArrayOfWorkflowRequestTableField> fieldJAXBElement = of.createWorkflowRequestTableRecordWorkflowRequestTableFields(mainFieldArray);
+
+                    theRecode.setWorkflowRequestTableFields(fieldJAXBElement);
+                    recodeList.add(theRecode);
+                    JAXBElement<ArrayOfWorkflowRequestTableRecord> requestRecodes = of.createWorkflowMainTableInfoRequestRecords(arrayOfWorkflowRequestTableRecord);
+                    mainTableInfo.setRequestRecords(requestRecodes);
+                    wi.setWorkflowMainTableInfo(of.createWorkflowRequestInfoWorkflowMainTableInfo(mainTableInfo));
+                    /****************main table end*************/
+                    /****************申请的条目表 table start*************/
+                    ArrayOfWorkflowDetailTableInfo arrayOfWorkflowDetailTableInfo = of.createArrayOfWorkflowDetailTableInfo();
+                    List<WorkflowDetailTableInfo> workflowDetailTableInfosList = arrayOfWorkflowDetailTableInfo.getWorkflowDetailTableInfo();
+                    WorkflowDetailTableInfo workflowDetailTableInfo = of.createWorkflowDetailTableInfo();
+                    workflowDetailTableInfo.setTableDBName(of.createWorkflowDetailTableInfoTableDBName(detailTbName));
+
+                    ArrayOfWorkflowRequestTableRecord arrayOfWorkflowRequestTableRecord1 = of.createArrayOfWorkflowRequestTableRecord();
+                    List<WorkflowRequestTableRecord> workflowRequestTableRecords = arrayOfWorkflowRequestTableRecord1.getWorkflowRequestTableRecord();
+
+
+
+                    for (Map<String, Object> map : dataList)  {//每个申请的条目
+                        WorkflowRequestTableRecord workflowRequestTableRecord = of.createWorkflowRequestTableRecord();
+                        ArrayOfWorkflowRequestTableField arrayOfWorkflowRequestTableField = of.createArrayOfWorkflowRequestTableField();
+                        //添加条目中每个字段
+                        List<WorkflowRequestTableField> workflowRequestTableFields1 = arrayOfWorkflowRequestTableField.getWorkflowRequestTableField();
+                        Set<String> keySet = map.keySet();
+                        for (String key : keySet) {
+                            Object theValue =  MapUtils.getObject(map , key);
+                            if(null != theValue){
+                                WorkflowRequestTableField workflowRequestTableField = of.createWorkflowRequestTableField();
+                                workflowRequestTableField.setFieldName(of.createWorkflowRequestTableFieldFieldName("key"));
+                                workflowRequestTableField.setFieldValue(of.createWorkflowRequestTableFieldFieldValue(theValue+""));
+                                workflowRequestTableField.setFieldDBType(of.createWorkflowRequestTableFieldFieldDBType("String"));
+                                workflowRequestTableField.setFieldShowName(of.createWorkflowRequestTableFieldFieldShowName("XXXX"));
+                                workflowRequestTableFields1.add(workflowRequestTableField);
+                            }
+                        }
+                        JAXBElement<ArrayOfWorkflowRequestTableField> fieldJAXBElement1 = of.createWorkflowRequestTableRecordWorkflowRequestTableFields(arrayOfWorkflowRequestTableField);
+                        workflowRequestTableRecord.setWorkflowRequestTableFields(fieldJAXBElement1);
+                        workflowRequestTableRecords.add(workflowRequestTableRecord);
+
+                    }
+                    JAXBElement<ArrayOfWorkflowRequestTableRecord> arrayOfWorkflowRequestTableRecordJAXBElement = of.createWorkflowMainTableInfoRequestRecords(arrayOfWorkflowRequestTableRecord1);
+
+                    workflowDetailTableInfo.setWorkflowRequestTableRecords(arrayOfWorkflowRequestTableRecordJAXBElement);
+                    workflowDetailTableInfosList.add(workflowDetailTableInfo);
+                    JAXBElement<ArrayOfWorkflowDetailTableInfo> detailTableInfoJAXBElement = of.createWorkflowRequestInfoWorkflowDetailTableInfos(arrayOfWorkflowDetailTableInfo);
+                    wi.setWorkflowDetailTableInfos(detailTableInfoJAXBElement);
+                    /****************申请的条目表 table end*************/
+                    service.submitWorkflowRequest(wi , 71116 , 249 , "submit" , "11");
+                }
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        }
+    }
+    //star todo
+    private void toToDo(String userCodes, String varsJson, String actTaskID){
         System.out.println("审批人："+userCodes);
         String sqrdm = "";
         String sqrxm = "";
@@ -191,7 +464,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
         return resultFlag;
     }
     /**
-     * 得到服务客户端申明
+     * 得到服务客户端申明 外发待办
      * @return
      */
     private OfsTodoDataWebServicePortType getTodoService(){
@@ -205,6 +478,23 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
             }
         }
         return ofsTodoDataWebService;
+    }
+
+    /**
+     * 得到服务客户端申明  外发路程
+     * @return
+     */
+    private WorkflowServicePortType getFlowWebService(){
+        if(null == flowWebServcie){
+            URL url = null;
+            try {
+                url = new URL(flowWsdl);
+                flowWebServcie = new WorkflowService(url).getWorkflowServiceHttpPort();
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+        return flowWebServcie;
     }
 
     public NoticeServiceImpl() {
@@ -235,7 +525,44 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
     @Autowired
     @Value("${weaver.todo.syscode}")
     private String weaverSyscode;
+    @Autowired
+    @Value("${lams.flow.debug}")
+    private Boolean isDebug;
+    @Autowired
+    @Value("${lams.flow.GoToOutSystem}")
+    private Boolean goToOutSystem;
+
+
+
+    @Autowired
+    @Value("${lams.flow.defFlowID}")
+    private String defFlowID;
+    @Autowired
+    @Value("${lams.flow.defFlowName}")
+    private String defFlowName;
+    @Autowired
+    @Value("${lams.flow.defFlowTypeID}")
+    private String defFlowTypeID;
+    @Autowired
+    @Value("${lams.flow.defFlowTypeName}")
+    private String defFlowTypeName;
+    @Autowired
+    @Value("${lams.flow.theFlowRqsLevel}")
+    private String theFlowRqsLevel;//level
+    @Autowired
+    @Value("${lams.flow.mainTbName}")
+    private String mainTbName;
+    @Autowired
+    @Value("${lams.flow.detailTbName}")
+    private String detailTbName;
+    @Autowired
+    @Value("${lams.flow.wsdl}")
+    private String flowWsdl;
+    @Autowired
+    @Value("${lams.flow.SqTitle}")
+    private String sqTitle;
 
     private OfsTodoDataWebServicePortType ofsTodoDataWebService;
+    private  WorkflowServicePortType flowWebServcie;
     private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
 }

@@ -17,3 +17,4 @@ http://115.28.168.237:9998/HamsPort/cxf/ArcDataWsSingle?wsdl
 weaver  泛微版本
 master  标准版本
 SS      十所版本
+http://localhost:8887/HamsPort/cxf/TaskWsServcie?wsdl

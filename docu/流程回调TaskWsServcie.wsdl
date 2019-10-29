@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.unis.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="TaskServiceImplService" targetNamespace="http://service.unis.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.unis.com/" elementFormDefault="unqualified" targetNamespace="http://service.unis.com/" version="1.0">
+
+  <xs:element name="receiveApproval" type="tns:receiveApproval"/>
+
+  <xs:element name="receiveApprovalResponse" type="tns:receiveApprovalResponse"/>
+
+  <xs:complexType name="receiveApproval">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="taskId" type="xs:string"/>
+      <xs:element minOccurs="0" name="result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="receiveApprovalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="receiveApproval">
+    <wsdl:part element="tns:receiveApproval" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receiveApprovalResponse">
+    <wsdl:part element="tns:receiveApprovalResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TaskWsServcie">
+    <wsdl:operation name="receiveApproval">
+      <wsdl:input message="tns:receiveApproval" name="receiveApproval">
+    </wsdl:input>
+      <wsdl:output message="tns:receiveApprovalResponse" name="receiveApprovalResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TaskServiceImplServiceSoapBinding" type="tns:TaskWsServcie">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="receiveApproval">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="receiveApproval">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="receiveApprovalResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TaskServiceImplService">
+    <wsdl:port binding="tns:TaskServiceImplServiceSoapBinding" name="TaskWsServciePort">
+      <soap:address location="http://localhost:8887/HamsPort/cxf/TaskWsServcie"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

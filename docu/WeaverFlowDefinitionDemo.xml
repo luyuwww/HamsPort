@@ -1,0 +1,84 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soap:Body>
+      <ns1:getAllWorkflowRequestListResponse xmlns:ns1="webservices.services.weaver.com.cn">
+         <ns1:out>
+            <ns2:WorkflowRequestInfo xmlns:ns2="http://webservices.workflow.weaver">
+               <canEdit xmlns="http://webservices.workflow.weaver">false</canEdit>
+               <canView xmlns="http://webservices.workflow.weaver">false</canView>
+               <createTime xmlns="http://webservices.workflow.weaver">2019-09-04 16:47:14</createTime>
+               <creatorId xmlns="http://webservices.workflow.weaver">249</creatorId>
+               <creatorName xmlns="http://webservices.workflow.weaver">蓝琪</creatorName>
+               <currentNodeId xmlns="http://webservices.workflow.weaver">536</currentNodeId>
+               <currentNodeName xmlns="http://webservices.workflow.weaver">一级部门负责人审批</currentNodeName>
+               <forwardButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <isnextflow xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <lastOperateTime xmlns="http://webservices.workflow.weaver">2019-09-04 16:47:14</lastOperateTime>
+               <lastOperatorName xmlns="http://webservices.workflow.weaver">蓝琪</lastOperatorName>
+               <messageType xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <mustInputRemark xmlns="http://webservices.workflow.weaver">false</mustInputRemark>
+               <needAffirmance xmlns="http://webservices.workflow.weaver">false</needAffirmance>
+               <receiveTime xmlns="http://webservices.workflow.weaver">2019-09-04 16:47:14</receiveTime>
+               <rejectButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <remark xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <requestId xmlns="http://webservices.workflow.weaver">12277</requestId>
+               <requestLevel xmlns="http://webservices.workflow.weaver">0</requestLevel>
+               <requestName xmlns="http://webservices.workflow.weaver">文件查询、借用申请-蓝琪-2019-09-04</requestName>
+               <status xmlns="http://webservices.workflow.weaver">一级部门负责人审批</status>
+               <subbackButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <submitButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <subnobackButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowBaseInfo xmlns="http://webservices.workflow.weaver">
+                  <workflowId>100</workflowId>
+                  <workflowName>文件查询、借用申请</workflowName>
+                  <workflowTypeId>21</workflowTypeId>
+                  <workflowTypeName>综合事务管理</workflowTypeName>
+               </workflowBaseInfo>
+               <workflowDetailTableInfos xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowHtmlShow xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowHtmlTemplete xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowMainTableInfo xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowPhrases xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowRequestLogs xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+            </ns2:WorkflowRequestInfo>
+            <ns2:WorkflowRequestInfo xmlns:ns2="http://webservices.workflow.weaver">
+               <canEdit xmlns="http://webservices.workflow.weaver">false</canEdit>
+               <canView xmlns="http://webservices.workflow.weaver">false</canView>
+               <createTime xmlns="http://webservices.workflow.weaver">2019-09-03 09:26:55</createTime>
+               <creatorId xmlns="http://webservices.workflow.weaver">249</creatorId>
+               <creatorName xmlns="http://webservices.workflow.weaver">蓝琪</creatorName>
+               <currentNodeId xmlns="http://webservices.workflow.weaver">359</currentNodeId>
+               <currentNodeName xmlns="http://webservices.workflow.weaver">风险部相应领导审批</currentNodeName>
+               <forwardButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <isnextflow xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <lastOperateTime xmlns="http://webservices.workflow.weaver">2019-09-03 09:26:55</lastOperateTime>
+               <lastOperatorName xmlns="http://webservices.workflow.weaver">蓝琪</lastOperatorName>
+               <messageType xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <mustInputRemark xmlns="http://webservices.workflow.weaver">false</mustInputRemark>
+               <needAffirmance xmlns="http://webservices.workflow.weaver">false</needAffirmance>
+               <receiveTime xmlns="http://webservices.workflow.weaver">2019-09-03 09:26:55</receiveTime>
+               <rejectButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <remark xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <requestId xmlns="http://webservices.workflow.weaver">12275</requestId>
+               <requestLevel xmlns="http://webservices.workflow.weaver">1</requestLevel>
+               <requestName xmlns="http://webservices.workflow.weaver">流程请求标题</requestName>
+               <status xmlns="http://webservices.workflow.weaver">分叉起始点</status>
+               <subbackButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <submitButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <subnobackButtonName xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowBaseInfo xmlns="http://webservices.workflow.weaver">
+                  <workflowId>76</workflowId>
+                  <workflowName>借（领）用项目合同档案审批</workflowName>
+                  <workflowTypeId>18</workflowTypeId>
+                  <workflowTypeName>业务管理</workflowTypeName>
+               </workflowBaseInfo>
+               <workflowDetailTableInfos xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowHtmlShow xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowHtmlTemplete xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowMainTableInfo xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowPhrases xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+               <workflowRequestLogs xsi:nil="true" xmlns="http://webservices.workflow.weaver"/>
+            </ns2:WorkflowRequestInfo>
+         </ns1:out>
+      </ns1:getAllWorkflowRequestListResponse>
+   </soap:Body>
+</soap:Envelope>

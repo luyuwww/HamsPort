@@ -64,6 +64,7 @@
     <!-- CXF -->
     <jaxws:endpoint id="arcServicePublish" implementor="#arcServcieImpl" address="/ArcDataWs"/>
     <jaxws:endpoint id="GdDataWs" implementor="#GdDataService" address="/GdDataWsSingle"/>
+    <jaxws:endpoint id="taskServiceWS" implementor="#taskService"	address="/TaskWsServcie" />
 
     <!-- 事务配置-->
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
