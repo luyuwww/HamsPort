@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="fqsq" name="赋权申请流程" isExecutable="true">
+    <extensionElements>
+      <activiti:executionListener event="start" delegateExpression="#{operateVariables}"></activiti:executionListener>
+      <activiti:executionListener event="end" delegateExpression="#{noticeSqr}"></activiti:executionListener>
+    </extensionElements>
+    <startEvent id="startevent1" name="Start" activiti:initiator="applyUserId"></startEvent>
+    <serviceTask id="servicetask1" name="执行赋权操作" activiti:delegateExpression="${fqsqService}"></serviceTask>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <sequenceFlow id="flow5" sourceRef="servicetask1" targetRef="endevent1"></sequenceFlow>
+    <scriptTask id="scripttask1" name="否决" scriptFormat="javascript" activiti:autoStoreVariables="true">
+      <script>execution.setVariable("approvalResult", "2")</script>
+    </scriptTask>
+    <sequenceFlow id="flow14" sourceRef="scripttask1" targetRef="servicetask1"></sequenceFlow>
+    <userTask id="usertask4" name="外部系统审核中" activiti:assignee="ROOT">
+      <extensionElements>
+        <activiti:formProperty id="sqrdm" name="申请人代码" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sqrxm" name="申请人姓名" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sqrbm" name="申请人部门" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sqrq" name="申请日期" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sqyy" name="申请缘由" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sqsm" name="申请说明" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="spjg" name="审批结果" type="enum" required="true">
+          <activiti:value id="true" name="同意"></activiti:value>
+          <activiti:value id="false" name="不同意"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="spyj" name="审批意见" type="string" default="   "></activiti:formProperty>
+        <activiti:formProperty id="OutSystemFqrCode" name="外部系统赋权人code" type="string"></activiti:formProperty>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow25" sourceRef="startevent1" targetRef="usertask4"></sequenceFlow>
+    <exclusiveGateway id="exclusivegateway3" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow26" sourceRef="usertask4" targetRef="exclusivegateway3"></sequenceFlow>
+    <sequenceFlow id="flow28" sourceRef="exclusivegateway3" targetRef="scripttask1">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${spjg=="false"}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow29" sourceRef="exclusivegateway3" targetRef="servicetask1">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${spjg=="true"}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_fqsq">
+    <bpmndi:BPMNPlane bpmnElement="fqsq" id="BPMNPlane_fqsq">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="115.0" y="42.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="320.0" y="51.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="480.0" y="142.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="320.0" y="132.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask4" id="BPMNShape_usertask4">
+        <omgdc:Bounds height="71.0" width="105.0" x="80.0" y="130.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway3" id="BPMNShape_exclusivegateway3">
+        <omgdc:Bounds height="40.0" width="40.0" x="230.0" y="139.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="425.0" y="78.0"></omgdi:waypoint>
+        <omgdi:waypoint x="497.0" y="78.0"></omgdi:waypoint>
+        <omgdi:waypoint x="497.0" y="142.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow14" id="BPMNEdge_flow14">
+        <omgdi:waypoint x="372.0" y="132.0"></omgdi:waypoint>
+        <omgdi:waypoint x="372.0" y="106.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow25" id="BPMNEdge_flow25">
+        <omgdi:waypoint x="132.0" y="77.0"></omgdi:waypoint>
+        <omgdi:waypoint x="132.0" y="130.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow26" id="BPMNEdge_flow26">
+        <omgdi:waypoint x="185.0" y="165.0"></omgdi:waypoint>
+        <omgdi:waypoint x="230.0" y="159.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow28" id="BPMNEdge_flow28">
+        <omgdi:waypoint x="270.0" y="159.0"></omgdi:waypoint>
+        <omgdi:waypoint x="320.0" y="159.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow29" id="BPMNEdge_flow29">
+        <omgdi:waypoint x="250.0" y="139.0"></omgdi:waypoint>
+        <omgdi:waypoint x="250.0" y="78.0"></omgdi:waypoint>
+        <omgdi:waypoint x="320.0" y="78.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

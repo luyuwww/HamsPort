@@ -268,8 +268,6 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                     ArrayOfWorkflowRequestTableRecord arrayOfWorkflowRequestTableRecord1 = of.createArrayOfWorkflowRequestTableRecord();
                     List<WorkflowRequestTableRecord> workflowRequestTableRecords = arrayOfWorkflowRequestTableRecord1.getWorkflowRequestTableRecord();
 
-
-
                     for (Map<String, Object> map : dataList)  {//每个申请的条目
                         WorkflowRequestTableRecord workflowRequestTableRecord = of.createWorkflowRequestTableRecord();
                         ArrayOfWorkflowRequestTableField arrayOfWorkflowRequestTableField = of.createArrayOfWorkflowRequestTableField();
