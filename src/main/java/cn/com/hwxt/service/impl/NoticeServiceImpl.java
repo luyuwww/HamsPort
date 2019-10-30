@@ -43,8 +43,10 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
     public void sendActivitiMsg(String userCodes, String varsJson, String actTaskID) {
         if(isDebug){
             log.error(varsJson);
+            System.out.println(varsJson);
         }
         if(goToOutSystem){
+            System.out.println(1);
             toOutSysFlow(userCodes , varsJson , actTaskID);
         }else{
             toToDo(userCodes , varsJson , actTaskID);
@@ -99,6 +101,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
             mj = (vars.get("mj") == null ? "" : vars.get("mj").toString());
             List<Map<String, Object>> dataList = (List<Map<String, Object>>) vars.get("dataList");
 
+            System.out.println(2);
             if (null == dataList || dataList.size() < 1) {
                 log.error("档案系统发送了错误数.dataList为空");
                 return;
@@ -297,7 +300,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                     JAXBElement<ArrayOfWorkflowDetailTableInfo> detailTableInfoJAXBElement = of.createWorkflowRequestInfoWorkflowDetailTableInfos(arrayOfWorkflowDetailTableInfo);
                     wi.setWorkflowDetailTableInfos(detailTableInfoJAXBElement);
                     /****************申请的条目表 table end*************/
-                    service.submitWorkflowRequest(wi , 71116 , 249 , "submit" , "11");
+                    log.error(service.doCreateWorkflowRequest(wi , Integer.parseInt(sqrUser.getEsbid())));
                 }
             }
         } catch (Exception e) {

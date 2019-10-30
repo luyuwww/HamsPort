@@ -1,0 +1,67 @@
+:{"endtime":"2019-11-04 16:56:35","timeortimes":"时间","startime":"2019-10-30 16:56:35","sqsjqzh":"001","extendfield":"","approvalResult":"1","sqtype":"电子浏览","lymd":"工作参考","times":-1,"sqrxm":"蓝琪","sqsjqzmc":"担保集团","sqr_role_name":"部门员工","sqrq":"2019-10-30 16:51:02.477","sqrqzh":"001","mj":"","sqr_fqjs_names":null,"dids":"-1,1,2","sqrbm":"信息中心（金融科技中心）","sqrdm":"蓝琪","dataList":[{"PID":421,"ATTREX":2,"QZH":"001","CREATOR":"ROOT","CREATETIME":1563946878910,"DALXLEVEL":2,"STATUS":0,"ATTACHED":1,"F3":2,"F2":"201803901","DID":18791,"ATTR":0,"DALXLIBCODE":2,"TITLE":"2018-0390-1-2、放款通知书（深担（2018）年放字（0487）号）"},{"PID":186,"ATTREX":2,"QZH":"001","CREATOR":"ROOT","CREATETIME":1563946878257,"DALXLEVEL":2,"STATUS":0,"ATTACHED":1,"F3":17,"F2":"20180033","DID":18186,"ATTR":0,"DALXLIBCODE":2,"TITLE":"2018-0033-17、变更通知书（聚作照明）"}],"applyUserId":"蓝琪","libcode":2,"sqyy":"这是一个测试","tablename":"S_TMPRIGHT","sqrqzmc":"担保集团","sqrmj":null,"isshowgrid":true,"sqrqq":null,"sqsm":"申请从:2019-10-30 至 2019-11-04浏览","recentOperator":"蓝琪"}
+date:2019-10-30 16:56:38	thread:http-apr-8080-exec-6	level:WARN 	logger:org.springframework.web.servlet.PageNotFound    	msg:No mapping found for HTTP request with URI [/HamsPort/page/sendMsg] in DispatcherServlet with name 'springMVC'
+
+
+
+{
+	"endtime": "2019-11-04 16:56:35",
+	"timeortimes": "时间",
+	"startime": "2019-10-30 16:56:35",
+	"sqsjqzh": "001",
+	"extendfield": "",
+	"approvalResult": "1",
+	"sqtype": "电子浏览",
+	"lymd": "工作参考",
+	"times": -1,
+	"sqrxm": "蓝琪",
+	"sqsjqzmc": "担保集团",
+	"sqr_role_name": "部门员工",
+	"sqrq": "2019-10-30 16:51:02.477",
+	"sqrqzh": "001",
+	"mj": "",
+	"sqr_fqjs_names": null,
+	"dids": "-1,1,2",
+	"sqrbm": "信息中心（金融科技中心）",
+	"sqrdm": "蓝琪",
+	"dataList": [{
+		"PID": 421,
+		"ATTREX": 2,
+		"QZH": "001",
+		"CREATOR": "ROOT",
+		"CREATETIME": 1563946878910,
+		"DALXLEVEL": 2,
+		"STATUS": 0,
+		"ATTACHED": 1,
+		"F3": 2,
+		"F2": "201803901",
+		"DID": 18791,
+		"ATTR": 0,
+		"DALXLIBCODE": 2,
+		"TITLE": "2018-0390-1-2、放款通知书（深担（2018）年放字（0487）号）"
+	}, {
+		"PID": 186,
+		"ATTREX": 2,
+		"QZH": "001",
+		"CREATOR": "ROOT",
+		"CREATETIME": 1563946878257,
+		"DALXLEVEL": 2,
+		"STATUS": 0,
+		"ATTACHED": 1,
+		"F3": 17,
+		"F2": "20180033",
+		"DID": 18186,
+		"ATTR": 0,
+		"DALXLIBCODE": 2,
+		"TITLE": "2018-0033-17、变更通知书（聚作照明）"
+	}],
+	"applyUserId": "蓝琪",
+	"libcode": 2,
+	"sqyy": "这是一个测试",
+	"tablename": "S_TMPRIGHT",
+	"sqrqzmc": "担保集团",
+	"sqrmj": null,
+	"isshowgrid": true,
+	"sqrqq": null,
+	"sqsm": "申请从:2019-10-30 至 2019-11-04浏览",
+	"recentOperator": "蓝琪"
+}
