@@ -389,9 +389,9 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
 //            oaSendDoOrTodo(doneMessage , actTaskID , fqr , 2 ,1);
                 boolean oaRe = oaSendDoOrTodo(doneMsg, backlog.getActtaskid() , backlog.getUsercode() , 4 , 0);
                 if(oaRe){
-                    log.error("oa已办处理成功："+actTaskId);
+                    log.error("oa办毕处理成功："+actTaskId);
                 }else {
-                    log.error("oa已办处理异常："+actTaskId);
+                    log.error("oa办毕处理异常："+actTaskId);
                 }
             }
         }else{
