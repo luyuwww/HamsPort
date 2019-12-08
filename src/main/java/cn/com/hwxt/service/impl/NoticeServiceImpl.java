@@ -313,6 +313,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
         String sqrdm = "";
         String sqrxm = "";
         String sqrq = "";
+        String flowEndCallSqr = "";//是否发起给申请人
 
         ObjectMapper mapper = new ObjectMapper();
         Map<String,Object> vars = null;
@@ -323,6 +324,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
             sqrq = sqrq.substring(0 , sqrq.indexOf("."));//去除格式多余的0
             sqrdm = (vars.get("sqrdm") == null ? "" : vars.get("sqrdm").toString());
             sqrxm = (vars.get("sqrxm") == null ? "" : vars.get("sqrxm").toString());
+            flowEndCallSqr = (vars.get("flowEndCallSqr") == null ? "" : vars.get("flowEndCallSqr").toString());
             String fqrNames = "";
             for (String fqr : userCodeList) {
                 try {
@@ -334,55 +336,82 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                     }else{
                         continue;
                     }
-                    JSONObject oaTodoMessage = new JSONObject();
-                    oaTodoMessage.put("requestname","档案借阅申请("+sqrxm+"["+sqrdm+"])");
-                    oaTodoMessage.put("workflowname","利用流程");
-                    oaTodoMessage.put("nodename","审批节点");
-                    oaTodoMessage.put("pcurl",returnStr);
-                    oaTodoMessage.put("appurl","");
-                    oaTodoMessage.put("creator",sqrdm);
-                    oaTodoMessage.put("createdatetime",sqrq);
-                    oaTodoMessage.put("receivedatetime",sqrq);
-                    boolean oaRly = oaTodoMsg(oaTodoMessage , actTaskID , fqr);
-                    if(oaRly){log.error("OA发送消息成功！");}
+
+                    //流程结束 通知申请人 (泛微 申请已办    接收人 创建人都是自己  remark 1)
+                    if(StringUtils.isNotBlank(flowEndCallSqr) && flowEndCallSqr.equals("CALL")) {
+                        JSONObject oaTodoMessage = new JSONObject();
+                        oaTodoMessage.put("requestname","档案借阅申请-已经处理");
+                        oaTodoMessage.put("workflowname","利用流程");
+                        oaTodoMessage.put("nodename","结束节点");
+                        oaTodoMessage.put("pcurl",returnStr);
+                        oaTodoMessage.put("appurl","");
+                        oaTodoMessage.put("creator",fqr);
+                        oaTodoMessage.put("createdatetime",sqrq);
+                        oaTodoMessage.put("receivedatetime",sqrq);
+                        boolean oaRly = oaTodoMsg(oaTodoMessage , actTaskID , fqr , 1);
+                        if(oaRly){log.error("OA发送消息成功！");}
+                    }else{//通知审批人
+                        JSONObject oaTodoMessage = new JSONObject();
+                        oaTodoMessage.put("requestname","档案借阅申请("+sqrxm+"["+sqrdm+"])");
+                        oaTodoMessage.put("workflowname","利用流程");
+                        oaTodoMessage.put("nodename","审批节点");
+                        oaTodoMessage.put("pcurl",returnStr);
+                        oaTodoMessage.put("appurl","");
+                        oaTodoMessage.put("creator",sqrdm);
+                        oaTodoMessage.put("createdatetime",sqrq);
+                        oaTodoMessage.put("receivedatetime",sqrq);
+                        boolean oaRly = oaTodoMsg(oaTodoMessage , actTaskID , fqr , 0 );
+                        if(oaRly){log.error("OA发送消息成功！");}
+                    }
                 } catch (Exception e) {
                     log.error(e.getMessage() , e );
                 }
             }
-
         } catch (Exception e) {
             log.error("消息待办:" + e.getMessage());
         }
     }
 
     public void sendDestoryMsg(String actTaskId , String fqr , String flowStatus){
-        Boolean isEndTask = Boolean.FALSE;
-        //真是 最后的结束节点
-        if(StringUtils.isNotBlank(flowStatus) && flowStatus.equals("FINISHED")){
-            isEndTask = Boolean.TRUE;
-        }
         if(StringUtils.isBlank(actTaskId)){
             return;
         }
-        List<String> userCodeList = jdbcDao.quert4List("SELECT USERCODE FROM S_BACKLOG WHERE ACTTASKID='"+actTaskId+"'");
-        for (String usercode : userCodeList) {
+        //flowStatus=FINISHED 最后的结束节点 要把线上所有的变成办结
+        if(StringUtils.isNotBlank(flowStatus) && flowStatus.equals("FINISHED")){
+            List<SBacklog> backlogs = sBacklogMapper.getAllBacklogOnProcess(actTaskId);
+            for (SBacklog backlog : backlogs) {
+                JSONObject doneMsg = new JSONObject();
+                doneMsg.put("requestname","档案借阅审批");
+                doneMsg.put("workflowname","利用流程");
+                doneMsg.put("nodename","审批节点");
+                doneMsg.put("createdatetime",DateUtil.getCurrentTimeStr());
+                doneMsg.put("receivedatetime",DateUtil.getCurrentTimeStr());
+                //paraMap.put("flowStatus", (isLastTask ? "FINISHED" : "CONTINUE")) 这个值是Lams里面规定的
+//                 * isremark   0：待办     2：已办   4：办结
+//                 * viewtype   0：未读     1：已读;
+//            oaSendDoOrTodo(doneMessage , actTaskID , fqr , 2 ,1);
+                boolean oaRe = oaSendDoOrTodo(doneMsg, "TODOD", backlog.getUsercode() , 4, 0);
+                if(oaRe){
+                    log.error("oa已办处理成功："+actTaskId);
+                }else {
+                    log.error("oa已办处理异常："+actTaskId);
+                }
+            }
+        }else{
             JSONObject doneMsg = new JSONObject();
             doneMsg.put("requestname","档案借阅审批");
             doneMsg.put("workflowname","利用流程");
             doneMsg.put("nodename","审批节点");
             doneMsg.put("createdatetime",DateUtil.getCurrentTimeStr());
             doneMsg.put("receivedatetime",DateUtil.getCurrentTimeStr());
-            //paraMap.put("flowStatus", (isLastTask ? "FINISHED" : "CONTINUE")) 这个值是Lams里面规定的
-//                 * isremark   0：待办     2：已办   4：办结
-//                 * viewtype   0：未读     1：已读;
-//            oaSendDoOrTodo(doneMessage , actTaskID , fqr , 2 ,1);
-            boolean oaRe = oaSendDoOrTodo(doneMsg, actTaskId, usercode , (isEndTask ? 4 : 2) , (usercode.equals(fqr) ? 1 : 0));
+            boolean oaRe = oaSendDoOrTodo(doneMsg, actTaskId, fqr , 2 , 0);
             if(oaRe){
                 log.error("oa已办处理成功："+actTaskId);
             }else {
                 log.error("oa已办处理异常："+actTaskId);
             }
         }
+
 
         String upStateSql = "update s_backlog set isoper = '1' where acttaskid = '"+actTaskId+"'";
         jdbcDao.excute(upStateSql);
@@ -452,10 +481,10 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
     }
 
     /**
-     * OA待办消息
+     * OA待办消息 或者 申请已办 remark=0待办  remark=1已办
      */
-    private Boolean oaTodoMsg(JSONObject doneMessage, String actTaskID, String fqr){
-        return oaSendDoOrTodo(doneMessage , actTaskID , fqr , 0 , 0);
+    private Boolean oaTodoMsg(JSONObject doneMessage, String actTaskID, String fqr , Integer remark){
+        return oaSendDoOrTodo(doneMessage , actTaskID , fqr , remark , 0);
     }
 
     /**

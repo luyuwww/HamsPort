@@ -15,7 +15,7 @@
 			<property name="suppressAllComments" value="true" />  
 		</commentGenerator>
 		<jdbcConnection driverClass="net.sourceforge.jtds.jdbc.Driver"
-			connectionURL="jdbc:jtds:sqlserver://127.0.0.1:1433/ys" 
+			connectionURL="jdbc:jtds:sqlserver://127.0.0.1:1433/zkkg"
 			userId="sa" 
 		    password="sa">
 		</jdbcConnection>
@@ -33,12 +33,10 @@
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
-		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.com.hwxt.dao.i" targetProject="LamsIFML">
+		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.com.hwxt.dao.i" targetProject="HamsPort">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table tableName="S_QZH" domainObjectName="SQzh" />
-		<table tableName="S_GROUP" domainObjectName="SGroup" />
-		<table tableName="S_USER" domainObjectName="SUser" />
+		<table tableName="S_BACKLOG" domainObjectName="SBacklog" />
 	</context>
 </generatorConfiguration>

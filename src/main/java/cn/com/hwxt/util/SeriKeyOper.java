@@ -117,8 +117,8 @@ public class SeriKeyOper {
     //===================================分割线==================================================
     public static void main(String[] args) {
 
-        System.out.println(encrypt("ROOT"));
-        System.out.println(encrypt("izerui"));
+        System.out.println(encrypt("007432"));
+        System.out.println(encrypt("ams2000"));
         System.out.println(encrypt("收集整编"));
     }
 }
