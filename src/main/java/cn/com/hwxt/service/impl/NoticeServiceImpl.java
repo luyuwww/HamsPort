@@ -4,14 +4,12 @@ import ch.qos.logback.classic.Logger;
 import cn.com.hwxt.dao.i.SBacklogMapper;
 import cn.com.hwxt.dao.i.SUserMapper;
 import cn.com.hwxt.pojo.SBacklog;
-import cn.com.hwxt.pojo.SGroup;
-import cn.com.hwxt.pojo.SUser;
 import cn.com.hwxt.pojo.SBacklogExample;
+import cn.com.hwxt.pojo.SUser;
 import cn.com.hwxt.service.BaseService;
 import cn.com.hwxt.service.i.NoticeService;
 import cn.com.hwxt.util.CommonUtil;
 import cn.com.hwxt.util.DateUtil;
-import cn.com.hwxt.util.GlobalFinalAttr;
 import cn.com.hwxt.util.SeriKeyOper;
 import net.sf.json.JSONObject;
 import org.apache.commons.collections.MapUtils;
@@ -32,7 +30,6 @@ import javax.xml.bind.JAXBElement;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.rmi.RemoteException;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -390,7 +387,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
 //                 * isremark   0：待办     2：已办   4：办结
 //                 * viewtype   0：未读     1：已读;
 //            oaSendDoOrTodo(doneMessage , actTaskID , fqr , 2 ,1);
-                boolean oaRe = oaSendDoOrTodo(doneMsg, "TODOD", backlog.getUsercode() , 4, 0);
+                boolean oaRe = oaSendDoOrTodo(doneMsg, backlog.getActtaskid() , backlog.getUsercode() , 4 , 0);
                 if(oaRe){
                     log.error("oa已办处理成功："+actTaskId);
                 }else {
@@ -411,7 +408,6 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                 log.error("oa已办处理异常："+actTaskId);
             }
         }
-
 
         String upStateSql = "update s_backlog set isoper = '1' where acttaskid = '"+actTaskId+"'";
         jdbcDao.excute(upStateSql);
@@ -456,13 +452,6 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
         return result;
     }
 
-    @Override
-    public List<SBacklog> allBacklog(String usercode) {
-        SBacklogExample ex = new SBacklogExample();
-        ex.createCriteria().andUsercodeEqualTo(usercode);
-        List<SBacklog> backLoList = sBacklogMapper.selectByExample(ex);
-        return backLoList;
-    }
 
     /**
      * 得到登录Lams并且进入相应模块的URL

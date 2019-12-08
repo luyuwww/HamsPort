@@ -1,11 +1,8 @@
 package cn.com.hwxt.service.i;
 
-import cn.com.hwxt.pojo.SBacklog;
-import cn.com.hwxt.util.XmlObjUtil;
 import weaver.hrm.jaxb.DepartmentBeanArray;
 import weaver.hrm.jaxb.SubCompanyBeanArray;
 import weaver.hrm.jaxb.UserBeanArray;
-import weaver.hrm.webservice.SubCompanyBean;
 
 import java.util.List;
 

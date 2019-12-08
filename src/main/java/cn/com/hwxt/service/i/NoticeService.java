@@ -30,12 +30,6 @@ public interface NoticeService {
      * @return
      */
     public String deleteUserRequestInfoByJson(String usercode , String taskid);
-    /**
-     * 测试 得到用户代办列表
-     *
-     * @param usercode
-     */
-    public List<SBacklog> allBacklog(String usercode);
 
     /**
      * paraMap.put("flowStatus", (isLastTask ? "FINISHED" : "CONTINUE"));
