@@ -161,6 +161,21 @@ public class CommonCtler {
         model.addAttribute("orgList", list);
         return "orgList.jsp";
     }
+    /**
+     * 删除指定用户待办
+     */
+    @RequestMapping(value = "/deleteUserRequestInfoByJson", method = RequestMethod.GET)
+    public String deleteUserRequestInfoByJson() {
+        return "deleteUserRequestInfoByJson.jsp";
+    }
+    /**
+     * 删除指定用户待办
+     */
+    @RequestMapping(value = "/deleteTask", method = RequestMethod.POST)
+    public String deleteTask(Model model , @RequestParam String usercode, @RequestParam String taskid) {
+        model.addAttribute("message" , noticeServiceImpl.deleteUserRequestInfoByJson(usercode , taskid));
+        return "syncResult.jsp";
+    }
 
     /**
      * 单点登录
@@ -194,9 +209,9 @@ public class CommonCtler {
      * 当流程结束 申请人或者流程管理员销毁流程的时候 调用销毁待办
      */
     @RequestMapping(value = "/sendDestoryMsg", method = RequestMethod.POST)
-    public void sendDestoryMsg(@RequestParam String operUserCode, @RequestParam String actTaskId) {
+    public void sendDestoryMsg(@RequestParam String operUserCode, @RequestParam String actTaskId, @RequestParam String flowStatus) {
         if (StringUtils.isNotEmpty(operUserCode) && StringUtils.isNotEmpty(actTaskId)) {
-            noticeServiceImpl.sendDestoryMsg(actTaskId, operUserCode);
+            noticeServiceImpl.sendDestoryMsg(actTaskId, operUserCode , flowStatus);
         }
     }
 

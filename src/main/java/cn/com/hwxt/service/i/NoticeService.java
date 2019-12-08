@@ -24,11 +24,24 @@ public interface NoticeService {
     public String toDoList(String usercode);
 
     /**
+     * 根据用户的code和taskid删除待办 手动
+     * @param usercode
+     * @param taskid
+     * @return
+     */
+    public String deleteUserRequestInfoByJson(String usercode , String taskid);
+    /**
      * 测试 得到用户代办列表
      *
      * @param usercode
      */
     public List<SBacklog> allBacklog(String usercode);
 
-    public void sendDestoryMsg(String actTaskId , String  fqr);
+    /**
+     * paraMap.put("flowStatus", (isLastTask ? "FINISHED" : "CONTINUE"));
+     * @param actTaskId
+     * @param fqr
+     * @param flowStatus
+     */
+    public void sendDestoryMsg(String actTaskId , String fqr , String flowStatus);
 }

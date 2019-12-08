@@ -28,14 +28,18 @@
 
         <a class="btn btn-lg btn-primary"
            href="${pageContext.request.contextPath}/viewLogList">查看日志</a>
+        <a class="btn btn-lg btn-warning"
+           href="${pageContext.request.contextPath}/cxf">查看服务</a>
+        <br/>
         <a class="btn btn-lg btn-danger"
            href="${pageContext.request.contextPath}/syncAll">同步组织用户</a>
         <a class="btn btn-lg btn-success"
            href="${pageContext.request.contextPath}/getUsers">测试数据库连接</a>
-        <a class="btn btn-lg btn-success"
-           href="${pageContext.request.contextPath}/listAllOrg">测试OA的HRM服务是否可用</a>
-        <a class="btn btn-lg btn-warning"
-           href="${pageContext.request.contextPath}/cxf">查看服务</a>
+        <a class="btn btn-lg btn-info"
+           href="${pageContext.request.contextPath}/listAllOrg">测试泛微的HRM服务是否可用</a>
+        <br/>
+        <a class="btn btn-lg btn-danger"
+           href="${pageContext.request.contextPath}/deleteUserRequestInfoByJson">删除指定用户待办</a>
     </p>
 </div>
 </body>

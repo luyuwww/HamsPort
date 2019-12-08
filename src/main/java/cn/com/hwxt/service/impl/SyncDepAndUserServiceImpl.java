@@ -198,6 +198,11 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
             log.error(e.getMessage(),e);
         }
     }
+
+    /**
+     * 处理一个部门的员工
+     * @param ub
+     */
     private void dualOnOrgUser(UserBeanArray.UserBean ub){
         //<result column="ESBID" property="esbid" jdbcType="VARCHAR"/>  userid
         //<result column="ESBCODE" property="esbcode" jdbcType="VARCHAR"/> departmentid
@@ -219,6 +224,11 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
                 pid = -1;
             }
             SUser user = sUserMapper.getUserByEsbid(esbID);
+            //排除有重复的问题，如果oa主键找不到，再用我们主键找一次
+            if(null == user){
+                user = sUserMapper.getUserByUsercode(usercode);
+                user.setEsbid(esbID);
+            }
             if(user == null){
                 SUserWithBLOBs userBlob = new SUserWithBLOBs();
                 userBlob.setDid(getMaxDid("S_USER"));
