@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>UserBean complex typeµÄ Java Àà¡£
+ * <p>UserBean complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="UserBean">
@@ -246,7 +246,7 @@ public class UserBean {
     protected JAXBElement<String> workroom;
 
     /**
-     * »ñÈ¡accounttypeÊôĞÔµÄÖµ¡£
+     * è·å–accounttypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -258,7 +258,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃaccounttypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®accounttypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -270,7 +270,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡assistantidÊôĞÔµÄÖµ¡£
+     * è·å–assistantidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -282,7 +282,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃassistantidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®assistantidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -294,7 +294,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡bememberdateÊôĞÔµÄÖµ¡£
+     * è·å–bememberdateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -306,7 +306,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃbememberdateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®bememberdateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -318,7 +318,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡bepartydateÊôĞÔµÄÖµ¡£
+     * è·å–bepartydateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -330,7 +330,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃbepartydateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®bepartydateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -342,7 +342,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡birthdayÊôĞÔµÄÖµ¡£
+     * è·å–birthdayå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -354,7 +354,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃbirthdayÊôĞÔµÄÖµ¡£
+     * è®¾ç½®birthdayå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -366,7 +366,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡certificatenumÊôĞÔµÄÖµ¡£
+     * è·å–certificatenumå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -378,7 +378,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃcertificatenumÊôĞÔµÄÖµ¡£
+     * è®¾ç½®certificatenumå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -390,7 +390,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡createdateÊôĞÔµÄÖµ¡£
+     * è·å–createdateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -402,7 +402,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃcreatedateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®createdateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -414,7 +414,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡degreeÊôĞÔµÄÖµ¡£
+     * è·å–degreeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -426,7 +426,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃdegreeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®degreeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -438,7 +438,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡departmentcodeÊôĞÔµÄÖµ¡£
+     * è·å–departmentcodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -450,7 +450,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃdepartmentcodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®departmentcodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -462,7 +462,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡departmentidÊôĞÔµÄÖµ¡£
+     * è·å–departmentidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -474,7 +474,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃdepartmentidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®departmentidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -486,7 +486,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡departmentnameÊôĞÔµÄÖµ¡£
+     * è·å–departmentnameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -498,7 +498,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃdepartmentnameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®departmentnameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -510,7 +510,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡dsporderÊôĞÔµÄÖµ¡£
+     * è·å–dsporderå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -522,7 +522,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃdsporderÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dsporderå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -534,7 +534,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡educationlevelÊôĞÔµÄÖµ¡£
+     * è·å–educationlevelå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -546,7 +546,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃeducationlevelÊôĞÔµÄÖµ¡£
+     * è®¾ç½®educationlevelå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -558,7 +558,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡emailÊôĞÔµÄÖµ¡£
+     * è·å–emailå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -570,7 +570,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃemailÊôĞÔµÄÖµ¡£
+     * è®¾ç½®emailå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -582,7 +582,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡enddateÊôĞÔµÄÖµ¡£
+     * è·å–enddateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -594,7 +594,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃenddateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®enddateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -606,7 +606,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡faxÊôĞÔµÄÖµ¡£
+     * è·å–faxå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -618,7 +618,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃfaxÊôĞÔµÄÖµ¡£
+     * è®¾ç½®faxå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -630,7 +630,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡folkÊôĞÔµÄÖµ¡£
+     * è·å–folkå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -642,7 +642,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃfolkÊôĞÔµÄÖµ¡£
+     * è®¾ç½®folkå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -654,7 +654,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡healthinfoÊôĞÔµÄÖµ¡£
+     * è·å–healthinfoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -666,7 +666,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃhealthinfoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®healthinfoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -678,7 +678,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡heightÊôĞÔµÄÖµ¡£
+     * è·å–heightå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -690,7 +690,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃheightÊôĞÔµÄÖµ¡£
+     * è®¾ç½®heightå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -702,7 +702,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡homeaddressÊôĞÔµÄÖµ¡£
+     * è·å–homeaddresså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -714,7 +714,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃhomeaddressÊôĞÔµÄÖµ¡£
+     * è®¾ç½®homeaddresså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -726,7 +726,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡islabouunionÊôĞÔµÄÖµ¡£
+     * è·å–islabouunionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -738,7 +738,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃislabouunionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®islabouunionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -750,7 +750,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡jobactivitydescÊôĞÔµÄÖµ¡£
+     * è·å–jobactivitydescå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -762,7 +762,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃjobactivitydescÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobactivitydescå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -774,7 +774,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡jobactivityidÊôĞÔµÄÖµ¡£
+     * è·å–jobactivityidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -786,7 +786,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃjobactivityidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobactivityidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -798,7 +798,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡jobcallÊôĞÔµÄÖµ¡£
+     * è·å–jobcallå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -810,7 +810,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃjobcallÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobcallå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -822,7 +822,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡jobgroupidÊôĞÔµÄÖµ¡£
+     * è·å–jobgroupidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -834,7 +834,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃjobgroupidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobgroupidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -846,7 +846,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡joblevelÊôĞÔµÄÖµ¡£
+     * è·å–joblevelå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -858,7 +858,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃjoblevelÊôĞÔµÄÖµ¡£
+     * è®¾ç½®joblevelå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -870,7 +870,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡jobtitleÊôĞÔµÄÖµ¡£
+     * è·å–jobtitleå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -882,7 +882,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃjobtitleÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobtitleå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -894,7 +894,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡lastChangdateÊôĞÔµÄÖµ¡£
+     * è·å–lastChangdateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -906,7 +906,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃlastChangdateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®lastChangdateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -918,7 +918,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡lastnameÊôĞÔµÄÖµ¡£
+     * è·å–lastnameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -930,7 +930,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃlastnameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®lastnameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -942,7 +942,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡locationidÊôĞÔµÄÖµ¡£
+     * è·å–locationidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -954,7 +954,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃlocationidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®locationidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -966,7 +966,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡loginidÊôĞÔµÄÖµ¡£
+     * è·å–loginidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -978,7 +978,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃloginidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®loginidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -990,7 +990,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡manageridÊôĞÔµÄÖµ¡£
+     * è·å–manageridå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1002,7 +1002,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃmanageridÊôĞÔµÄÖµ¡£
+     * è®¾ç½®manageridå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1014,7 +1014,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡maritalstatusÊôĞÔµÄÖµ¡£
+     * è·å–maritalstatuså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1026,7 +1026,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃmaritalstatusÊôĞÔµÄÖµ¡£
+     * è®¾ç½®maritalstatuså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1038,7 +1038,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡mobileÊôĞÔµÄÖµ¡£
+     * è·å–mobileå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1050,7 +1050,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃmobileÊôĞÔµÄÖµ¡£
+     * è®¾ç½®mobileå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1062,7 +1062,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡mobilecallÊôĞÔµÄÖµ¡£
+     * è·å–mobilecallå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1074,7 +1074,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃmobilecallÊôĞÔµÄÖµ¡£
+     * è®¾ç½®mobilecallå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1086,7 +1086,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡nativeplaceÊôĞÔµÄÖµ¡£
+     * è·å–nativeplaceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1098,7 +1098,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃnativeplaceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®nativeplaceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1110,7 +1110,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡passwordÊôĞÔµÄÖµ¡£
+     * è·å–passwordå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1122,7 +1122,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃpasswordÊôĞÔµÄÖµ¡£
+     * è®¾ç½®passwordå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1134,7 +1134,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡policyÊôĞÔµÄÖµ¡£
+     * è·å–policyå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1146,7 +1146,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃpolicyÊôĞÔµÄÖµ¡£
+     * è®¾ç½®policyå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1158,7 +1158,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡regresidentplaceÊôĞÔµÄÖµ¡£
+     * è·å–regresidentplaceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1170,7 +1170,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃregresidentplaceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®regresidentplaceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1182,7 +1182,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡residentplaceÊôĞÔµÄÖµ¡£
+     * è·å–residentplaceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1194,7 +1194,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃresidentplaceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®residentplaceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1206,7 +1206,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡seclevelÊôĞÔµÄÖµ¡£
+     * è·å–seclevelå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1218,7 +1218,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃseclevelÊôĞÔµÄÖµ¡£
+     * è®¾ç½®seclevelå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1230,7 +1230,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡sexÊôĞÔµÄÖµ¡£
+     * è·å–sexå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1242,7 +1242,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃsexÊôĞÔµÄÖµ¡£
+     * è®¾ç½®sexå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1254,7 +1254,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡startdateÊôĞÔµÄÖµ¡£
+     * è·å–startdateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1266,7 +1266,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃstartdateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®startdateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1278,7 +1278,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡statusÊôĞÔµÄÖµ¡£
+     * è·å–statuså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1290,7 +1290,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃstatusÊôĞÔµÄÖµ¡£
+     * è®¾ç½®statuså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1302,7 +1302,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡subcompanycodeÊôĞÔµÄÖµ¡£
+     * è·å–subcompanycodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1314,7 +1314,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃsubcompanycodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®subcompanycodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1326,7 +1326,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡subcompanyid1ÊôĞÔµÄÖµ¡£
+     * è·å–subcompanyid1å±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1338,7 +1338,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃsubcompanyid1ÊôĞÔµÄÖµ¡£
+     * è®¾ç½®subcompanyid1å±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1350,7 +1350,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡subcompanynameÊôĞÔµÄÖµ¡£
+     * è·å–subcompanynameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1362,7 +1362,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃsubcompanynameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®subcompanynameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1374,7 +1374,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡systemlanguageÊôĞÔµÄÖµ¡£
+     * è·å–systemlanguageå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1386,7 +1386,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃsystemlanguageÊôĞÔµÄÖµ¡£
+     * è®¾ç½®systemlanguageå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1398,7 +1398,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡telephoneÊôĞÔµÄÖµ¡£
+     * è·å–telephoneå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1410,7 +1410,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃtelephoneÊôĞÔµÄÖµ¡£
+     * è®¾ç½®telephoneå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1422,7 +1422,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡tempresidentnumberÊôĞÔµÄÖµ¡£
+     * è·å–tempresidentnumberå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1434,7 +1434,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃtempresidentnumberÊôĞÔµÄÖµ¡£
+     * è®¾ç½®tempresidentnumberå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1446,7 +1446,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡useridÊôĞÔµÄÖµ¡£
+     * è·å–useridå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1458,7 +1458,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃuseridÊôĞÔµÄÖµ¡£
+     * è®¾ç½®useridå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1470,7 +1470,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡weightÊôĞÔµÄÖµ¡£
+     * è·å–weightå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1482,7 +1482,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃweightÊôĞÔµÄÖµ¡£
+     * è®¾ç½®weightå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1494,7 +1494,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡workcodeÊôĞÔµÄÖµ¡£
+     * è·å–workcodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1506,7 +1506,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃworkcodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®workcodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1518,7 +1518,7 @@ public class UserBean {
     }
 
     /**
-     * »ñÈ¡workroomÊôĞÔµÄÖµ¡£
+     * è·å–workroomå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1530,7 +1530,7 @@ public class UserBean {
     }
 
     /**
-     * ÉèÖÃworkroomÊôĞÔµÄÖµ¡£
+     * è®¾ç½®workroomå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

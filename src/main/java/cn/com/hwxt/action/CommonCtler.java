@@ -168,6 +168,7 @@ public class CommonCtler {
     public String deleteUserRequestInfoByJson() {
         return "deleteUserRequestInfoByJson.jsp";
     }
+
     /**
      * 删除指定用户待办
      */
@@ -191,6 +192,23 @@ public class CommonCtler {
             log.error("验证失败!");
         }
         return "redirect:" + lamsUrl;
+    }
+
+    /**
+     * 跳转到检测用户
+     */
+    @RequestMapping(value = "/gotoCheckUser", method = RequestMethod.GET)
+    public String gotoCheckUser() {
+        return "checkUser.jsp";
+    }
+
+    /**
+     * 检测用户是否存在
+     */
+    @RequestMapping(value = "/checkUser", method = RequestMethod.POST)
+    public String checkUser(Model model , @RequestParam String usercode, @RequestParam String password) {
+        model.addAttribute("message" , syncDepAndUserService.checkUser(usercode , password));
+        return "syncResult.jsp";
     }
 
 

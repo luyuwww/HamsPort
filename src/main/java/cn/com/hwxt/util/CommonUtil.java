@@ -21,9 +21,9 @@ public class CommonUtil {
      * @param modName  模块中文名称
      * @param modOwner 模块所属者 user,  "任务列表", "izerui"
      */
-    public static String generatUrl(SUser user, String modName, String modOwner, String lamsIP) {
+    public static String generatUrl(SUser user, String modName, String modOwner) {
         StringBuffer sb = new StringBuffer();
-        sb.append("http://").append(lamsIP).append("/Lams/autoLogin?card=").append(SeriKeyOper.encrypt(user.getUsercode()));
+        sb.append("Lams/autoLogin?card=").append(SeriKeyOper.encrypt(user.getUsercode()));
         sb.append("&serikey=").append(SeriKeyOper.encrypt(user.getPasswd())).append("&moduleName=");
         sb.append(SeriKeyOper.encrypt(modName)).append("&moduleOwner=").append(SeriKeyOper.encrypt(modOwner));
         sb.append("&random=").append(Math.random());
@@ -42,6 +42,19 @@ public class CommonUtil {
         return sb.toString();
     }
 
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("Lams/autoLogin4Web?card=").append(SeriKeyOper.encrypt("004820"));
+        sb.append("&serikey=").append(SeriKeyOper.encrypt("ams2000")).append("&_url=/web/todoList&taskid=b469815f-1afe-11ea-ac90-005056c00001");
+        sb.append("&random=").append(Math.random());
+        System.out.println(sb.toString());
+
+        StringBuffer sb1 = new StringBuffer();
+        sb1.append("Lams/autoLogin4Web?card=").append(SeriKeyOper.encrypt("000607"));
+        sb1.append("&serikey=").append(SeriKeyOper.encrypt("ams2000")).append("&_url=/web/myApplication");
+        sb1.append("&random=").append(Math.random());
+        System.out.println(sb1.toString());
+    }
 
     /**
      * 得到登录Lams的应用端并且进入我的申请

@@ -22,6 +22,8 @@ import weaver.hrm.HrmServicePortType;
 import weaver.hrm.jaxb.DepartmentBeanArray;
 import weaver.hrm.jaxb.SubCompanyBeanArray;
 import weaver.hrm.jaxb.UserBeanArray;
+import weaver.hrm.sso.ZKHrmService;
+import weaver.hrm.sso.ZKHrmServicePortType;
 import weaver.hrm.webservice.*;
 
 import java.net.MalformedURLException;
@@ -90,7 +92,6 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
                         }
                     }
                 }
-
             }
         }
     }
@@ -119,9 +120,12 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
      * @return
      */
     public  List<UserBeanArray.UserBean> oaUserListByOrgIDAndDeptID(String orgID , String deptID){
-        String userXML = getHrmServicePortType().getHrmUserInfoXML(ip , null, orgID , deptID, null, null);
+        String userXML = getHrmServicePortType().getHrmUserInfoXML(ip , "", orgID , deptID, "", "");
         UserBeanArray ua = XmlObjUtil.xml2Obj(userXML, UserBeanArray.class);
         return ua.getUserBean();
+    }
+    public Boolean checkUser(String usercode, String password){
+        return  getZKHrmServicePortType().checkUser(ip , usercode , password);
     }
 
     /**
@@ -140,11 +144,23 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
         return hrmServicePortType;
     }
 
+    /**
+     * 得到服务客户端申明
+     * @return
+     */
+    private ZKHrmServicePortType getZKHrmServicePortType(){
+        if(null == zkHrmServicePortType){
+            try {
+                URL url = new URL(wsdlZkHrm);
+                zkHrmServicePortType = new ZKHrmService(url).getZKHrmServiceHttpPort();
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+        return zkHrmServicePortType;
+    }
+
     private void dualOneDept(DepartmentBeanArray.DepartmentBean dept , String qzh){
-        //<result column="DEPCODE" property="depcode" jdbcType="VARCHAR"/>code
-        //<result column="DEPID" property="depid" jdbcType="VARCHAR"/> departmentid
-        //<result column="GFZJ" property="gfzj" jdbcType="VARCHAR"/> getShoworder 排序字段
-        //<result column="BH" property="bh" jdbcType="VARCHAR"/>    getSupdepartmentid
         Integer pid = -1;
         Integer did = -1;
         try {
@@ -283,6 +299,9 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
     @Autowired
     @Value("${weaver.wsdl}")
     protected String wsdl;
+    @Autowired
+    @Value("${weaver.wsdl.zkHrm}")
+    protected String wsdlZkHrm;
 
 
     @Autowired
@@ -291,5 +310,6 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
 
     private static String bz = "fromoa";
     private HrmServicePortType hrmServicePortType = null;
+    private ZKHrmServicePortType zkHrmServicePortType = null;
     private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
 }

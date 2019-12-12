@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>JobTitleBean complex typeµÄ Java Àà¡£
+ * <p>JobTitleBean complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="JobTitleBean">
@@ -77,7 +77,7 @@ public class JobTitleBean {
     protected JAXBElement<String> action;
 
     /**
-     * »ñÈ¡codeÊôĞÔµÄÖµ¡£
+     * è·å–codeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -89,7 +89,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃcodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®codeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -101,7 +101,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡departmentidÊôĞÔµÄÖµ¡£
+     * è·å–departmentidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -113,7 +113,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃdepartmentidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®departmentidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -125,7 +125,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡fullnameÊôĞÔµÄÖµ¡£
+     * è·å–fullnameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -137,7 +137,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃfullnameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®fullnameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -149,7 +149,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡jobcompetencyÊôĞÔµÄÖµ¡£
+     * è·å–jobcompetencyå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -161,7 +161,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃjobcompetencyÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobcompetencyå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -173,7 +173,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡jobdocÊôĞÔµÄÖµ¡£
+     * è·å–jobdocå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -185,7 +185,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃjobdocÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobdocå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -197,7 +197,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡jobresponsibilityÊôĞÔµÄÖµ¡£
+     * è·å–jobresponsibilityå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -209,7 +209,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃjobresponsibilityÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobresponsibilityå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -221,7 +221,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡jobtitleidÊôĞÔµÄÖµ¡£
+     * è·å–jobtitleidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -233,7 +233,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃjobtitleidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobtitleidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -245,7 +245,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡jobtitleremarkÊôĞÔµÄÖµ¡£
+     * è·å–jobtitleremarkå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -257,7 +257,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃjobtitleremarkÊôĞÔµÄÖµ¡£
+     * è®¾ç½®jobtitleremarkå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -269,7 +269,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡lastChangdateÊôĞÔµÄÖµ¡£
+     * è·å–lastChangdateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -281,7 +281,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃlastChangdateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®lastChangdateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -293,7 +293,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡shortnameÊôĞÔµÄÖµ¡£
+     * è·å–shortnameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -305,7 +305,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃshortnameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®shortnameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -317,7 +317,7 @@ public class JobTitleBean {
     }
 
     /**
-     * »ñÈ¡actionÊôĞÔµÄÖµ¡£
+     * è·å–actionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -329,7 +329,7 @@ public class JobTitleBean {
     }
 
     /**
-     * ÉèÖÃactionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®actionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

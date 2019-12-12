@@ -341,11 +341,11 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                         oaTodoMessage.put("workflowname","利用流程");
                         oaTodoMessage.put("nodename","结束节点");
                         oaTodoMessage.put("pcurl",returnStr);
-                        oaTodoMessage.put("appurl","");
+                        oaTodoMessage.put("appurl",returnStr);// appURL 和 PCURL先一致
                         oaTodoMessage.put("creator",fqr);
                         oaTodoMessage.put("createdatetime",sqrq);
                         oaTodoMessage.put("receivedatetime",sqrq);
-                        boolean oaRly = oaTodoMsg(oaTodoMessage , actTaskID , fqr , 1);
+                        boolean oaRly = oaTodoMsg(oaTodoMessage , actTaskID , fqr , 0);
                         if(oaRly){log.error("OA发送消息成功！");}
                     }else{//通知审批人
                         JSONObject oaTodoMessage = new JSONObject();
@@ -353,7 +353,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                         oaTodoMessage.put("workflowname","利用流程");
                         oaTodoMessage.put("nodename","审批节点");
                         oaTodoMessage.put("pcurl",returnStr);
-                        oaTodoMessage.put("appurl","");
+                        oaTodoMessage.put("appurl",returnStr);// appURL 和 PCURL先一致
                         oaTodoMessage.put("creator",sqrdm);
                         oaTodoMessage.put("createdatetime",sqrq);
                         oaTodoMessage.put("receivedatetime",sqrq);
@@ -377,16 +377,21 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
         if(StringUtils.isNotBlank(flowStatus) && flowStatus.equals("FINISHED")){
             List<SBacklog> backlogs = sBacklogMapper.getAllBacklogOnProcess(actTaskId);
             for (SBacklog backlog : backlogs) {
+                String returnStr = "Lams?random="+Math.random();
+                SUser user = sUserMapper.getUserByUsercode(backlog.getUsercode());
+                if (null != user) {
+                    returnStr = CommonUtil.generat2WebUrl(user, backlog.getActtaskid());
+                }else{
+                    continue;
+                }
                 JSONObject doneMsg = new JSONObject();
                 doneMsg.put("requestname","档案借阅审批");
                 doneMsg.put("workflowname","利用流程");
                 doneMsg.put("nodename","审批节点");
                 doneMsg.put("createdatetime",DateUtil.getCurrentTimeStr());
                 doneMsg.put("receivedatetime",DateUtil.getCurrentTimeStr());
-                //paraMap.put("flowStatus", (isLastTask ? "FINISHED" : "CONTINUE")) 这个值是Lams里面规定的
-//                 * isremark   0：待办     2：已办   4：办结
-//                 * viewtype   0：未读     1：已读;
-//            oaSendDoOrTodo(doneMessage , actTaskID , fqr , 2 ,1);
+                doneMsg.put("pcurl",returnStr);
+                doneMsg.put("appurl",returnStr);// appURL 和 PCURL先一致
                 boolean oaRe = oaSendDoOrTodo(doneMsg, backlog.getActtaskid() , backlog.getUsercode() , 4 , 0);
                 if(oaRe){
                     log.error("oa办毕处理成功："+actTaskId);
@@ -395,12 +400,22 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                 }
             }
         }else{
+            //待办消息
+            String returnStr = "Lams?random="+Math.random();
+            SUser user = sUserMapper.getUserByUsercode(fqr);
+            if (null != user) {
+                returnStr = CommonUtil.generat2WebUrl(user, actTaskId);
+            }else{
+                return;
+            }
             JSONObject doneMsg = new JSONObject();
             doneMsg.put("requestname","档案借阅审批");
             doneMsg.put("workflowname","利用流程");
             doneMsg.put("nodename","审批节点");
             doneMsg.put("createdatetime",DateUtil.getCurrentTimeStr());
             doneMsg.put("receivedatetime",DateUtil.getCurrentTimeStr());
+            doneMsg.put("pcurl",returnStr);
+            doneMsg.put("appurl",returnStr);// appURL 和 PCURL先一致
             boolean oaRe = oaSendDoOrTodo(doneMsg, actTaskId, fqr , 2 , 0);
             if(oaRe){
                 log.error("oa已办处理成功："+actTaskId);
@@ -441,7 +456,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                 SUser user = sUserMapper.getUserByUsercode(usercode);
                 if (user != null) {
                     String title = "档案系统审批: 待处理" + todoNum + "条数据";
-                    String url = generatUrl(user, "任务列表", "izerui");
+                    String url = CommonUtil.generatUrl(user, "任务列表", "izerui");
                     System.out.println(title);
                     System.out.println(url);
                 }
@@ -450,23 +465,6 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
             }
         }
         return result;
-    }
-
-
-    /**
-     * 得到登录Lams并且进入相应模块的URL
-     *
-     * @param user     用户
-     * @param modName  模块中文名称
-     * @param modOwner 模块所属者
-     */
-    private String generatUrl(SUser user, String modName, String modOwner) {
-        StringBuffer sb = new StringBuffer();
-        sb.append("http://").append(lamsIP).append("/Lams/autoLogin?card=").append(SeriKeyOper.encrypt(user.getUsercode()));
-        sb.append("&serikey=").append(SeriKeyOper.encrypt(user.getPasswd())).append("&moduleName=");
-        sb.append(SeriKeyOper.encrypt(modName)).append("&moduleOwner=").append(SeriKeyOper.encrypt(modOwner));
-        sb.append("&random=").append(Math.random());
-        return sb.toString();
     }
 
     /**
@@ -607,6 +605,6 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
     private String sqTitle;
 
     private OfsTodoDataWebServicePortType ofsTodoDataWebService;
-    private  WorkflowServicePortType flowWebServcie;
+    private WorkflowServicePortType flowWebServcie;
     private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
 }

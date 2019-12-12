@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>DepartmentBean complex typeµÄ Java Àà¡£
+ * <p>DepartmentBean complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="DepartmentBean">
@@ -73,7 +73,7 @@ public class DepartmentBean {
     protected JAXBElement<String> lastChangdate;
 
     /**
-     * »ñÈ¡canceledÊôĞÔµÄÖµ¡£
+     * è·å–canceledå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -85,7 +85,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃcanceledÊôĞÔµÄÖµ¡£
+     * è®¾ç½®canceledå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -97,7 +97,7 @@ public class DepartmentBean {
     }
 
     /**
-     * »ñÈ¡codeÊôĞÔµÄÖµ¡£
+     * è·å–codeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -109,7 +109,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃcodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®codeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -121,7 +121,7 @@ public class DepartmentBean {
     }
 
     /**
-     * »ñÈ¡departmentidÊôĞÔµÄÖµ¡£
+     * è·å–departmentidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -133,7 +133,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃdepartmentidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®departmentidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -145,7 +145,7 @@ public class DepartmentBean {
     }
 
     /**
-     * »ñÈ¡fullnameÊôĞÔµÄÖµ¡£
+     * è·å–fullnameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -157,7 +157,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃfullnameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®fullnameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -169,7 +169,7 @@ public class DepartmentBean {
     }
 
     /**
-     * »ñÈ¡shortnameÊôĞÔµÄÖµ¡£
+     * è·å–shortnameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -181,7 +181,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃshortnameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®shortnameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -193,7 +193,7 @@ public class DepartmentBean {
     }
 
     /**
-     * »ñÈ¡showorderÊôĞÔµÄÖµ¡£
+     * è·å–showorderå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -205,7 +205,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃshoworderÊôĞÔµÄÖµ¡£
+     * è®¾ç½®showorderå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -217,7 +217,7 @@ public class DepartmentBean {
     }
 
     /**
-     * »ñÈ¡subcompanyidÊôĞÔµÄÖµ¡£
+     * è·å–subcompanyidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -229,7 +229,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃsubcompanyidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®subcompanyidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -241,7 +241,7 @@ public class DepartmentBean {
     }
 
     /**
-     * »ñÈ¡supdepartmentidÊôĞÔµÄÖµ¡£
+     * è·å–supdepartmentidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -253,7 +253,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃsupdepartmentidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®supdepartmentidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -265,7 +265,7 @@ public class DepartmentBean {
     }
 
     /**
-     * »ñÈ¡actionÊôĞÔµÄÖµ¡£
+     * è·å–actionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -277,7 +277,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃactionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®actionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -289,7 +289,7 @@ public class DepartmentBean {
     }
 
     /**
-     * »ñÈ¡lastChangdateÊôĞÔµÄÖµ¡£
+     * è·å–lastChangdateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -301,7 +301,7 @@ public class DepartmentBean {
     }
 
     /**
-     * ÉèÖÃlastChangdateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®lastChangdateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

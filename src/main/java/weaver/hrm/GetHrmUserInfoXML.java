@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType>
@@ -58,7 +58,7 @@ public class GetHrmUserInfoXML {
     protected String in5;
 
     /**
-     * »ñÈ¡in0ÊôĞÔµÄÖµ¡£
+     * è·å–in0å±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -70,7 +70,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * ÉèÖÃin0ÊôĞÔµÄÖµ¡£
+     * è®¾ç½®in0å±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -82,7 +82,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * »ñÈ¡in1ÊôĞÔµÄÖµ¡£
+     * è·å–in1å±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -94,7 +94,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * ÉèÖÃin1ÊôĞÔµÄÖµ¡£
+     * è®¾ç½®in1å±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -106,7 +106,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * »ñÈ¡in2ÊôĞÔµÄÖµ¡£
+     * è·å–in2å±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -118,7 +118,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * ÉèÖÃin2ÊôĞÔµÄÖµ¡£
+     * è®¾ç½®in2å±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -130,7 +130,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * »ñÈ¡in3ÊôĞÔµÄÖµ¡£
+     * è·å–in3å±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -142,7 +142,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * ÉèÖÃin3ÊôĞÔµÄÖµ¡£
+     * è®¾ç½®in3å±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -154,7 +154,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * »ñÈ¡in4ÊôĞÔµÄÖµ¡£
+     * è·å–in4å±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -166,7 +166,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * ÉèÖÃin4ÊôĞÔµÄÖµ¡£
+     * è®¾ç½®in4å±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -178,7 +178,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * »ñÈ¡in5ÊôĞÔµÄÖµ¡£
+     * è·å–in5å±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -190,7 +190,7 @@ public class GetHrmUserInfoXML {
     }
 
     /**
-     * ÉèÖÃin5ÊôĞÔµÄÖµ¡£
+     * è®¾ç½®in5å±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

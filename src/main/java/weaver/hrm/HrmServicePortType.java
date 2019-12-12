@@ -33,15 +33,15 @@ public interface HrmServicePortType {
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.changeUserPassword")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "changeUserPassword", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.ChangeUserPassword")
-    @ResponseWrapper(localName = "changeUserPasswordResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.ChangeUserPasswordResponse")
+    @RequestWrapper(localName = "changeUserPassword", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.ChangeUserPassword")
+    @ResponseWrapper(localName = "changeUserPasswordResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.ChangeUserPasswordResponse")
     public boolean changeUserPassword(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1,
-        @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
-        String in2);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1,
+            @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
+                    String in2);
 
     /**
      * 
@@ -53,15 +53,29 @@ public interface HrmServicePortType {
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmJobTitleInfoXML")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "getHrmJobTitleInfoXML", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmJobTitleInfoXML")
-    @ResponseWrapper(localName = "getHrmJobTitleInfoXMLResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmJobTitleInfoXMLResponse")
+    @RequestWrapper(localName = "getHrmJobTitleInfoXML", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmJobTitleInfoXML")
+    @ResponseWrapper(localName = "getHrmJobTitleInfoXMLResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmJobTitleInfoXMLResponse")
     public String getHrmJobTitleInfoXML(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1,
-        @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
-        String in2);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1,
+            @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
+                    String in2);
+
+    /**
+     * 
+     * @param in0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getDepartmentInfoWithPage")
+    @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
+    @RequestWrapper(localName = "getDepartmentInfoWithPage", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetDepartmentInfoWithPage")
+    @ResponseWrapper(localName = "getDepartmentInfoWithPageResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetDepartmentInfoWithPageResponse")
+    public String getDepartmentInfoWithPage(
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0);
 
     /**
      * 
@@ -72,13 +86,13 @@ public interface HrmServicePortType {
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmDepartmentInfoXML")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "getHrmDepartmentInfoXML", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmDepartmentInfoXML")
-    @ResponseWrapper(localName = "getHrmDepartmentInfoXMLResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmDepartmentInfoXMLResponse")
+    @RequestWrapper(localName = "getHrmDepartmentInfoXML", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmDepartmentInfoXML")
+    @ResponseWrapper(localName = "getHrmDepartmentInfoXMLResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmDepartmentInfoXMLResponse")
     public String getHrmDepartmentInfoXML(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1);
 
     /**
      * 
@@ -89,13 +103,13 @@ public interface HrmServicePortType {
      */
     @WebMethod(operationName = "SynSubCompany", action = "urn:weaver.hrm.webservice.HrmService.SynSubCompany")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "SynSubCompany", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.SynSubCompany")
-    @ResponseWrapper(localName = "SynSubCompanyResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.SynSubCompanyResponse")
+    @RequestWrapper(localName = "SynSubCompany", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SynSubCompany")
+    @ResponseWrapper(localName = "SynSubCompanyResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SynSubCompanyResponse")
     public String synSubCompany(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1);
 
     /**
      * 
@@ -103,33 +117,33 @@ public interface HrmServicePortType {
      * @param in2
      * @param in1
      * @return
-     *     returns weaver.hrm.ArrayOfJobTitleBean
+     *     returns waear.hrm.ArrayOfJobTitleBean
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmJobTitleInfo")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "getHrmJobTitleInfo", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmJobTitleInfo")
-    @ResponseWrapper(localName = "getHrmJobTitleInfoResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmJobTitleInfoResponse")
+    @RequestWrapper(localName = "getHrmJobTitleInfo", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmJobTitleInfo")
+    @ResponseWrapper(localName = "getHrmJobTitleInfoResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmJobTitleInfoResponse")
     public ArrayOfJobTitleBean getHrmJobTitleInfo(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1,
-        @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
-        String in2);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1,
+            @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
+                    String in2);
 
     /**
      * 
      * @param in0
      * @return
-     *     returns weaver.hrm.ArrayOfSubCompanyBean
+     *     returns waear.hrm.ArrayOfSubCompanyBean
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmSubcompanyInfo")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "getHrmSubcompanyInfo", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmSubcompanyInfo")
-    @ResponseWrapper(localName = "getHrmSubcompanyInfoResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmSubcompanyInfoResponse")
+    @RequestWrapper(localName = "getHrmSubcompanyInfo", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmSubcompanyInfo")
+    @ResponseWrapper(localName = "getHrmSubcompanyInfoResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmSubcompanyInfoResponse")
     public ArrayOfSubCompanyBean getHrmSubcompanyInfo(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0);
 
     /**
      * 
@@ -140,13 +154,13 @@ public interface HrmServicePortType {
      */
     @WebMethod(operationName = "SynDepartment", action = "urn:weaver.hrm.webservice.HrmService.SynDepartment")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "SynDepartment", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.SynDepartment")
-    @ResponseWrapper(localName = "SynDepartmentResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.SynDepartmentResponse")
+    @RequestWrapper(localName = "SynDepartment", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SynDepartment")
+    @ResponseWrapper(localName = "SynDepartmentResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SynDepartmentResponse")
     public String synDepartment(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1);
 
     /**
      * 
@@ -157,25 +171,25 @@ public interface HrmServicePortType {
      * @param in4
      * @param in3
      * @return
-     *     returns weaver.hrm.ArrayOfUserBean
+     *     returns waear.hrm.ArrayOfUserBean
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmUserInfo")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "getHrmUserInfo", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmUserInfo")
-    @ResponseWrapper(localName = "getHrmUserInfoResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmUserInfoResponse")
+    @RequestWrapper(localName = "getHrmUserInfo", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmUserInfo")
+    @ResponseWrapper(localName = "getHrmUserInfoResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmUserInfoResponse")
     public ArrayOfUserBean getHrmUserInfo(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1,
-        @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
-        String in2,
-        @WebParam(name = "in3", targetNamespace = "http://localhost/services/HrmService")
-        String in3,
-        @WebParam(name = "in4", targetNamespace = "http://localhost/services/HrmService")
-        String in4,
-        @WebParam(name = "in5", targetNamespace = "http://localhost/services/HrmService")
-        String in5);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1,
+            @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
+                    String in2,
+            @WebParam(name = "in3", targetNamespace = "http://localhost/services/HrmService")
+                    String in3,
+            @WebParam(name = "in4", targetNamespace = "http://localhost/services/HrmService")
+                    String in4,
+            @WebParam(name = "in5", targetNamespace = "http://localhost/services/HrmService")
+                    String in5);
 
     /**
      * 
@@ -187,15 +201,29 @@ public interface HrmServicePortType {
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.checkUser")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "checkUser", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.CheckUser")
-    @ResponseWrapper(localName = "checkUserResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.CheckUserResponse")
+    @RequestWrapper(localName = "checkUser", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.CheckUser")
+    @ResponseWrapper(localName = "checkUserResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.CheckUserResponse")
     public boolean checkUser(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1,
-        @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
-        String in2);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1,
+            @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
+                    String in2);
+
+    /**
+     * 
+     * @param in0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getJobtitleInfoWithPage")
+    @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
+    @RequestWrapper(localName = "getJobtitleInfoWithPage", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetJobtitleInfoWithPage")
+    @ResponseWrapper(localName = "getJobtitleInfoWithPageResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetJobtitleInfoWithPageResponse")
+    public String getJobtitleInfoWithPage(
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0);
 
     /**
      * 
@@ -206,30 +234,92 @@ public interface HrmServicePortType {
      */
     @WebMethod(operationName = "SynHrmResource", action = "urn:weaver.hrm.webservice.HrmService.SynHrmResource")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "SynHrmResource", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.SynHrmResource")
-    @ResponseWrapper(localName = "SynHrmResourceResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.SynHrmResourceResponse")
+    @RequestWrapper(localName = "SynHrmResource", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SynHrmResource")
+    @ResponseWrapper(localName = "SynHrmResourceResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SynHrmResourceResponse")
     public String synHrmResource(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1);
+
+    /**
+     * 
+     * @param in0
+     * @param in2
+     * @param in1
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmUserImage")
+    @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
+    @RequestWrapper(localName = "getHrmUserImage", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmUserImage")
+    @ResponseWrapper(localName = "getHrmUserImageResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmUserImageResponse")
+    public String getHrmUserImage(
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1,
+            @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
+                    String in2);
+
+    /**
+     * 
+     * @param in0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.sycHrmUserImage")
+    @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
+    @RequestWrapper(localName = "sycHrmUserImage", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SycHrmUserImage")
+    @ResponseWrapper(localName = "sycHrmUserImageResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SycHrmUserImageResponse")
+    public String sycHrmUserImage(
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0);
 
     /**
      * 
      * @param in0
      * @param in1
      * @return
-     *     returns weaver.hrm.ArrayOfDepartmentBean
+     *     returns waear.hrm.ArrayOfDepartmentBean
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmDepartmentInfo")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "getHrmDepartmentInfo", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmDepartmentInfo")
-    @ResponseWrapper(localName = "getHrmDepartmentInfoResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmDepartmentInfoResponse")
+    @RequestWrapper(localName = "getHrmDepartmentInfo", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmDepartmentInfo")
+    @ResponseWrapper(localName = "getHrmDepartmentInfoResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmDepartmentInfoResponse")
     public ArrayOfDepartmentBean getHrmDepartmentInfo(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1);
+
+    /**
+     * 
+     * @param in0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmUserInfoWithPage")
+    @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
+    @RequestWrapper(localName = "getHrmUserInfoWithPage", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmUserInfoWithPage")
+    @ResponseWrapper(localName = "getHrmUserInfoWithPageResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmUserInfoWithPageResponse")
+    public String getHrmUserInfoWithPage(
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0);
+
+    /**
+     * 
+     * @param in0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmSubcompanyInfoWithPage")
+    @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
+    @RequestWrapper(localName = "getHrmSubcompanyInfoWithPage", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmSubcompanyInfoWithPage")
+    @ResponseWrapper(localName = "getHrmSubcompanyInfoWithPageResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmSubcompanyInfoWithPageResponse")
+    public String getHrmSubcompanyInfoWithPage(
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0);
 
     /**
      * 
@@ -240,13 +330,13 @@ public interface HrmServicePortType {
      */
     @WebMethod(operationName = "SynJobtitle", action = "urn:weaver.hrm.webservice.HrmService.SynJobtitle")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "SynJobtitle", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.SynJobtitle")
-    @ResponseWrapper(localName = "SynJobtitleResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.SynJobtitleResponse")
+    @RequestWrapper(localName = "SynJobtitle", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SynJobtitle")
+    @ResponseWrapper(localName = "SynJobtitleResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.SynJobtitleResponse")
     public String synJobtitle(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1);
 
     /**
      * 
@@ -256,11 +346,11 @@ public interface HrmServicePortType {
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmSubcompanyInfoXML")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "getHrmSubcompanyInfoXML", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmSubcompanyInfoXML")
-    @ResponseWrapper(localName = "getHrmSubcompanyInfoXMLResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmSubcompanyInfoXMLResponse")
+    @RequestWrapper(localName = "getHrmSubcompanyInfoXML", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmSubcompanyInfoXML")
+    @ResponseWrapper(localName = "getHrmSubcompanyInfoXMLResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmSubcompanyInfoXMLResponse")
     public String getHrmSubcompanyInfoXML(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0);
 
     /**
      * 
@@ -275,20 +365,20 @@ public interface HrmServicePortType {
      */
     @WebMethod(action = "urn:weaver.hrm.webservice.HrmService.getHrmUserInfoXML")
     @WebResult(name = "out", targetNamespace = "http://localhost/services/HrmService")
-    @RequestWrapper(localName = "getHrmUserInfoXML", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmUserInfoXML")
-    @ResponseWrapper(localName = "getHrmUserInfoXMLResponse", targetNamespace = "http://localhost/services/HrmService", className = "weaver.hrm.GetHrmUserInfoXMLResponse")
+    @RequestWrapper(localName = "getHrmUserInfoXML", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmUserInfoXML")
+    @ResponseWrapper(localName = "getHrmUserInfoXMLResponse", targetNamespace = "http://localhost/services/HrmService", className = "waear.hrm.GetHrmUserInfoXMLResponse")
     public String getHrmUserInfoXML(
-        @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
-        String in0,
-        @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
-        String in1,
-        @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
-        String in2,
-        @WebParam(name = "in3", targetNamespace = "http://localhost/services/HrmService")
-        String in3,
-        @WebParam(name = "in4", targetNamespace = "http://localhost/services/HrmService")
-        String in4,
-        @WebParam(name = "in5", targetNamespace = "http://localhost/services/HrmService")
-        String in5);
+            @WebParam(name = "in0", targetNamespace = "http://localhost/services/HrmService")
+                    String in0,
+            @WebParam(name = "in1", targetNamespace = "http://localhost/services/HrmService")
+                    String in1,
+            @WebParam(name = "in2", targetNamespace = "http://localhost/services/HrmService")
+                    String in2,
+            @WebParam(name = "in3", targetNamespace = "http://localhost/services/HrmService")
+                    String in3,
+            @WebParam(name = "in4", targetNamespace = "http://localhost/services/HrmService")
+                    String in4,
+            @WebParam(name = "in5", targetNamespace = "http://localhost/services/HrmService")
+                    String in5);
 
 }

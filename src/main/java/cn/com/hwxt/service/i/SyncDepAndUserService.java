@@ -36,4 +36,12 @@ public interface SyncDepAndUserService {
      */
     public  List<UserBeanArray.UserBean> oaUserListByOrgIDAndDeptID(String orgID , String deptID);
 
+    /**
+     * 调用oa接口判断用户是否存在
+     * @param usercode
+     * @param password
+     * @return
+     */
+    public Boolean checkUser(String usercode, String password);
+
 }

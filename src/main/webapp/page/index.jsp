@@ -40,6 +40,9 @@
         <br/>
         <a class="btn btn-lg btn-danger"
            href="${pageContext.request.contextPath}/deleteUserRequestInfoByJson">删除指定用户待办</a>
+        <br/>
+        <a class="btn btn-lg btn-success"
+           href="${pageContext.request.contextPath}/gotoCheckUser">检测用户</a>
     </p>
 </div>
 </body>

@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the weaver.hrm package. 
+ * generated in the waear.hrm package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -24,6 +24,17 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _JobTitleBeanShortname_QNAME = new QName("http://webservice.hrm.weaver", "_shortname");
+    private final static QName _JobTitleBeanJobcompetency_QNAME = new QName("http://webservice.hrm.weaver", "_jobcompetency");
+    private final static QName _JobTitleBeanJobdoc_QNAME = new QName("http://webservice.hrm.weaver", "_jobdoc");
+    private final static QName _JobTitleBeanDepartmentid_QNAME = new QName("http://webservice.hrm.weaver", "_departmentid");
+    private final static QName _JobTitleBeanCode_QNAME = new QName("http://webservice.hrm.weaver", "_code");
+    private final static QName _JobTitleBeanLastChangdate_QNAME = new QName("http://webservice.hrm.weaver", "_lastChangdate");
+    private final static QName _JobTitleBeanAction_QNAME = new QName("http://webservice.hrm.weaver", "action");
+    private final static QName _JobTitleBeanJobresponsibility_QNAME = new QName("http://webservice.hrm.weaver", "_jobresponsibility");
+    private final static QName _JobTitleBeanJobtitleid_QNAME = new QName("http://webservice.hrm.weaver", "_jobtitleid");
+    private final static QName _JobTitleBeanJobtitleremark_QNAME = new QName("http://webservice.hrm.weaver", "_jobtitleremark");
+    private final static QName _JobTitleBeanFullname_QNAME = new QName("http://webservice.hrm.weaver", "_fullname");
     private final static QName _UserBeanEnddate_QNAME = new QName("http://webservice.hrm.weaver", "enddate");
     private final static QName _UserBeanDepartmentname_QNAME = new QName("http://webservice.hrm.weaver", "departmentname");
     private final static QName _UserBeanMaritalstatus_QNAME = new QName("http://webservice.hrm.weaver", "maritalstatus");
@@ -75,29 +86,90 @@ public class ObjectFactory {
     private final static QName _UserBeanJobcall_QNAME = new QName("http://webservice.hrm.weaver", "jobcall");
     private final static QName _UserBeanManagerid_QNAME = new QName("http://webservice.hrm.weaver", "managerid");
     private final static QName _UserBeanWorkroom_QNAME = new QName("http://webservice.hrm.weaver", "workroom");
-    private final static QName _DepartmentBeanShortname_QNAME = new QName("http://webservice.hrm.weaver", "_shortname");
     private final static QName _DepartmentBeanSupdepartmentid_QNAME = new QName("http://webservice.hrm.weaver", "_supdepartmentid");
-    private final static QName _DepartmentBeanDepartmentid_QNAME = new QName("http://webservice.hrm.weaver", "_departmentid");
     private final static QName _DepartmentBeanCanceled_QNAME = new QName("http://webservice.hrm.weaver", "_canceled");
-    private final static QName _DepartmentBeanCode_QNAME = new QName("http://webservice.hrm.weaver", "_code");
-    private final static QName _DepartmentBeanAction_QNAME = new QName("http://webservice.hrm.weaver", "action");
     private final static QName _DepartmentBeanSubcompanyid_QNAME = new QName("http://webservice.hrm.weaver", "_subcompanyid");
-    private final static QName _DepartmentBeanFullname_QNAME = new QName("http://webservice.hrm.weaver", "_fullname");
     private final static QName _DepartmentBeanShoworder_QNAME = new QName("http://webservice.hrm.weaver", "_showorder");
-    private final static QName _JobTitleBeanJobcompetency_QNAME = new QName("http://webservice.hrm.weaver", "_jobcompetency");
-    private final static QName _JobTitleBeanJobdoc_QNAME = new QName("http://webservice.hrm.weaver", "_jobdoc");
-    private final static QName _JobTitleBeanLastChangdate_QNAME = new QName("http://webservice.hrm.weaver", "_lastChangdate");
-    private final static QName _JobTitleBeanJobresponsibility_QNAME = new QName("http://webservice.hrm.weaver", "_jobresponsibility");
-    private final static QName _JobTitleBeanJobtitleid_QNAME = new QName("http://webservice.hrm.weaver", "_jobtitleid");
-    private final static QName _JobTitleBeanJobtitleremark_QNAME = new QName("http://webservice.hrm.weaver", "_jobtitleremark");
     private final static QName _SubCompanyBeanWebsite_QNAME = new QName("http://webservice.hrm.weaver", "_website");
     private final static QName _SubCompanyBeanSupsubcompanyid_QNAME = new QName("http://webservice.hrm.weaver", "_supsubcompanyid");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: weaver.hrm
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: waear.hrm
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfJobTitleBean }
+     * 
+     */
+    public ArrayOfJobTitleBean createArrayOfJobTitleBean() {
+        return new ArrayOfJobTitleBean();
+    }
+
+    /**
+     * Create an instance of {@link SubCompanyBean }
+     * 
+     */
+    public SubCompanyBean createSubCompanyBean() {
+        return new SubCompanyBean();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfUserBean }
+     * 
+     */
+    public ArrayOfUserBean createArrayOfUserBean() {
+        return new ArrayOfUserBean();
+    }
+
+    /**
+     * Create an instance of {@link UserBean }
+     * 
+     */
+    public UserBean createUserBean() {
+        return new UserBean();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfDepartmentBean }
+     * 
+     */
+    public ArrayOfDepartmentBean createArrayOfDepartmentBean() {
+        return new ArrayOfDepartmentBean();
+    }
+
+    /**
+     * Create an instance of {@link JobTitleBean }
+     * 
+     */
+    public JobTitleBean createJobTitleBean() {
+        return new JobTitleBean();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfSubCompanyBean }
+     * 
+     */
+    public ArrayOfSubCompanyBean createArrayOfSubCompanyBean() {
+        return new ArrayOfSubCompanyBean();
+    }
+
+    /**
+     * Create an instance of {@link DepartmentBean }
+     * 
+     */
+    public DepartmentBean createDepartmentBean() {
+        return new DepartmentBean();
+    }
+
+    /**
+     * Create an instance of {@link GetDepartmentInfoWithPage }
+     * 
+     */
+    public GetDepartmentInfoWithPage createGetDepartmentInfoWithPage() {
+        return new GetDepartmentInfoWithPage();
     }
 
     /**
@@ -117,6 +189,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SycHrmUserImageResponse }
+     * 
+     */
+    public SycHrmUserImageResponse createSycHrmUserImageResponse() {
+        return new SycHrmUserImageResponse();
+    }
+
+    /**
      * Create an instance of {@link GetHrmSubcompanyInfo }
      * 
      */
@@ -130,6 +210,22 @@ public class ObjectFactory {
      */
     public SynHrmResourceResponse createSynHrmResourceResponse() {
         return new SynHrmResourceResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetHrmUserImageResponse }
+     * 
+     */
+    public GetHrmUserImageResponse createGetHrmUserImageResponse() {
+        return new GetHrmUserImageResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetDepartmentInfoWithPageResponse }
+     * 
+     */
+    public GetDepartmentInfoWithPageResponse createGetDepartmentInfoWithPageResponse() {
+        return new GetDepartmentInfoWithPageResponse();
     }
 
     /**
@@ -149,6 +245,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetJobtitleInfoWithPageResponse }
+     * 
+     */
+    public GetJobtitleInfoWithPageResponse createGetJobtitleInfoWithPageResponse() {
+        return new GetJobtitleInfoWithPageResponse();
+    }
+
+    /**
      * Create an instance of {@link ChangeUserPasswordResponse }
      * 
      */
@@ -162,6 +266,22 @@ public class ObjectFactory {
      */
     public SynHrmResource createSynHrmResource() {
         return new SynHrmResource();
+    }
+
+    /**
+     * Create an instance of {@link GetHrmUserImage }
+     * 
+     */
+    public GetHrmUserImage createGetHrmUserImage() {
+        return new GetHrmUserImage();
+    }
+
+    /**
+     * Create an instance of {@link SycHrmUserImage }
+     * 
+     */
+    public SycHrmUserImage createSycHrmUserImage() {
+        return new SycHrmUserImage();
     }
 
     /**
@@ -181,11 +301,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ArrayOfJobTitleBean }
+     * Create an instance of {@link GetHrmUserInfoWithPage }
      * 
      */
-    public ArrayOfJobTitleBean createArrayOfJobTitleBean() {
-        return new ArrayOfJobTitleBean();
+    public GetHrmUserInfoWithPage createGetHrmUserInfoWithPage() {
+        return new GetHrmUserInfoWithPage();
+    }
+
+    /**
+     * Create an instance of {@link GetHrmSubcompanyInfoWithPage }
+     * 
+     */
+    public GetHrmSubcompanyInfoWithPage createGetHrmSubcompanyInfoWithPage() {
+        return new GetHrmSubcompanyInfoWithPage();
     }
 
     /**
@@ -237,6 +365,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetHrmUserInfoWithPageResponse }
+     * 
+     */
+    public GetHrmUserInfoWithPageResponse createGetHrmUserInfoWithPageResponse() {
+        return new GetHrmUserInfoWithPageResponse();
+    }
+
+    /**
      * Create an instance of {@link GetHrmJobTitleInfoXMLResponse }
      * 
      */
@@ -285,14 +421,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ArrayOfDepartmentBean }
-     * 
-     */
-    public ArrayOfDepartmentBean createArrayOfDepartmentBean() {
-        return new ArrayOfDepartmentBean();
-    }
-
-    /**
      * Create an instance of {@link GetHrmUserInfo }
      * 
      */
@@ -309,19 +437,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetJobtitleInfoWithPage }
+     * 
+     */
+    public GetJobtitleInfoWithPage createGetJobtitleInfoWithPage() {
+        return new GetJobtitleInfoWithPage();
+    }
+
+    /**
+     * Create an instance of {@link GetHrmSubcompanyInfoWithPageResponse }
+     * 
+     */
+    public GetHrmSubcompanyInfoWithPageResponse createGetHrmSubcompanyInfoWithPageResponse() {
+        return new GetHrmSubcompanyInfoWithPageResponse();
+    }
+
+    /**
      * Create an instance of {@link GetHrmSubcompanyInfoResponse }
      * 
      */
     public GetHrmSubcompanyInfoResponse createGetHrmSubcompanyInfoResponse() {
         return new GetHrmSubcompanyInfoResponse();
-    }
-
-    /**
-     * Create an instance of {@link ArrayOfSubCompanyBean }
-     * 
-     */
-    public ArrayOfSubCompanyBean createArrayOfSubCompanyBean() {
-        return new ArrayOfSubCompanyBean();
     }
 
     /**
@@ -341,14 +477,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ArrayOfUserBean }
-     * 
-     */
-    public ArrayOfUserBean createArrayOfUserBean() {
-        return new ArrayOfUserBean();
-    }
-
-    /**
      * Create an instance of {@link GetHrmSubcompanyInfoXML }
      * 
      */
@@ -357,35 +485,102 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubCompanyBean }
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    public SubCompanyBean createSubCompanyBean() {
-        return new SubCompanyBean();
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_shortname", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanShortname(String value) {
+        return new JAXBElement<String>(_JobTitleBeanShortname_QNAME, String.class, JobTitleBean.class, value);
     }
 
     /**
-     * Create an instance of {@link UserBean }
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    public UserBean createUserBean() {
-        return new UserBean();
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobcompetency", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanJobcompetency(String value) {
+        return new JAXBElement<String>(_JobTitleBeanJobcompetency_QNAME, String.class, JobTitleBean.class, value);
     }
 
     /**
-     * Create an instance of {@link JobTitleBean }
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    public JobTitleBean createJobTitleBean() {
-        return new JobTitleBean();
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobdoc", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanJobdoc(String value) {
+        return new JAXBElement<String>(_JobTitleBeanJobdoc_QNAME, String.class, JobTitleBean.class, value);
     }
 
     /**
-     * Create an instance of {@link DepartmentBean }
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    public DepartmentBean createDepartmentBean() {
-        return new DepartmentBean();
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_departmentid", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanDepartmentid(String value) {
+        return new JAXBElement<String>(_JobTitleBeanDepartmentid_QNAME, String.class, JobTitleBean.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_code", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanCode(String value) {
+        return new JAXBElement<String>(_JobTitleBeanCode_QNAME, String.class, JobTitleBean.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_lastChangdate", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanLastChangdate(String value) {
+        return new JAXBElement<String>(_JobTitleBeanLastChangdate_QNAME, String.class, JobTitleBean.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "action", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanAction(String value) {
+        return new JAXBElement<String>(_JobTitleBeanAction_QNAME, String.class, JobTitleBean.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobresponsibility", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanJobresponsibility(String value) {
+        return new JAXBElement<String>(_JobTitleBeanJobresponsibility_QNAME, String.class, JobTitleBean.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobtitleid", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanJobtitleid(String value) {
+        return new JAXBElement<String>(_JobTitleBeanJobtitleid_QNAME, String.class, JobTitleBean.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobtitleremark", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanJobtitleremark(String value) {
+        return new JAXBElement<String>(_JobTitleBeanJobtitleremark_QNAME, String.class, JobTitleBean.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_fullname", scope = JobTitleBean.class)
+    public JAXBElement<String> createJobTitleBeanFullname(String value) {
+        return new JAXBElement<String>(_JobTitleBeanFullname_QNAME, String.class, JobTitleBean.class, value);
     }
 
     /**
@@ -853,7 +1048,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_shortname", scope = DepartmentBean.class)
     public JAXBElement<String> createDepartmentBeanShortname(String value) {
-        return new JAXBElement<String>(_DepartmentBeanShortname_QNAME, String.class, DepartmentBean.class, value);
+        return new JAXBElement<String>(_JobTitleBeanShortname_QNAME, String.class, DepartmentBean.class, value);
     }
 
     /**
@@ -871,7 +1066,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_departmentid", scope = DepartmentBean.class)
     public JAXBElement<String> createDepartmentBeanDepartmentid(String value) {
-        return new JAXBElement<String>(_DepartmentBeanDepartmentid_QNAME, String.class, DepartmentBean.class, value);
+        return new JAXBElement<String>(_JobTitleBeanDepartmentid_QNAME, String.class, DepartmentBean.class, value);
     }
 
     /**
@@ -898,7 +1093,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_code", scope = DepartmentBean.class)
     public JAXBElement<String> createDepartmentBeanCode(String value) {
-        return new JAXBElement<String>(_DepartmentBeanCode_QNAME, String.class, DepartmentBean.class, value);
+        return new JAXBElement<String>(_JobTitleBeanCode_QNAME, String.class, DepartmentBean.class, value);
     }
 
     /**
@@ -907,7 +1102,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "action", scope = DepartmentBean.class)
     public JAXBElement<String> createDepartmentBeanAction(String value) {
-        return new JAXBElement<String>(_DepartmentBeanAction_QNAME, String.class, DepartmentBean.class, value);
+        return new JAXBElement<String>(_JobTitleBeanAction_QNAME, String.class, DepartmentBean.class, value);
     }
 
     /**
@@ -925,7 +1120,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_fullname", scope = DepartmentBean.class)
     public JAXBElement<String> createDepartmentBeanFullname(String value) {
-        return new JAXBElement<String>(_DepartmentBeanFullname_QNAME, String.class, DepartmentBean.class, value);
+        return new JAXBElement<String>(_JobTitleBeanFullname_QNAME, String.class, DepartmentBean.class, value);
     }
 
     /**
@@ -941,108 +1136,9 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_shortname", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanShortname(String value) {
-        return new JAXBElement<String>(_DepartmentBeanShortname_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobcompetency", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanJobcompetency(String value) {
-        return new JAXBElement<String>(_JobTitleBeanJobcompetency_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobdoc", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanJobdoc(String value) {
-        return new JAXBElement<String>(_JobTitleBeanJobdoc_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_departmentid", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanDepartmentid(String value) {
-        return new JAXBElement<String>(_DepartmentBeanDepartmentid_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_code", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanCode(String value) {
-        return new JAXBElement<String>(_DepartmentBeanCode_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_lastChangdate", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanLastChangdate(String value) {
-        return new JAXBElement<String>(_JobTitleBeanLastChangdate_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "action", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanAction(String value) {
-        return new JAXBElement<String>(_DepartmentBeanAction_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobresponsibility", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanJobresponsibility(String value) {
-        return new JAXBElement<String>(_JobTitleBeanJobresponsibility_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobtitleid", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanJobtitleid(String value) {
-        return new JAXBElement<String>(_JobTitleBeanJobtitleid_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_jobtitleremark", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanJobtitleremark(String value) {
-        return new JAXBElement<String>(_JobTitleBeanJobtitleremark_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_fullname", scope = JobTitleBean.class)
-    public JAXBElement<String> createJobTitleBeanFullname(String value) {
-        return new JAXBElement<String>(_DepartmentBeanFullname_QNAME, String.class, JobTitleBean.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
     @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_shortname", scope = SubCompanyBean.class)
     public JAXBElement<String> createSubCompanyBeanShortname(String value) {
-        return new JAXBElement<String>(_DepartmentBeanShortname_QNAME, String.class, SubCompanyBean.class, value);
+        return new JAXBElement<String>(_JobTitleBeanShortname_QNAME, String.class, SubCompanyBean.class, value);
     }
 
     /**
@@ -1069,7 +1165,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_code", scope = SubCompanyBean.class)
     public JAXBElement<String> createSubCompanyBeanCode(String value) {
-        return new JAXBElement<String>(_DepartmentBeanCode_QNAME, String.class, SubCompanyBean.class, value);
+        return new JAXBElement<String>(_JobTitleBeanCode_QNAME, String.class, SubCompanyBean.class, value);
     }
 
     /**
@@ -1096,7 +1192,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "action", scope = SubCompanyBean.class)
     public JAXBElement<String> createSubCompanyBeanAction(String value) {
-        return new JAXBElement<String>(_DepartmentBeanAction_QNAME, String.class, SubCompanyBean.class, value);
+        return new JAXBElement<String>(_JobTitleBeanAction_QNAME, String.class, SubCompanyBean.class, value);
     }
 
     /**
@@ -1114,7 +1210,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://webservice.hrm.weaver", name = "_fullname", scope = SubCompanyBean.class)
     public JAXBElement<String> createSubCompanyBeanFullname(String value) {
-        return new JAXBElement<String>(_DepartmentBeanFullname_QNAME, String.class, SubCompanyBean.class, value);
+        return new JAXBElement<String>(_JobTitleBeanFullname_QNAME, String.class, SubCompanyBean.class, value);
     }
 
     /**

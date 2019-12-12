@@ -13,6 +13,6 @@
 <div class="well">${message}</div>
 <br/>
 <a class="btn btn-lg btn-info"
-   href="${pageContext.request.contextPath}/deleteUserRequestInfoByJson">返回</a>
+   href="${pageContext.request.contextPath}/">返回</a>
 </body>
 </html>
