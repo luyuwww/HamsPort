@@ -243,8 +243,9 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
             //排除有重复的问题，如果oa主键找不到，再用我们主键找一次
             if(null == user){
                 user = sUserMapper.getUserByUsercode(usercode);
-                user.setEsbid(esbID);
+                if(user != null){user.setEsbid(esbID);}
             }
+
             if(user == null){
                 SUserWithBLOBs userBlob = new SUserWithBLOBs();
                 userBlob.setDid(getMaxDid("S_USER"));
@@ -270,8 +271,9 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
                     user.setPid(pid);
                     user.setUsername(username);
                     user.setEmail(email);
+                    user.setIslsyh(islsyh);
                     sUserMapper.updateByPrimaryKey(user);
-                    log.error("update user:" + group.toString());
+                    log.error("update user:" + user.toString());
                 }else{
                     //nothing todo
                 }

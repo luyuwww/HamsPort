@@ -42,18 +42,39 @@ public class CommonUtil {
         return sb.toString();
     }
 
+    /**
+     * 得到登录Lams的app页面，这只是简单的审批界面，不是app并且进入待办列表
+     * @param user 用户
+     */
+    public static String generat2AppUrl(SUser user , String taskid){
+        StringBuffer sb = new StringBuffer();
+        sb.append("Lams/appLogin4ShenPi?card=").append(SeriKeyOper.encrypt(user.getUsercode()));
+        sb.append("&serikey=").append(SeriKeyOper.encrypt(user.getPasswd())).append("&_url=/app/todoListApp&taskid="+taskid);
+        sb.append("&random=").append(Math.random());
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         StringBuffer sb = new StringBuffer();
-        sb.append("Lams/autoLogin4Web?card=").append(SeriKeyOper.encrypt("004820"));
-        sb.append("&serikey=").append(SeriKeyOper.encrypt("ams2000")).append("&_url=/web/todoList&taskid=b469815f-1afe-11ea-ac90-005056c00001");
+        sb.append("Lams/appLogin4ShenPi?card=").append(SeriKeyOper.encrypt("100014"));
+        sb.append("&serikey=").append(SeriKeyOper.encrypt("ams2000")).append("&_url=/app/todoListApp&taskid=9a2a9589-1e45-11ea-8e8f-005056c00001");
         sb.append("&random=").append(Math.random());
         System.out.println(sb.toString());
 
+
+
         StringBuffer sb1 = new StringBuffer();
-        sb1.append("Lams/autoLogin4Web?card=").append(SeriKeyOper.encrypt("000607"));
+        sb1.append("Lams/autoLogin4Web?card=").append(SeriKeyOper.encrypt("004820"));
         sb1.append("&serikey=").append(SeriKeyOper.encrypt("ams2000")).append("&_url=/web/myApplication");
         sb1.append("&random=").append(Math.random());
         System.out.println(sb1.toString());
+
+        StringBuffer sb2 = new StringBuffer();
+        sb2.append("Lams/autoLogin4Web?card=").append(SeriKeyOper.encrypt("004820"));
+        sb2.append("&serikey=").append(SeriKeyOper.encrypt("ams2000")).append("&_url=/web/todoList&taskid=taskid=2b1d8434-1e21-11ea-8315-005056c00001");
+        sb2.append("&random=").append(Math.random());
+        System.out.println(sb2.toString());
+
     }
 
     /**

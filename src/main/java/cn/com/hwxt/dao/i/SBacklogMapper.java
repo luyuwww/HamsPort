@@ -35,4 +35,7 @@ public interface SBacklogMapper  extends BaseDao {
 
     @Select("SELECT * FROM S_BACKLOG WHERE BZ IN (SELECT BZ FROM S_BACKLOG WHERE ACTTASKID='${taskId}' GROUP BY BZ)")
     List<SBacklog> getAllBacklogOnProcess(@Param("taskId") String taskId);
+
+    @Select("SELECT * FROM S_BACKLOG WHERE ACTTASKID='${taskId}'")
+    List<SBacklog> getAllBacklogOneTask(@Param("taskId") String taskId);
 }

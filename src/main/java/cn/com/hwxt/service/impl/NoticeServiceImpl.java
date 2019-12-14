@@ -43,7 +43,6 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
             System.out.println(varsJson);
         }
         if(goToOutSystem){
-            System.out.println(1);
             toOutSysFlow(userCodes , varsJson , actTaskID);
         }else{
             toToDo(userCodes , varsJson , actTaskID);
@@ -98,7 +97,6 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
             mj = (vars.get("mj") == null ? "" : vars.get("mj").toString());
             List<Map<String, Object>> dataList = (List<Map<String, Object>>) vars.get("dataList");
 
-            System.out.println(2);
             if (null == dataList || dataList.size() < 1) {
                 log.error("档案系统发送了错误数.dataList为空");
                 return;
@@ -304,12 +302,13 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
             log.error(e.getMessage());
         }
     }
-    //star todo
+
+    //star
     private void toToDo(String userCodes, String varsJson, String actTaskID){
-        System.out.println("审批人："+userCodes);
         String sqrdm = "";
         String sqrxm = "";
         String sqrq = "";
+        String sqtype = "";
         String flowEndCallSqr = "";//是否发起给申请人
 
         ObjectMapper mapper = new ObjectMapper();
@@ -321,15 +320,18 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
             sqrq = sqrq.substring(0 , sqrq.indexOf("."));//去除格式多余的0
             sqrdm = (vars.get("sqrdm") == null ? "" : vars.get("sqrdm").toString());
             sqrxm = (vars.get("sqrxm") == null ? "" : vars.get("sqrxm").toString());
+            sqtype = (vars.get("sqtype") == null ? "" : vars.get("sqtype").toString());
             flowEndCallSqr = (vars.get("flowEndCallSqr") == null ? "" : vars.get("flowEndCallSqr").toString());
             String fqrNames = "";
             for (String fqr : userCodeList) {
                 try {
                     //待办消息
-                    String returnStr = "Lams?random="+Math.random();
+                    String webUrl = "Lams?random="+Math.random();
+                    String appUrl = "Lams?random="+Math.random();
                     SUser user = sUserMapper.getUserByUsercode(fqr);
                     if (null != user) {
-                        returnStr = CommonUtil.generat2WebUrl(user, actTaskID);
+                        webUrl = CommonUtil.generat2WebUrl(user, actTaskID);
+                        appUrl = CommonUtil.generat2AppUrl(user, actTaskID);
                     }else{
                         continue;
                     }
@@ -337,26 +339,30 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                     //流程结束 通知申请人 (泛微 申请已办    接收人 创建人都是自己  remark 1)
                     if(StringUtils.isNotBlank(flowEndCallSqr) && flowEndCallSqr.equals("CALL")) {
                         JSONObject oaTodoMessage = new JSONObject();
-                        oaTodoMessage.put("requestname","档案借阅申请-已经处理");
+                        oaTodoMessage.put("requestname","您的档案["+sqtype+"]申请-已经处理");
                         oaTodoMessage.put("workflowname","利用流程");
                         oaTodoMessage.put("nodename","结束节点");
-                        oaTodoMessage.put("pcurl",returnStr);
-                        oaTodoMessage.put("appurl",returnStr);// appURL 和 PCURL先一致
+                        oaTodoMessage.put("pcurl",webUrl);
+                        oaTodoMessage.put("appurl",appUrl);
                         oaTodoMessage.put("creator",fqr);
                         oaTodoMessage.put("createdatetime",sqrq);
                         oaTodoMessage.put("receivedatetime",sqrq);
+//                        System.out.println("1. " + webUrl);
+//                        System.out.println("1. " + appUrl);
                         boolean oaRly = oaTodoMsg(oaTodoMessage , actTaskID , fqr , 0);
                         if(oaRly){log.error("OA发送消息成功！");}
                     }else{//通知审批人
                         JSONObject oaTodoMessage = new JSONObject();
-                        oaTodoMessage.put("requestname","档案借阅申请("+sqrxm+"["+sqrdm+"])");
+                        oaTodoMessage.put("requestname","("+sqrxm+")的档案["+sqtype+"]申请");
                         oaTodoMessage.put("workflowname","利用流程");
                         oaTodoMessage.put("nodename","审批节点");
-                        oaTodoMessage.put("pcurl",returnStr);
-                        oaTodoMessage.put("appurl",returnStr);// appURL 和 PCURL先一致
+                        oaTodoMessage.put("pcurl",webUrl);
+                        oaTodoMessage.put("appurl",appUrl);
                         oaTodoMessage.put("creator",sqrdm);
                         oaTodoMessage.put("createdatetime",sqrq);
                         oaTodoMessage.put("receivedatetime",sqrq);
+//                        System.out.println("2. " + webUrl);
+//                        System.out.println("2. " + appUrl);
                         boolean oaRly = oaTodoMsg(oaTodoMessage , actTaskID , fqr , 0 );
                         if(oaRly){log.error("OA发送消息成功！");}
                     }
@@ -373,25 +379,62 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
         if(StringUtils.isBlank(actTaskId)){
             return;
         }
+
+        //获取这个节点所有用户 变为已办
+        List<SBacklog> theTaskBackLogs = sBacklogMapper.getAllBacklogOneTask(actTaskId);
+        for (SBacklog bg : theTaskBackLogs) {
+            String webUrl = "Lams?random="+Math.random();
+            String appUrl = "Lams?random="+Math.random();
+            SUser user = sUserMapper.getUserByUsercode(bg.getUsercode());
+            if (null != user) {
+                webUrl = CommonUtil.generat2WebUrl(user, bg.getActtaskid());
+                appUrl = CommonUtil.generat2AppUrl(user, bg.getActtaskid());
+            }else{
+                return;
+            }
+
+            JSONObject doneMsg = new JSONObject();
+            doneMsg.put("requestname",bg.getTitle()+"：已办");
+            doneMsg.put("workflowname","利用流程");
+            doneMsg.put("nodename","审批节点");
+            doneMsg.put("createdatetime",DateUtil.getCurrentTimeStr());
+            doneMsg.put("receivedatetime",DateUtil.getCurrentTimeStr());
+            doneMsg.put("pcurl",webUrl);
+            doneMsg.put("appurl",appUrl);
+//            System.out.println("4. " + webUrl);
+//            System.out.println("4. " + appUrl);
+            boolean oaRe = oaSendDoOrTodo(doneMsg, bg.getActtaskid(), bg.getUsercode() , 2 , 0);
+            if(oaRe){
+                log.error("oa已办处理成功："+actTaskId);
+            }else {
+                log.error("oa已办处理异常："+actTaskId);
+            }
+        }
         //flowStatus=FINISHED 最后的结束节点 要把线上所有的变成办结
         if(StringUtils.isNotBlank(flowStatus) && flowStatus.equals("FINISHED")){
+            //获取整个流程所有用户
             List<SBacklog> backlogs = sBacklogMapper.getAllBacklogOnProcess(actTaskId);
             for (SBacklog backlog : backlogs) {
-                String returnStr = "Lams?random="+Math.random();
+                String webUrl = "Lams?random="+Math.random();
+                String appUrl = "Lams?random="+Math.random();
                 SUser user = sUserMapper.getUserByUsercode(backlog.getUsercode());
                 if (null != user) {
-                    returnStr = CommonUtil.generat2WebUrl(user, backlog.getActtaskid());
+                    webUrl = CommonUtil.generat2WebUrl(user, backlog.getActtaskid());
+                    appUrl = CommonUtil.generat2AppUrl(user, backlog.getActtaskid());
                 }else{
                     continue;
                 }
+
                 JSONObject doneMsg = new JSONObject();
-                doneMsg.put("requestname","档案借阅审批");
+                doneMsg.put("requestname",backlog.getTitle()+"：办结");
                 doneMsg.put("workflowname","利用流程");
                 doneMsg.put("nodename","审批节点");
                 doneMsg.put("createdatetime",DateUtil.getCurrentTimeStr());
                 doneMsg.put("receivedatetime",DateUtil.getCurrentTimeStr());
-                doneMsg.put("pcurl",returnStr);
-                doneMsg.put("appurl",returnStr);// appURL 和 PCURL先一致
+                doneMsg.put("pcurl",webUrl);
+                doneMsg.put("appurl",appUrl);
+//                System.out.println("3. " + webUrl);
+//                System.out.println("3. " + appUrl);
                 boolean oaRe = oaSendDoOrTodo(doneMsg, backlog.getActtaskid() , backlog.getUsercode() , 4 , 0);
                 if(oaRe){
                     log.error("oa办毕处理成功："+actTaskId);
@@ -399,31 +442,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                     log.error("oa办毕处理异常："+actTaskId);
                 }
             }
-        }else{
-            //待办消息
-            String returnStr = "Lams?random="+Math.random();
-            SUser user = sUserMapper.getUserByUsercode(fqr);
-            if (null != user) {
-                returnStr = CommonUtil.generat2WebUrl(user, actTaskId);
-            }else{
-                return;
-            }
-            JSONObject doneMsg = new JSONObject();
-            doneMsg.put("requestname","档案借阅审批");
-            doneMsg.put("workflowname","利用流程");
-            doneMsg.put("nodename","审批节点");
-            doneMsg.put("createdatetime",DateUtil.getCurrentTimeStr());
-            doneMsg.put("receivedatetime",DateUtil.getCurrentTimeStr());
-            doneMsg.put("pcurl",returnStr);
-            doneMsg.put("appurl",returnStr);// appURL 和 PCURL先一致
-            boolean oaRe = oaSendDoOrTodo(doneMsg, actTaskId, fqr , 2 , 0);
-            if(oaRe){
-                log.error("oa已办处理成功："+actTaskId);
-            }else {
-                log.error("oa已办处理异常："+actTaskId);
-            }
         }
-
         String upStateSql = "update s_backlog set isoper = '1' where acttaskid = '"+actTaskId+"'";
         jdbcDao.excute(upStateSql);
     }
@@ -434,7 +453,6 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
         delJson.put("flowid",taskid);
         delJson.put("userid",usercode);
         String result = "";
-        System.out.println(delJson.toString());
         try {
             String reply =  getTodoService().deleteUserRequestInfoByJson(delJson.toString());
             JSONObject jsonResult = JSONObject.fromObject(reply);
@@ -457,8 +475,6 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
                 if (user != null) {
                     String title = "档案系统审批: 待处理" + todoNum + "条数据";
                     String url = CommonUtil.generatUrl(user, "任务列表", "izerui");
-                    System.out.println(title);
-                    System.out.println(url);
                 }
             } catch (Exception e) {
                 log.error(e.getMessage(), e);
