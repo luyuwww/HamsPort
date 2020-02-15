@@ -79,7 +79,7 @@ public class CommonCtler {
     public void viewLog(HttpServletRequest request, HttpServletResponse response) {
         PrintWriter out = null;
         try {
-            response.setContentType("text/html;charset=GBK ");
+            response.setContentType("text/html;charset=UTF-8");
             out = response.getWriter();
             out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
             out.println("<HTML>");
