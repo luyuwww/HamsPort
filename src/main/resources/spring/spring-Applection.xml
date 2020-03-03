@@ -64,7 +64,7 @@
     <!-- dao -->
     <!-- service -->
     <!-- CXF -->
-    <jaxws:endpoint id="arcServicePublish" implementor="#arcServcieImpl" address="/ArcDataWs"/>
+<!--    <jaxws:endpoint id="arcServicePublish" implementor="#arcServcieImpl" address="/ArcDataWs"/>-->
     <jaxws:endpoint id="GdDataWs" implementor="#GdDataService" address="/GdDataWsSingle"/>
 
     <!-- 事务配置-->

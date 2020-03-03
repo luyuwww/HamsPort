@@ -2,7 +2,6 @@ package cn.com.hwxt.action;
 
 import ch.qos.logback.classic.Logger;
 import cn.com.hwxt.service.i.ArcService;
-import cn.com.hwxt.service.i.NoticeService;
 import cn.com.hwxt.util.GlobalFinalAttr;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
@@ -131,17 +130,6 @@ public class CommonCtler {
         return "redirect:" + lamsUrl;
     }
 
-
-    /**
-     * 流程过来的消息 需要发送到 邮件和待办
-     */
-    @RequestMapping(value = "/sendMsg", method = RequestMethod.POST)
-    public void sendMsg(@RequestParam String userCodes, @RequestParam String varsJson, @RequestParam String actTaskID) {
-        if (StringUtils.isNotEmpty(varsJson) && StringUtils.isNotEmpty(actTaskID)) {
-            noticeServiceImpl.sendActivitiMsg(userCodes, varsJson, actTaskID);
-        }
-    }
-
     /**
      * 查看日志
      */
@@ -178,8 +166,6 @@ public class CommonCtler {
 
     @Autowired
     private ArcService arcServcieImpl;
-    @Autowired
-    private NoticeService noticeServiceImpl;
     @Autowired
     @Value("${interface.log.home.address}")
     private String logHomeAdd;

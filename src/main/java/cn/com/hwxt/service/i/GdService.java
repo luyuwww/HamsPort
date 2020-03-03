@@ -4,24 +4,15 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
-@WebService(name = "GdDataWs", targetNamespace = "http://service.hwxt.com.cn/")
+@WebService(name = "GdDataWs", targetNamespace = "http://unisra.www.com/")
 public interface GdService {
 
     @WebMethod
-    public String dataReciveXml(@WebParam(name = "xmlName") String xmlName
-            , @WebParam(name = "dataXml") String dataXml, @WebParam(name = "gdrCode") String gdrCode);
+    public String dataReciveXml(@WebParam(name = "appKey") String appKey  , @WebParam(name = "dataXml") String dataXml
+            , @WebParam(name = "pk") String pk , @WebParam(name = "md5") String md5);
 
 
     @WebMethod
-    public String dataReciveJson(@WebParam(name = "xmlName") String xmlName
-            , @WebParam(name = "dataJson") String dataJson, @WebParam(name = "gdrCode") String gdrCode);
-
-    @WebMethod
-    public Integer fileReciveXml(@WebParam(name = "xmlName") String xmlName
-            , @WebParam(name = "dataXml") String dataXml, @WebParam(name = "gdrCode") String gdrCode);
-
-
-    @WebMethod
-    public Integer fileReciveJson(@WebParam(name = "xmlName") String xmlName
-            , @WebParam(name = "dataJson") String dataJson, @WebParam(name = "gdrCode") String gdrCode);
+    public String dataReciveJson(@WebParam(name = "appKey") String appKey , @WebParam(name = "dataJson") String dataJson
+            , @WebParam(name = "pk") String pk , @WebParam(name = "md5") String md5);
 }
