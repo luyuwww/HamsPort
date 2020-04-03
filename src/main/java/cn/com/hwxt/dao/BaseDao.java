@@ -79,4 +79,8 @@ public interface BaseDao {
     @Select("SELECT * FROM ${tableName} WHERE LIBCODE=${libcode}")
     List<DClassifyZjk> listFlh(@Param("tableName") String tableName ,
                                @Param("libcode") Integer libcode);
+
+    @Insert({ "INSERT INTO S_BIZEEPQUEUE (UUID, APPNAME, CREATETIME, STATUS, MEMO, LIBCODE, LEVELSTR) VALUES" +
+            " ((#{UUID}, #{APPNAME}, #{CREATETIME, JDBCTYPE=DATE}, #{STATUS}, #{MEMO}, #{LIBCODE}, #{LEVELSTR})" })
+    int insertSbizEepQueue(SBizEepQueue bizEepQueue);
 }
