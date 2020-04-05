@@ -34,6 +34,8 @@
            href="${pageContext.request.contextPath}/getUsers">测试数据库连接</a>
         <a class="btn btn-lg btn-warning"
            href="${pageContext.request.contextPath}/cxf">查看服务</a>
+        <a class="btn btn-lg btn-warning"
+           href="${pageContext.request.contextPath}/syncDepAndUser">部门用户同步</a>
     </p>
 </div>
 </body>

@@ -17,13 +17,10 @@ public class SGroup implements Serializable {
 
     private String bz;
 
-    private String depcode;
+    private String depcode;//数据供应方主键
 
-    private String depid;
+    private String gfzj;//排序使用
 
-    private String gfzj;//数据供应方主键
-
-    private String bh; //部门编号
 
     public Integer getDid() {
         return did;
@@ -81,28 +78,12 @@ public class SGroup implements Serializable {
         this.depcode = depcode;
     }
 
-    public String getDepid() {
-        return depid;
-    }
-
-    public void setDepid(String depid) {
-        this.depid = depid;
-    }
-
     public String getGfzj() {
         return gfzj;
     }
 
     public void setGfzj(String gfzj) {
         this.gfzj = gfzj;
-    }
-
-    public String getBh() {
-        return bh;
-    }
-
-    public void setBh(String bh) {
-        this.bh = bh;
     }
 
 

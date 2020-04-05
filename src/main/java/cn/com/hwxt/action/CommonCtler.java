@@ -3,6 +3,7 @@ package cn.com.hwxt.action;
 import ch.qos.logback.classic.Logger;
 import cn.com.hwxt.service.i.ArcService;
 import cn.com.hwxt.service.i.NoticeService;
+import cn.com.hwxt.service.i.SyncDepAndUserService;
 import cn.com.hwxt.util.GlobalFinalAttr;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
@@ -169,6 +170,32 @@ public class CommonCtler {
     }
 
     /**
+     * 同步一次
+     */
+    @RequestMapping(value = "/syncDepAndUser", method = RequestMethod.GET)
+    public void syncDepAndUser(HttpServletResponse response) {
+        PrintWriter out = null;
+        try {
+            response.setContentType("text/html;charset=GBK ");
+            out = response.getWriter();
+            out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
+            out.println("<HTML>");
+            out.println("<BODY>");
+            out.println("<XMP>");
+            out.println("OK");
+            syncDepAndUserService.sync();
+            out.println("</XMP>");
+            out.println("</BODY>");
+            out.println("</HTML>");
+        } catch (Exception e) {
+            out.println("读取日志错误" + e.getMessage());
+            log.error("读取日志错误" + e.getMessage());
+        } finally {
+            out.flush();
+            out.close();
+        }
+    }
+    /**
      * 内部调用 判断是否是允许用户 ture是的
      */
     private Boolean judgeSSO(String usercode, String token) {
@@ -183,5 +210,7 @@ public class CommonCtler {
     @Autowired
     @Value("${interface.log.home.address}")
     private String logHomeAdd;
+    @Autowired
+    private SyncDepAndUserService syncDepAndUserService;
     private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
 }

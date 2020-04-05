@@ -1,0 +1,52 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DataPojo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataProperty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DataPojo" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DataProperty" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="DataValue" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="isnull" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="propertyname" use="optional"/>
+                        <xs:attribute type="xs:byte" name="valuetype" use="optional"/>
+                        <xs:attribute type="xs:string" name="isnull" use="optional"/>
+                        <xs:attribute type="xs:byte" name="length" use="optional"/>
+                        <xs:attribute type="xs:string" name="value" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="type" use="optional"/>
+                  <xs:attribute type="xs:byte" name="version" use="optional"/>
+                  <xs:attribute type="xs:byte" name="valuecount" use="optional"/>
+                  <xs:attribute type="xs:string" name="isnull" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="propertyname"/>
+            <xs:attribute type="xs:byte" name="valuetype"/>
+            <xs:attribute type="xs:string" name="isnull"/>
+            <xs:attribute type="xs:short" name="length"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="type"/>
+      <xs:attribute type="xs:byte" name="version"/>
+      <xs:attribute type="xs:string" name="isnull"/>
+      <xs:attribute type="xs:byte" name="valuecount"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

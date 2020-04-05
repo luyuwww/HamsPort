@@ -35,15 +35,9 @@ public interface SGroupMapper extends BaseDao {
     int updateByKey(SGroup record);
 
     /**
-     * <p>Title: 根据xml里面的mdCode来查询s_group中的depid</p>
-     * <p>Description: </p>
-     *
-     * @param depid
-     * @return
-     * @date 2014年2月21日
      */
-    @Select("SELECT * FROM S_GROUP WHERE DEPID = '${depid}'")
-    SGroup getGroupByDepID(@Param("depid") String depid);
+    @Select("SELECT * FROM S_GROUP WHERE GNAME = '${gname}' AND  QZH = '${qzh}' ")
+    SGroup getGroupByName(@Param("gname") String gname , @Param("qzh") String qzh);
 
     /**
      * <p>Title: 根据xml里面的orgCode来查询s_group中的depCode</p>
@@ -61,12 +55,4 @@ public interface SGroupMapper extends BaseDao {
 
     @Select("SELECT * FROM S_GROUP WHERE GFZJ = '${gfzj}'")
     SGroup getGroupByGfzj(@Param("gfzj") String gfzj);
-
-    @Select("SELECT * FROM S_QZH WHERE primarykey = '${primarykey}'")
-    SQzh getQzhByQzzj(@Param("primarykey") String primarykey);
-
-    @Select("SELECT * FROM S_GROUP WHERE BH = '${bh}'")
-    SGroup getGroupByBh(@Param("bh") String bh);
-
-
 }

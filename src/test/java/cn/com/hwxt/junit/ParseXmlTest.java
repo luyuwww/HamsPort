@@ -1,15 +1,85 @@
 package cn.com.hwxt.junit;
 
+import com.seeyou.pojo.DataPojo;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.Unmarshaller;
+import java.io.File;
+import java.io.Reader;
+import java.io.Serializable;
+import java.io.StringReader;
+import java.util.List;
 
 
 public class ParseXmlTest {
-    public static void main(String[] args) throws Exception {
-//		File file = new File("C:/ML_OA_DATA.xml");
+//    public static void main(String[] args) throws Exception {
+//		File file = new File("D:\\workspace\\idea\\HamsPort\\docu\\seeyou\\dep_person\\departments.xml");
 //		String xmlStr = FileUtils.readFileToString(file , "UTF-8");
+//        System.out.println(xmlStr);
 //		Reader reader = new StringReader(xmlStr);
-//        Unmarshaller unmarshaller =  JAXBContext.newInstance(MLXmlResult.class).createUnmarshaller();     
-//        MLXmlResult result = (MLXmlResult) unmarshaller.unmarshal(reader); 
+//        Unmarshaller unmarshaller =  JAXBContext.newInstance(DataPojo.class).createUnmarshaller();
+//        DataPojo result = (DataPojo) unmarshaller.unmarshal(reader);
+//        List<DataPojo.DataProperty.DataPojo1> array = result.getDataProperty().getDataPojo();
+//        System.out.println(array.size());
+//        for (DataPojo.DataProperty.DataPojo1 dataPojo1 : array) {
+//           List< DataPojo.DataProperty.DataPojo1.DataProperty1> oneObject =  dataPojo1.getDataProperty();
+//            for (DataPojo.DataProperty.DataPojo1.DataProperty1 dp : oneObject) {
+//                if(dp.getPropertyname().equals("departmentName") && dp.getContent().size()>0){
+//                    List<Serializable> depNames = dp.getContent();
+//                    for (Serializable depName : depNames) {
+//                        if(depName instanceof JAXBElement){
+//
+//                            JAXBElement ojbect = (JAXBElement) depName;
+//                            System.out.print(((com.seeyou.pojo.DataPojo.DataProperty.DataPojo1.DataProperty1.DataValue)ojbect.getValue()).getValue()+ "\t");
+//                        }
+//
+//
+//                    }
+//                    System.out.println();
+//                }
+//
+//
+//            }
+//
+//        }
+
+    public static void main(String[] args) throws Exception {
+        File file = new File("D:\\workspace\\idea\\HamsPort\\docu\\seeyou\\dep_person\\members.xml");
+        String xmlStr = FileUtils.readFileToString(file , "UTF-8");
+        System.out.println(xmlStr);
+        Reader reader = new StringReader(xmlStr);
+        Unmarshaller unmarshaller =  JAXBContext.newInstance(DataPojo.class).createUnmarshaller();
+        DataPojo result = (DataPojo) unmarshaller.unmarshal(reader);
+        List<DataPojo.DataProperty.DataPojo1> array = result.getDataProperty().getDataPojo();
+        System.out.println(array.size());
+        for (DataPojo.DataProperty.DataPojo1 dataPojo1 : array) {
+            List< DataPojo.DataProperty.DataPojo1.DataProperty1> oneObject =  dataPojo1.getDataProperty();
+            for (DataPojo.DataProperty.DataPojo1.DataProperty1 dp : oneObject) {
+                if(dp.getPropertyname().equals("departmentName") && dp.getContent().size()>0){
+                    List<Serializable> depNames = dp.getContent();
+                    for (Serializable depName : depNames) {
+                        if(depName instanceof JAXBElement){
+
+                            JAXBElement ojbect = (JAXBElement) depName;
+                            System.out.print(((com.seeyou.pojo.DataPojo.DataProperty.DataPojo1.DataProperty1.DataValue)ojbect.getValue()).getValue()+ "\t");
+                        }
+
+
+                    }
+                    System.out.println();
+                }
+
+
+            }
+
+        }
+
+
+
 //        List<cn.com.hwxt.pojo.MLXmlResult.DocInfo.Field> list = result.getDocInfo().getField();
 //        List<cn.com.hwxt.pojo.MLXmlResult.Attachments.Attachment> eFileList = result.getAttachments().getAttachment();
 //        for (cn.com.hwxt.pojo.MLXmlResult.Attachments.Attachment efile : eFileList) {
@@ -34,12 +104,6 @@ public class ParseXmlTest {
 //		service.sendCommonMessageByUserCode(nSenderPlatID, nSenderUserCode, sReceiverPlatUserIds,
 //				strContent, nOnlineOnly, nReserveDays, strFromApp, strAppCode, strFromUserName, strCustomInfo)
 
-        String a = "null&;'gname'&;'bz'&;";
-        String[] aa = a.split("&;");
-        for (String aaa : aa) {
-            System.out.println(aaa);
-            System.out.println(StringUtils.isBlank(aaa));
-        }
-
+//        D:\workspace\idea\HamsPort\docu\seeyou\dep_person
     }
 }

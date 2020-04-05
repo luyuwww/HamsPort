@@ -1,0 +1,2077 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <DataPojo type="IEOrganizationInfo"  version="1" isnull="false" valuecount="1">
+<DataProperty propertyname="depArray" valuetype="10"  isnull="false" length="209">
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >公司领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >2</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >200</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >党委工作部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >3</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >29</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >贵铝工服领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >4</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >纪检监察部（审计部）</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >5</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >67</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >产品研发设计中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >6</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >2</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >工会共青团工作部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >8</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >53</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >综合管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >9</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >72</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >资产经营部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >10</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >186</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="3" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >产品研发设计中心</DataValue>
+    <DataValue isnull="false" >开发测试</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="true" />
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >11</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >3</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >企业管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >12</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >4</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >党群工作部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >13</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >5</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >再就业培训中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >14</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >6</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >劳保用品分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >15</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >7</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >第一分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >16</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >8</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >安全环保质量部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >17</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >9</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >市场营销部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >18</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >10</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >广西平果分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >19</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >11</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >云南分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >20</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >建筑安装工程分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >21</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >12</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >氧化铝事业部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >22</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >13</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >汽车维修分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >23</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >14</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >生产运营中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >24</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >15</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >电力承装分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >25</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >16</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >电解事业部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >26</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >17</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >纪检监察部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >27</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >18</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >综合管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >28</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >19</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >装备制造分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >29</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >20</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >计量技术事业部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >30</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >21</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >财务部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >31</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >22</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >资产分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >32</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >23</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >门窗事业部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >33</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >24</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >企业管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >34</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >25</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >安全环保部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >35</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >50</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >财务部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >36</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >80</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州区域法律中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >37</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >109</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >38</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >110</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >39</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >119</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >40</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >1</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司职业教育学院</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >41</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >178</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州中铝彩铝科技有限公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >42</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >104</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >43</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >164</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >44</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >136</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >企业管理部</DataValue>
+    <DataValue isnull="false" >企业管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >45</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >26</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >企业管理部</DataValue>
+    <DataValue isnull="false" >生产管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >46</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >27</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >企业管理部</DataValue>
+    <DataValue isnull="false" >工程管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >47</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >28</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >党委工作部</DataValue>
+    <DataValue isnull="false" >企业文化科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >49</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >30</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >党委工作部</DataValue>
+    <DataValue isnull="false" >信访科（调解、综治办）</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >50</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >31</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >党委工作部</DataValue>
+    <DataValue isnull="false" >党务科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >51</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >32</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >党委工作部</DataValue>
+    <DataValue isnull="false" >报社</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >52</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >33</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >党委工作部</DataValue>
+    <DataValue isnull="false" >电视台</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >53</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >34</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >贵铝后勤中心领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >54</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >党委工作部</DataValue>
+    <DataValue isnull="false" >组织科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >55</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >35</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >企业发展部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >57</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >37</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >党群</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >59</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >39</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >公寓经营管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >60</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >40</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >养老</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >61</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >41</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >客运</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >62</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >42</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >家政物业服务部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >63</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >43</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >工会</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >64</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >44</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >环卫印刷</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >65</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >45</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >离退休</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >66</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >46</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >综合部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >67</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >47</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >资产经营部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >68</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >48</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >铝兴物业</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >69</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >49</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >安全环保部</DataValue>
+    <DataValue isnull="false" >安全科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >71</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >51</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >安全环保部</DataValue>
+    <DataValue isnull="false" >环保科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >72</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >52</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >工会共青团工作部</DataValue>
+    <DataValue isnull="false" >办公室</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >74</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >54</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >工会共青团工作部</DataValue>
+    <DataValue isnull="false" >团委</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >75</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >55</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >工会共青团工作部</DataValue>
+    <DataValue isnull="false" >图书馆</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >76</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >56</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >工会共青团工作部</DataValue>
+    <DataValue isnull="false" >女工(计划生育)</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >77</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >57</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >工会共青团工作部</DataValue>
+    <DataValue isnull="false" >宣教文体</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >78</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >58</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >工会共青团工作部</DataValue>
+    <DataValue isnull="false" >服务职工中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >79</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >59</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >工会共青团工作部</DataValue>
+    <DataValue isnull="false" >生产民管</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >80</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >60</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >珠海亚奇纸塑制品有限公司</DataValue>
+    <DataValue isnull="false" >珠海亚奇领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >81</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >珠海亚奇纸塑制品有限公司</DataValue>
+    <DataValue isnull="false" >市场部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >82</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >62</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >珠海亚奇纸塑制品有限公司</DataValue>
+    <DataValue isnull="false" >生产部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >83</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >63</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >珠海亚奇纸塑制品有限公司</DataValue>
+    <DataValue isnull="false" >财务</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >84</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >64</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >珠海亚奇纸塑制品有限公司</DataValue>
+    <DataValue isnull="false" >采购部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >85</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >65</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >纪检监察部（审计部）</DataValue>
+    <DataValue isnull="false" >审计风控室</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >88</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >68</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >纪检监察部（审计部）</DataValue>
+    <DataValue isnull="false" >巡查办公室</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >89</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >69</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >纪检监察部（审计部）</DataValue>
+    <DataValue isnull="false" >纪委办公室</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >90</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >70</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >纪检监察部（审计部）</DataValue>
+    <DataValue isnull="false" >纪检监察室</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >91</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >71</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >综合管理部</DataValue>
+    <DataValue isnull="false" >员工管理单元</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >93</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >73</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >综合管理部</DataValue>
+    <DataValue isnull="false" >培训开发单元</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >94</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >74</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >综合管理部</DataValue>
+    <DataValue isnull="false" >文秘档案单元</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >95</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >75</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >综合管理部</DataValue>
+    <DataValue isnull="false" >综合事务单元</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >96</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >76</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >综合管理部</DataValue>
+    <DataValue isnull="false" >劳动力管理站</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >97</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >77</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >综合管理部</DataValue>
+    <DataValue isnull="false" >社会保险科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >98</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >78</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >综合管理部</DataValue>
+    <DataValue isnull="false" >薪酬考核单元</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >99</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >79</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >总稽核</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >101</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >81</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >成本会计科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >102</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >82</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >社保基金科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >103</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >83</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >税政管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >104</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >84</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >综合管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >105</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >85</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部委派后勤中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >106</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >86</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部委派贵州贵铝华颐房地产开发有限责任公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >107</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >87</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部委派贵州贵铝城市服务有限公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >108</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >88</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部委派贵州贵铝建筑物流有限责任公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >109</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >89</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部委派贵州贵铝彩铝有限责任公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >110</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >90</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部委派贵州贵铝技术服务有限责任公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >111</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >91</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部委派贵州铝兴物业管理有限公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >112</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >92</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部委派贵州铝厂工业服务公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >113</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >93</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部派驻贵州铝厂职教学院财务科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >114</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >94</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >财务部派驻贵州铝厂铝合金厂财务科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >115</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >95</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >资产管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >116</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >96</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >资金管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >117</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >97</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >财务部</DataValue>
+    <DataValue isnull="false" >预算管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >118</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >98</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >珠海亚奇纸塑制品有限公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >120</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >61</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝云顶旅游开发有限公司</DataValue>
+    <DataValue isnull="false" >贵铝云顶领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >121</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州中铝云顶旅游开发有限公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >122</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >99</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝云顶旅游开发有限公司</DataValue>
+    <DataValue isnull="false" >土地维权巡防队</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >123</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >100</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝云顶旅游开发有限公司</DataValue>
+    <DataValue isnull="false" >安全环保（资产经营）部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >124</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >101</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝云顶旅游开发有限公司</DataValue>
+    <DataValue isnull="false" >综合管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >125</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >102</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝彩铝科技有限公司</DataValue>
+    <DataValue isnull="false" >贵铝彩铝领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >126</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝云顶旅游开发有限公司</DataValue>
+    <DataValue isnull="false" >项目开发部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >127</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >103</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝彩铝科技有限公司</DataValue>
+    <DataValue isnull="false" >市场拓展部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >129</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >105</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝彩铝科技有限公司</DataValue>
+    <DataValue isnull="false" >生产运营中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >130</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >106</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝彩铝科技有限公司</DataValue>
+    <DataValue isnull="false" >综合部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >131</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >107</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝彩铝科技有限公司</DataValue>
+    <DataValue isnull="false" >营销中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >132</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >108</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+    <DataValue isnull="false" >贵铝华颐领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >134</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+    <DataValue isnull="false" >安全环保部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >135</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >111</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+    <DataValue isnull="false" >巡防大队</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >136</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >112</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+    <DataValue isnull="false" >工程部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >137</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >113</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+    <DataValue isnull="false" >开发部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >138</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >114</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+    <DataValue isnull="false" >综合部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >139</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >115</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+    <DataValue isnull="false" >财务部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >140</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >116</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+    <DataValue isnull="false" >营销部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >141</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >117</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝华颐房地产开发有限责任公司</DataValue>
+    <DataValue isnull="false" >预结算部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >142</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >118</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >贵铝物流领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >143</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >仓储配送公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >144</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >120</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >党委工作部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >145</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >121</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >多式联运项目部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >146</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >122</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >安全环保部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >147</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >123</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >工程机械物流项目部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >148</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >124</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >汽车修理项目部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >149</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >125</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >清镇基地物流项目部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >150</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >126</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >清镇物流中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >151</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >127</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >物流贸易部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >152</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >128</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >生产运行部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >153</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >129</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >仓储装卸公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >154</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >130</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >经营部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >156</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >131</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >综合部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >157</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >132</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >财务部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >158</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >133</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >汽车运输公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >159</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >134</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝物流有限公司</DataValue>
+    <DataValue isnull="false" >铁路公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >160</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >135</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >贵铝城服领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >161</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >企业发展部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >162</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >137</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >电力运维分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >163</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >138</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >党群工作部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >164</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >139</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >公寓经营管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >165</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >140</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >养老中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >166</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >141</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >印刷厂</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >167</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >142</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >客运部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >168</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >143</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >家政物业服务部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >169</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >144</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >离退休人员服务部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >171</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >146</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >综合部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >172</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >147</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >贵州铝厂有限责任公司宾馆</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >173</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >148</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >贵州铝厂有限责任公司红福酒楼</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >174</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >149</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >资产经营部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >175</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >150</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >贵州铝兴物业管理有限公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >176</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >151</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司精细氧化铝厂</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >177</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >161</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+    <DataValue isnull="false" >贵铝保安领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >178</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+    <DataValue isnull="false" >一中队</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >179</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >153</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+    <DataValue isnull="false" >三中队</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >180</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >154</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+    <DataValue isnull="false" >二中队</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >181</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >155</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+    <DataValue isnull="false" >后勤部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >182</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >156</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >贵铝铝合金厂领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >183</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+    <DataValue isnull="false" >政工部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >184</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >157</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+    <DataValue isnull="false" >机动中队</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >185</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >158</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+    <DataValue isnull="false" >行政部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >186</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >159</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+    <DataValue isnull="false" >西区中队</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >187</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >160</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司精细氧化铝厂</DataValue>
+    <DataValue isnull="false" >贵铝精细氧化铝厂领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >188</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司精细氧化铝厂</DataValue>
+    <DataValue isnull="false" >生产技术部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >189</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >162</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司精细氧化铝厂</DataValue>
+    <DataValue isnull="false" >综合管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >190</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >163</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >党务办</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >192</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >165</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >加工部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >193</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >166</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >安全环保部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >194</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >167</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >物流管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >195</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >168</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >生产部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >196</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >169</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >综合办</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >197</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >170</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >营销部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >198</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >171</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >设备能源管理部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >199</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >172</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司铝合金厂</DataValue>
+    <DataValue isnull="false" >质量技术部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >200</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >173</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司保安分公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >203</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >152</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >205</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >36</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝技术服务有限责任公司</DataValue>
+    <DataValue isnull="false" >贵铝技服领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >207</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="1" >
+    <DataValue isnull="false" >贵州贵铝技术服务有限责任公司</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >208</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >176</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝技术服务有限责任公司</DataValue>
+    <DataValue isnull="false" >坝场运行维护部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >209</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >177</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司职业教育学院</DataValue>
+    <DataValue isnull="false" >贵铝职教学院领导</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >210</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司职业教育学院</DataValue>
+    <DataValue isnull="false" >学生处</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >211</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >179</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司职业教育学院</DataValue>
+    <DataValue isnull="false" >实训中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >212</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >180</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司职业教育学院</DataValue>
+    <DataValue isnull="false" >就业中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >213</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >181</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司职业教育学院</DataValue>
+    <DataValue isnull="false" >总务处</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >214</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >182</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司职业教育学院</DataValue>
+    <DataValue isnull="false" >招生办</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >215</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >183</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司职业教育学院</DataValue>
+    <DataValue isnull="false" >教务处</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >216</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >184</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司职业教育学院</DataValue>
+    <DataValue isnull="false" >综合办</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >217</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >185</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >资产经营部</DataValue>
+    <DataValue isnull="false" >土地管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >219</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >187</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >资产经营部</DataValue>
+    <DataValue isnull="false" >改革发展科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >220</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >188</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="3" >
+    <DataValue isnull="false" >资产经营部</DataValue>
+    <DataValue isnull="false" >改革发展科</DataValue>
+    <DataValue isnull="false" >工贸清算组</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >221</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >189</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >资产经营部</DataValue>
+    <DataValue isnull="false" >综合科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >222</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >190</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >资产经营部</DataValue>
+    <DataValue isnull="false" >资产管理科</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >223</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" >191</DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >安全环保部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >231</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州中铝云顶旅游开发有限公司</DataValue>
+    <DataValue isnull="false" >财务部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >232</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝技术服务有限责任公司</DataValue>
+    <DataValue isnull="false" >技术中心</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >233</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州铝厂有限责任公司后勤中心</DataValue>
+    <DataValue isnull="false" >安全环保部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >234</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="2" >
+    <DataValue isnull="false" >贵州贵铝现代城市服务有限公司</DataValue>
+    <DataValue isnull="false" >绿化工程部</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >235</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="3" >
+    <DataValue isnull="false" >贵州中铝彩铝科技有限公司</DataValue>
+    <DataValue isnull="false" >生产运营中心</DataValue>
+    <DataValue isnull="false" >涂装班</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >236</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="3" >
+    <DataValue isnull="false" >中铝贵州工业服务有限公司</DataValue>
+    <DataValue isnull="false" >汽车维修分公司</DataValue>
+    <DataValue isnull="false" >汽修二班</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >237</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+<DataPojo type="DepartmentInfoParam_All"  version="1"  valuecount="5"  isnull="false" >
+  <DataProperty propertyname="departmentName"  valuetype="7"  isnull="false"  length="3" >
+    <DataValue isnull="false" >企业管理部</DataValue>
+    <DataValue isnull="false" >企业管理科</DataValue>
+    <DataValue isnull="false" >测试组</DataValue>
+  </DataProperty>
+  <DataProperty propertyname="accountId"  valuetype="3"  value="670869647114347" />
+  <DataProperty propertyname="discursion"  valuetype="1"  isnull="false" ></DataProperty>
+  <DataProperty propertyname="dep_sort"  valuetype="1"  isnull="false" >238</DataProperty>
+  <DataProperty propertyname="departmentNumber"  valuetype="1"  isnull="false" ></DataProperty>
+</DataPojo>
+</DataProperty>
+</DataPojo>
