@@ -11,7 +11,7 @@ import java.util.List;
 public class Member implements Serializable {
     private static final long serialVersionUID = 7419315988584703175L;
     private List<String> departmentName;//部门名称 可能是个列表
-    private String pName;//直接父部门名称
+    private String pname;//直接父部门名称
     private String trueName;//用户名称
     private String birthday;//
     private String secondOcupationName;// 副岗
@@ -31,6 +31,18 @@ public class Member implements Serializable {
     private String id;// 人员ID
     private String email;//
 
+    public String getDepartmentNameStr(){
+        String rslt = "";
+        if(null == departmentName || departmentName.size()==0){
+            rslt = "";
+        }else{
+            for (String s : departmentName) {
+                rslt = rslt+"_"+s;
+            }
+        }
+        return rslt;
+    }
+
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
@@ -43,12 +55,12 @@ public class Member implements Serializable {
         this.departmentName = departmentName;
     }
 
-    public String getpName() {
-        return pName;
+    public String getPname() {
+        return pname;
     }
 
-    public void setpName(String pName) {
-        this.pName = pName;
+    public void setPname(String pname) {
+        this.pname = pname;
     }
 
     public String getTrueName() {

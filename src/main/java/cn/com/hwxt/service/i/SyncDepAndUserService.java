@@ -26,5 +26,6 @@ public interface SyncDepAndUserService {
      * @return
      */
     public Boolean checkUser(String usercode, String password);
+    public String judgeSsoFromSeeyou(String token);
 
 }

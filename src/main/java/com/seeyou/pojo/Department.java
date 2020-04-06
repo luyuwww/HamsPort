@@ -17,6 +17,17 @@ public class Department implements Serializable {
     private String depSort;//排序号
     private String departmentNumber;//部门代码
 
+    public String getDepartmentNameStr(){
+        String rslt = "";
+        if(null == departmentName || departmentName.size()==0){
+            rslt = "";
+        }else{
+            for (String s : departmentName) {
+                rslt = rslt+"_"+s;
+            }
+        }
+        return rslt;
+    }
     public List<String> getDepartmentName() {
         return departmentName;
     }

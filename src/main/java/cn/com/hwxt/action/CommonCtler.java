@@ -120,10 +120,10 @@ public class CommonCtler {
      * 单点登录
      */
     @RequestMapping(value = "/sso", method = RequestMethod.GET)
-    public String sso(@RequestParam String usercode, @RequestParam String token) {
+    public String sso(@RequestParam String token) {
         String lamsUrl = "http://" + arcServcieImpl.getLamsIP() + "/Lams/directLogin?usercode=";
-        Boolean result = judgeSSO(usercode, token);
-        if (result) {//返回0 表示成功
+        String usercode = judgeSSO(token);
+        if (StringUtils.isNotBlank(usercode)) {//返回0 表示成功
             lamsUrl = lamsUrl + usercode;
             log.error("验证成功可以登录档案系统!");
         } else {
@@ -198,8 +198,8 @@ public class CommonCtler {
     /**
      * 内部调用 判断是否是允许用户 ture是的
      */
-    private Boolean judgeSSO(String usercode, String token) {
-        Boolean result = false;
+    private String  judgeSSO(String token) {
+        String result = syncDepAndUserService.judgeSsoFromSeeyou(token);
         return result;
     }
 

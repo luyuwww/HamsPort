@@ -61,7 +61,6 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
 
     /**
      * 同步全量部门信息,循环全宗列表一个个单位同步
-     * cancel是1的是删除的部门 我们不同步。但是一旦同步过来的部门不用接口删除。可以在档案系统手动删除。
      */
     private void syncAllDeptAtOneUnit(String unitName, String qzh) {
         String xml = "";
@@ -79,9 +78,7 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
     }
 
     /**
-     * 同步全量部门信息 循环全宗列表一个个单位同步 只同步 status=1的 遇到不为1的 设置成禁用  accounttype只管主的
-     * status  0：试用  1：正式  2：临时  3：试用延期  4：解聘  5：离职  6：退休  7：无效
-     * accounttype Null:主账号,1:次账号
+     * 同步全量用户
      */
     public synchronized void syncAllUser() {
         List<SQzh> qzhList = sQzhMapper.listAllSqzh();
@@ -96,7 +93,6 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
 
     /**
      * 同步全量部门信息,循环全宗列表一个个单位同步
-     * cancel是1的是删除的部门 我们不同步。但是一旦同步过来的部门不用接口删除。可以在档案系统手动删除。
      */
     private void syncMemberAtOneUnit(String unitName, String qzh) {
         String xml = "";
@@ -124,12 +120,14 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
             String gname = dept.getName();
             String depCode = (null != dept.getDepartmentNumber() ? dept.getDepartmentNumber() : "");
             //作为排序字段
-            String gfzj = (null != dept.getDepSort() ? dept.getDepSort() : "");
+            Integer gid = (null != dept.getDepSort() ? Integer.parseInt(dept.getDepSort()) : -1);
+            String gfzj = dept.getDepartmentNameStr();
             String discursion = (null != dept.getDiscursion() ? dept.getDiscursion() : "");
             SGroup parentGroup = null;
             //
             if (StringUtils.isNotBlank(dept.getParentName())) {
-                sGroupMapper.getGroupByName(dept.getParentName(), qzh);
+                String compareKey = gfzj.replace("_"+dept.getName() , "");
+                parentGroup = sGroupMapper.getGroupByGfzj4Seeyou(compareKey, qzh);
             }
             if (null != parentGroup) {
                 pid = parentGroup.getDid();
@@ -142,7 +140,7 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
                 group.setDid(getMaxDid("S_GROUP"));
                 group.setPid(pid);
                 group.setQzh(qzh);
-                group.setGid(0);
+                group.setGid(gid);
                 group.setGname(gname);
                 group.setDepcode(depCode);
                 group.setGfzj(gfzj);
@@ -185,14 +183,15 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
             String usercode = ub.getLoginName();
             String email = ub.getEmail();
             String esbID = null != ub.getStaffNumber() ? ub.getStaffNumber() : "";
-            String esbcode = null != ub.getPerSort() ? ub.getPerSort() : "";
-            String parentName = null != ub.getpName() ? ub.getpName() : "";
+            String esbcode = ub.getDepartmentNameStr();
+            String parentName = null != ub.getPname() ? ub.getPname() : "";
             String discursion = (null != ub.getDiscursion() ? ub.getDiscursion() : "");
             Integer islsyh = getLamsStatus(0);
 
             SGroup group = null;
-            if(StringUtils.isNotBlank(parentName)){
-                group = sGroupMapper.getGroupByName(parentName , qzh);
+            if(StringUtils.isNotBlank(esbcode)){
+                System.out.println(esbcode);
+                group = sGroupMapper.getGroupByGfzj4Seeyou(esbcode , qzh);
             }
             if (null != group) {
                 pid = group.getDid();
@@ -246,6 +245,10 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
         }
     }
 
+    public String judgeSsoFromSeeyou(String token){
+        return SeeYouUtil.jdugeSSO(ip , token);
+    }
+
     //档案系统 0可用   -1锁定
     private int getLamsStatus(Integer status) {
         return 0;
@@ -263,7 +266,7 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
     protected String appValue;
 
     @Autowired
-    @Value("${weaver.user.default.password}")
+    @Value("${user.default.password}")
     protected String defaultPassword;
 
     private static String bz = "fromoa";

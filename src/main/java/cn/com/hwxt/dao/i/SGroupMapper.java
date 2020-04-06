@@ -34,10 +34,15 @@ public interface SGroupMapper extends BaseDao {
 
     int updateByKey(SGroup record);
 
+
     /**
+     * _综合管理部_薪酬考核单元
+     * @param gfzj
+     * @param qzh
+     * @return
      */
-    @Select("SELECT * FROM S_GROUP WHERE GNAME = '${gname}' AND  QZH = '${qzh}' ")
-    SGroup getGroupByName(@Param("gname") String gname , @Param("qzh") String qzh);
+    @Select("SELECT * FROM S_GROUP WHERE GFZJ = '${gfzj}' AND  QZH = '${qzh}' ")
+    SGroup getGroupByGfzj4Seeyou(@Param("gfzj") String gfzj , @Param("qzh") String qzh);
 
     /**
      * <p>Title: 根据xml里面的orgCode来查询s_group中的depCode</p>
