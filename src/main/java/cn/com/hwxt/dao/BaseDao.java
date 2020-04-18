@@ -5,6 +5,7 @@ import cn.com.hwxt.pojo.*;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
@@ -80,7 +81,13 @@ public interface BaseDao {
     List<DClassifyZjk> listFlh(@Param("tableName") String tableName ,
                                @Param("libcode") Integer libcode);
 
-    @Insert({ "INSERT INTO S_BIZEEPQUEUE (UUID, APPNAME, CREATETIME, STATUS, MEMO, LIBCODE, LEVELSTR) VALUES" +
-            " ((#{UUID}, #{APPNAME}, #{CREATETIME, JDBCTYPE=DATE}, #{STATUS}, #{MEMO}, #{LIBCODE}, #{LEVELSTR})" })
+    @Insert({ "INSERT INTO S_BIZEEPQUEUE (UUID, APPNAME, CREATETIME,UPDATETIME, STATUS, LIBCODE, LEVELSTR , MD5,APPPK,PACKAGEPATH,PZM) VALUES" +
+            " (#{uuid}, #{appName}, #{createTime, jdbcType=TIMESTAMP}, #{updateTime, jdbcType=TIMESTAMP}, #{status}, #{libcode}, #{levelStr}, #{md5}, #{appPk}, #{packagePath}, #{pzm})" })
     int insertSbizEepQueue(SBizEepQueue bizEepQueue);
+
+    @Update({ "UPDATE S_BIZEEPQUEUE SET STATUS = #{status},UPDATETIME = #{updateTime, jdbcType=TIMESTAMP},MEMO=#{memo} WHERE UUID = #{uuid}" })
+    int updateSysRoleById(SBizEepQueue bizEepQueue);
+
+    @Select("SELECT * FROM  S_BIZEEPQUEUE WHERE ${sql}")
+    List<SBizEepQueue> getSBizEepQueues(@Param("sql") String sql);
 }

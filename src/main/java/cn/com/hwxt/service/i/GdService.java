@@ -16,3 +16,5 @@ public interface GdService {
     public String dataReciveJson(@WebParam(name = "appKey") String appKey , @WebParam(name = "dataJson") String dataJson
             , @WebParam(name = "pk") String pk , @WebParam(name = "md5") String md5);
 }
+
+

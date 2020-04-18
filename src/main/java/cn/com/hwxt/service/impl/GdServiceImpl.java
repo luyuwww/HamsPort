@@ -2,6 +2,7 @@ package cn.com.hwxt.service.impl;
 
 import ch.qos.logback.classic.Logger;
 import cn.com.hwxt.dao.i.SUserMapper;
+import cn.com.hwxt.pojo.SBizEepQueue;
 import cn.com.hwxt.pojo.jaxb.Field;
 import cn.com.hwxt.pojo.jaxb.Table;
 import cn.com.hwxt.service.BaseService;
@@ -25,6 +26,7 @@ import java.util.Map;
 @Service("GdDataService")
 @WebService(name = "GdDataWs", targetNamespace = "http://unisra.www.com/")
 public class GdServiceImpl extends BaseService implements GdService {
+    //            , @WebParam(name = "levelStr") String levelStr , @WebParam(name = "libcode") Integer libcode,@WebParam(name = "pzm") String pzm
     private String rsltMsg = "<?xml version='1.0' encoding='UTF-8'?><rslt><flag value='#FLAG#'/><msg value='#MSG#'/></rslt>";
     private String rsltJson ="{\"DID\":\"#DID#\",\"MSG\":\"#MSG#\"}";
     @WebMethod
@@ -35,8 +37,24 @@ public class GdServiceImpl extends BaseService implements GdService {
         log.error("pk:"+pk);
         log.error("md5:"+md5);
         String rsltStr = "";
-        rsltStr = rsltMsg.replace("#FLAG#" , "true");
-        rsltStr = rsltStr.replace("#MSG#" , "");
+
+        if(appKey.split("-").length <4){
+            throw new RuntimeException("appkey format error");
+        }
+        String levelStr = appKey.split("-")[1];
+        Integer libcode = Integer.parseInt( appKey.split("_")[2]);
+        String pzm = appKey.split("-")[3];
+
+        SBizEepQueue beq = new SBizEepQueue(appKey, pk, dataXml , md5 , levelStr,  libcode , pzm);
+        try {
+            sUserMapper.insertSbizEepQueue(beq);
+            rsltStr = rsltMsg.replace("#FLAG#" , "true");
+            rsltStr = rsltStr.replace("#MSG#" , "");
+        } catch (Exception e) {
+            rsltStr = rsltMsg.replace("#FLAG#" , "false");
+            rsltStr = rsltStr.replace("#MSG#" , e.getMessage());
+            e.printStackTrace();
+        }
         return rsltStr;
     }
 
@@ -48,8 +66,24 @@ public class GdServiceImpl extends BaseService implements GdService {
         log.error("pk:"+pk);
         log.error("md5:"+md5);
         String rsltStr = "";
-        rsltStr = rsltMsg.replace("#FLAG#" , "true");
-        rsltStr = rsltStr.replace("#MSG#" , "");
+        if(appKey.split("-").length <4){
+            throw new RuntimeException("appkey format error");
+        }
+
+        String levelStr = appKey.split("-")[1];
+        Integer libcode = Integer.parseInt( appKey.split("-")[2]);
+        String pzm = appKey.split("-")[3];
+
+        SBizEepQueue beq = new SBizEepQueue(appKey, pk, dataJson , md5 , levelStr,  libcode , pzm);
+        try {
+            sUserMapper.insertSbizEepQueue(beq);
+            rsltStr = rsltMsg.replace("#FLAG#" , "true");
+            rsltStr = rsltStr.replace("#MSG#" , "");
+        } catch (Exception e) {
+            rsltStr = rsltMsg.replace("#FLAG#" , "false");
+            rsltStr = rsltStr.replace("#MSG#" , e.getMessage());
+            e.printStackTrace();
+        }
         return rsltStr;
     }
     @Autowired

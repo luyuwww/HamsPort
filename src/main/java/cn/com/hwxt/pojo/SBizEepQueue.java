@@ -12,13 +12,18 @@ import java.util.UUID;
  */
 public class SBizEepQueue implements java.io.Serializable {
 
-    public SBizEepQueue(String appName, String packagePath , String  dm5,String levelStr,  Integer libcode) {
+    public SBizEepQueue(String appName, String appPk , String packagePath , String  md5 ,String levelStr,  Integer libcode , String pzm) {
+        this.appPk = appPk;
         this.uuid = UUID.randomUUID().toString();
         this.appName = appName;
         this.levelStr = levelStr;
         this.libcode = libcode;
         this.md5 = md5;
         this.packagePath = packagePath;
+        this.createTime = new Date();
+        this.updateTime = new Date();
+        this.pzm = pzm;
+        this.status = 0;
     }
 
     public SBizEepQueue() {    }
@@ -27,13 +32,32 @@ public class SBizEepQueue implements java.io.Serializable {
 
     private String uuid;
     private String appName;
+    private String appPk;//对方的主键
     private Date createTime;
+    private Date updateTime;
     private Integer status;//0 null未处理, 1已经处理,2失败了
     private String memo;//如果失败记录失败原因
     private String levelStr;//d_vol  d_file
     private String md5;//d_vol  d_file
     private String packagePath;//d_vol  d_file
+    private String pzm;//d_vol  d_file
     private Integer libcode;
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public String getAppPk() {
+        return appPk;
+    }
+
+    public void setAppPk(String appPk) {
+        this.appPk = appPk;
+    }
 
     public String getPackagePath() {
         return packagePath;
