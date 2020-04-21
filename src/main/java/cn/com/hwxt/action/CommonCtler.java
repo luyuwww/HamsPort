@@ -2,6 +2,8 @@ package cn.com.hwxt.action;
 
 import ch.qos.logback.classic.Logger;
 import cn.com.hwxt.service.i.ArcService;
+import cn.com.hwxt.service.i.ScheduleService;
+import cn.com.hwxt.service.impl.ScheduleServiceImpl;
 import cn.com.hwxt.util.GlobalFinalAttr;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
@@ -115,6 +117,32 @@ public class CommonCtler {
     }
 
     /**
+     * 抓取一次队列
+     */
+    @RequestMapping(value = "/dualQueue", method = RequestMethod.GET)
+    public void dualQueue(HttpServletResponse response) {
+        PrintWriter out = null;
+        try {
+            response.setContentType("text/html;charset=GBK ");
+            out = response.getWriter();
+            out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
+            out.println("<HTML>");
+            out.println("<BODY>");
+            out.println("<XMP>");
+            out.println(scheduleService.parseEepQueue());
+            out.println("</XMP>");
+            out.println("</BODY>");
+            out.println("</HTML>");
+        } catch (Exception e) {
+            out.println("读取日志错误" + e.getMessage());
+            log.error("读取日志错误" + e.getMessage());
+        } finally {
+            out.flush();
+            out.close();
+        }
+    }
+
+    /**
      * 单点登录
      */
     @RequestMapping(value = "/sso", method = RequestMethod.GET)
@@ -166,6 +194,8 @@ public class CommonCtler {
 
     @Autowired
     private ArcService arcServcieImpl;
+    @Autowired
+    private ScheduleService scheduleService;
     @Autowired
     @Value("${interface.log.home.address}")
     private String logHomeAdd;

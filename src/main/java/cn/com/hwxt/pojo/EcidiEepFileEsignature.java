@@ -8,8 +8,6 @@ import java.util.Map;
 /**
  * @author DaMo
  * 华东院提供的meta_file.xml 电子签章
- * @UPDATE 2020/4/2-23:56
- * @since 2020/4/2-23:56
  */
 public class EcidiEepFileEsignature implements Serializable {
     private static final long serialVersionUID = -4227678053683697030L;

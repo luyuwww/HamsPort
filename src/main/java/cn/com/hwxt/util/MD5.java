@@ -3,6 +3,7 @@ package cn.com.hwxt.util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.security.MessageDigest;
@@ -26,7 +27,7 @@ public class MD5 {
         long begin = System.currentTimeMillis();
 
         File big = new File("F:/w2ksp4_cn.exe");
-        String md5 = getFileMD5String(big);
+        String md5 = getFileMD5(big);
         //String md5 = getMD5String("a");
         long end = System.currentTimeMillis();
         System.out.println("md5:" + md5 + " time:" + ((end - begin) / 1000) + "s");
@@ -41,43 +42,27 @@ public class MD5 {
      * @param file
      * @return
      */
-    public static String getFileMD5String(File file) {
-//		return null;
+    public static String getFileMD5(File file) {
+        InputStream fis = null;
         try {
-            FileInputStream in = new FileInputStream(file);
-            FileChannel ch = in.getChannel();
-
-            //700000000 bytes are about 670M
-            int maxSize = 700000000;
-
-            long startPosition = 0L;
-            long step = file.length() / maxSize;
-
-            if (step == 0) {
-                MappedByteBuffer byteBuffer = ch.map(FileChannel.MapMode.READ_ONLY, 0, file.length());
-                messageDigest.update(byteBuffer);
-                return bufferToHex(messageDigest.digest());
+            fis = new FileInputStream(file);
+            byte[] buffer = new byte[1024];
+            int numRead = 0;
+            while ((numRead = fis.read(buffer)) > 0) {
+                messageDigest.update(buffer, 0, numRead);
             }
-
-            for (int i = 0; i < step; i++) {
-                MappedByteBuffer byteBuffer = ch.map(FileChannel.MapMode.READ_ONLY, startPosition, maxSize);
-                messageDigest.update(byteBuffer);
-                startPosition += maxSize;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally{
+            try {
+                if(null != fis){
+                    fis.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-
-            if (startPosition == file.length()) {
-                return bufferToHex(messageDigest.digest());
-            }
-
-            MappedByteBuffer byteBuffer = ch.map(FileChannel.MapMode.READ_ONLY, startPosition, file.length() - startPosition);
-            messageDigest.update(byteBuffer);
-
-
-            return bufferToHex(messageDigest.digest());
-        } catch (Exception e) {
-            System.out.println(e.getMessage() + "----");
-            return null;
         }
+        return bufferToHex(messageDigest.digest());
     }
 
     public static String getMD5String(String s) {

@@ -7,15 +7,14 @@ import java.util.Map;
 /**
  * @author DaMo
  * 人员机构bean
- * @UPDATE 2020/4/2-23:56
- * @since 2020/4/2-23:56
  */
 public class EcidiEepOrgPerson implements Serializable {
     private static final long serialVersionUID = 471753703905980096L;
     private String name;
     private String id;
     private String personName;
-    private Date orgName;
+    private String orgName;
+    private String opName;//操作名
     private Integer orderNum;//顺序 0开始
 
     public Integer getOrderNum() {
@@ -50,11 +49,19 @@ public class EcidiEepOrgPerson implements Serializable {
         this.personName = personName;
     }
 
-    public Date getOrgName() {
+    public String getOrgName() {
         return orgName;
     }
 
-    public void setOrgName(Date orgName) {
+    public void setOrgName(String orgName) {
         this.orgName = orgName;
+    }
+
+    public String getOpName() {
+        return opName;
+    }
+
+    public void setOpName(String opName) {
+        this.opName = opName;
     }
 }

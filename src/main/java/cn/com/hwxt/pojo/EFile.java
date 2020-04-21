@@ -24,6 +24,7 @@ public class EFile implements java.io.Serializable {
     private Integer attr;
     private Integer attrex;
     private String creator;
+    private String creatorName;
     private Date createtime;
     private String editor;
     private Date edittime;
@@ -34,6 +35,11 @@ public class EFile implements java.io.Serializable {
     private String tablename;
     private String md5;
     private Integer filesize = 0;
+    private Integer esort;
+    private Integer convertstatus = 0;
+    private Integer txtflag = 0;
+    private Integer systoyun = 0;
+    private Integer metaxmlflag = 0;
 
     // Constructors
 
@@ -267,5 +273,43 @@ public class EFile implements java.io.Serializable {
         this.tablename = tablename;
     }
 
+    public Integer getEsort() {
+        return esort;
+    }
 
+    public void setEsort(Integer esort) {
+        this.esort = esort;
+    }
+
+    public Integer getConvertstatus() {
+        return convertstatus;
+    }
+
+    public void setConvertstatus(Integer convertstatus) {
+        this.convertstatus = convertstatus;
+    }
+
+    public Integer getTxtflag() {
+        return txtflag;
+    }
+
+    public void setTxtflag(Integer txtflag) {
+        this.txtflag = txtflag;
+    }
+
+    public Integer getSystoyun() {
+        return systoyun;
+    }
+
+    public void setSystoyun(Integer systoyun) {
+        this.systoyun = systoyun;
+    }
+
+    public Integer getMetaxmlflag() {
+        return metaxmlflag;
+    }
+
+    public void setMetaxmlflag(Integer metaxmlflag) {
+        this.metaxmlflag = metaxmlflag;
+    }
 }

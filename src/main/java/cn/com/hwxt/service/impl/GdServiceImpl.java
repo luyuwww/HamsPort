@@ -3,10 +3,12 @@ package cn.com.hwxt.service.impl;
 import ch.qos.logback.classic.Logger;
 import cn.com.hwxt.dao.i.SUserMapper;
 import cn.com.hwxt.pojo.SBizEepQueue;
+import cn.com.hwxt.pojo.SFwqpz;
 import cn.com.hwxt.pojo.jaxb.Field;
 import cn.com.hwxt.pojo.jaxb.Table;
 import cn.com.hwxt.service.BaseService;
 import cn.com.hwxt.service.i.GdService;
+import cn.com.hwxt.util.CommonUtil;
 import cn.com.hwxt.util.GlobalFinalAttr;
 import cn.com.hwxt.util.XmlObjUtil;
 import org.apache.commons.io.FileUtils;
@@ -37,15 +39,18 @@ public class GdServiceImpl extends BaseService implements GdService {
         log.error("pk:"+pk);
         log.error("md5:"+md5);
         String rsltStr = "";
+        String[] params = appKey.split("-");
 
-        if(appKey.split("-").length <4){
+        if(params.length <4){
             throw new RuntimeException("appkey format error");
         }
-        String levelStr = appKey.split("-")[1];
-        Integer libcode = Integer.parseInt( appKey.split("_")[2]);
-        String pzm = appKey.split("-")[3];
 
-        SBizEepQueue beq = new SBizEepQueue(appKey, pk, dataXml , md5 , levelStr,  libcode , pzm);
+        String levelStr = CommonUtil.getLevelStr(params[1]);
+        Integer libcode = Integer.parseInt(params[2]);
+        String qzh = params[3];
+        String pzm = params[4];
+
+        SBizEepQueue beq = new SBizEepQueue(appKey, pk, dataXml , md5 , levelStr,  libcode , qzh ,pzm);
         try {
             sUserMapper.insertSbizEepQueue(beq);
             rsltStr = rsltMsg.replace("#FLAG#" , "true");
@@ -66,16 +71,24 @@ public class GdServiceImpl extends BaseService implements GdService {
         log.error("pk:"+pk);
         log.error("md5:"+md5);
         String rsltStr = "";
-        if(appKey.split("-").length <4){
+        String[] params = appKey.split("-");
+
+        if(params.length <4){
             throw new RuntimeException("appkey format error");
         }
 
-        String levelStr = appKey.split("-")[1];
-        Integer libcode = Integer.parseInt( appKey.split("-")[2]);
-        String pzm = appKey.split("-")[3];
+        String levelStr = CommonUtil.getLevelStr(params[1]);
+        Integer libcode = Integer.parseInt(params[2]);
+        String qzh = params[3];
+        String pzm = params[4];
 
-        SBizEepQueue beq = new SBizEepQueue(appKey, pk, dataJson , md5 , levelStr,  libcode , pzm);
+        SBizEepQueue beq = new SBizEepQueue(appKey, pk, dataJson , md5 , levelStr,  libcode , qzh ,pzm);
         try {
+            SFwqpz fwqpz = sUserMapper.getFwqpzByPzm(pzm);
+            if(fwqpz == null){
+                throw new RuntimeException("传入的APP有错误,请联系档案管理员");
+            }
+
             sUserMapper.insertSbizEepQueue(beq);
             rsltStr = rsltMsg.replace("#FLAG#" , "true");
             rsltStr = rsltStr.replace("#MSG#" , "");

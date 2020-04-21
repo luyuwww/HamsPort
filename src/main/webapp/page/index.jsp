@@ -26,14 +26,16 @@
 <div class="container theme-showcase">
     <p>
 
+        <a class="btn btn-lg btn-danger"
+           href="${pageContext.request.contextPath}/dualQueue">队列处理一下</a>
         <a class="btn btn-lg btn-primary"
            href="${pageContext.request.contextPath}/viewLogList">查看日志</a>
-        <a class="btn btn-lg btn-danger"
-           href="${pageContext.request.contextPath}/viewXMLList">查看XML</a>
         <a class="btn btn-lg btn-success"
            href="${pageContext.request.contextPath}/getUsers">测试数据库连接</a>
         <a class="btn btn-lg btn-warning"
            href="${pageContext.request.contextPath}/cxf">查看服务</a>
+<%--        <a class="btn btn-lg btn-danger"--%>
+<%--           href="${pageContext.request.contextPath}/viewXMLList">查看XML</a>--%>
     </p>
 </div>
 </body>

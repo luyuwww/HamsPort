@@ -12,12 +12,13 @@ import java.util.UUID;
  */
 public class SBizEepQueue implements java.io.Serializable {
 
-    public SBizEepQueue(String appName, String appPk , String packagePath , String  md5 ,String levelStr,  Integer libcode , String pzm) {
+    public SBizEepQueue(String appName, String appPk , String packagePath , String  md5 ,String levelStr,  Integer libcode , String qzh , String pzm) {
         this.appPk = appPk;
         this.uuid = UUID.randomUUID().toString();
         this.appName = appName;
         this.levelStr = levelStr;
         this.libcode = libcode;
+        this.qzh = qzh;
         this.md5 = md5;
         this.packagePath = packagePath;
         this.createTime = new Date();
@@ -40,8 +41,25 @@ public class SBizEepQueue implements java.io.Serializable {
     private String levelStr;//d_vol  d_file
     private String md5;//d_vol  d_file
     private String packagePath;//d_vol  d_file
+    private String qzh;//d_vol  d_file
     private String pzm;//d_vol  d_file
     private Integer libcode;
+
+    public String getQzh() {
+        return qzh;
+    }
+
+    public void setQzh(String qzh) {
+        this.qzh = qzh;
+    }
+
+    public String getPzm() {
+        return pzm;
+    }
+
+    public void setPzm(String pzm) {
+        this.pzm = pzm;
+    }
 
     public Date getUpdateTime() {
         return updateTime;
@@ -133,5 +151,14 @@ public class SBizEepQueue implements java.io.Serializable {
 
     public void setLibcode(Integer libcode) {
         this.libcode = libcode;
+    }
+
+    @Override
+    public String toString() {
+        return "SBizEepQueue{" +
+                "uuid='" + uuid + '\'' +
+                ", appName='" + appName + '\'' +
+                ", appPk='" + appPk + '\'' +
+                '}';
     }
 }

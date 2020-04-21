@@ -81,12 +81,12 @@ public interface BaseDao {
     List<DClassifyZjk> listFlh(@Param("tableName") String tableName ,
                                @Param("libcode") Integer libcode);
 
-    @Insert({ "INSERT INTO S_BIZEEPQUEUE (UUID, APPNAME, CREATETIME,UPDATETIME, STATUS, LIBCODE, LEVELSTR , MD5,APPPK,PACKAGEPATH,PZM) VALUES" +
-            " (#{uuid}, #{appName}, #{createTime, jdbcType=TIMESTAMP}, #{updateTime, jdbcType=TIMESTAMP}, #{status}, #{libcode}, #{levelStr}, #{md5}, #{appPk}, #{packagePath}, #{pzm})" })
+    @Insert({ "INSERT INTO S_BIZEEPQUEUE (UUID, APPNAME, CREATETIME,UPDATETIME, STATUS, LIBCODE, LEVELSTR , MD5,APPPK,PACKAGEPATH,QZH,PZM) VALUES" +
+            " (#{uuid}, #{appName}, #{createTime, jdbcType=TIMESTAMP}, #{updateTime, jdbcType=TIMESTAMP}, #{status}, #{libcode}, #{levelStr}, #{md5}, #{appPk}, #{packagePath}, #{qzh}, #{pzm})" })
     int insertSbizEepQueue(SBizEepQueue bizEepQueue);
 
     @Update({ "UPDATE S_BIZEEPQUEUE SET STATUS = #{status},UPDATETIME = #{updateTime, jdbcType=TIMESTAMP},MEMO=#{memo} WHERE UUID = #{uuid}" })
-    int updateSysRoleById(SBizEepQueue bizEepQueue);
+    int updateSBizEepQueueById(SBizEepQueue bizEepQueue);
 
     @Select("SELECT * FROM  S_BIZEEPQUEUE WHERE ${sql}")
     List<SBizEepQueue> getSBizEepQueues(@Param("sql") String sql);

@@ -1,29 +1,23 @@
-package cn.com.hwxt.junit;
+package cn.com.hwxt.util;
 
 import cn.com.hwxt.pojo.EcidiEepOrgPerson;
 import cn.com.hwxt.pojo.EcidiSimpleEEP;
 import cn.com.hwxt.pojo.EcidiSimpleFile;
-import cn.com.hwxt.util.DateUtil;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.Assert;
 import org.springframework.util.xml.DomUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
-import javax.mail.FetchProfile;
-import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
-public class ParseXmlTest {
+public class ParseBimXmlUtil {
     public static void main(String[] args) throws Exception {
 //		File file = new File("C:/ML_OA_DATA.xml");
 //		String xmlStr = FileUtils.readFileToString(file , "UTF-8");
@@ -63,11 +57,19 @@ public class ParseXmlTest {
         // 解析xml文件
         // 1、获取InputStream输入流
         File f = new File("D:\\workspace\\idea\\HamsPort\\docu\\yfg\\meta_file.xml");
+        String basePht = "D:\\temp\\yfg\\yfg-15393e9fe0a4828982a1dce82d29e581\\";
         EcidiSimpleEEP ecidiEEP = parseBimEEP(f);
         for (EcidiSimpleFile ecidiSimpleFile : ecidiEEP.getFileList()) {
-            System.out.println(ecidiSimpleFile.getFileBizName());
+            File att = new File(basePht+ecidiSimpleFile.getFileBizName());
+            String md5 = MD5.getFileMD5(att);
+            if(!md5.equals(ecidiSimpleFile.getMd5())){
+                throw new RuntimeException("数字摘要值验证错误:"+ecidiSimpleFile.getFileBizName());
+            }
+
+
         }
         System.out.println();
+
 //        // 4、将docBuilder转换为Document
 //        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(f);
 //        // 5、获取节点并循环输出节点值
@@ -162,7 +164,7 @@ public class ParseXmlTest {
 
     }
 
-    private static EcidiSimpleEEP parseBimEEP(File f) throws Exception {
+    public static EcidiSimpleEEP parseBimEEP(File f) throws Exception {
         //固定复杂结构
         String[] innerargs = {"xs:element"};
         String[] argss = {"xs:complexType", "xs:sequence", "xs:element"};

@@ -77,7 +77,7 @@ public class FileUploadCtler {
                 eFile.setCreator(StringUtils.isNotBlank(upUserCode) ? upUserCode : "ROOT");
                 eFile.setCreatetime(new Date());
                 eFile.setFilesize(((Long) file.getSize()).intValue() / 1000);
-                eFile.setMd5(MD5.getFileMD5String(newFile));
+                eFile.setMd5(MD5.getFileMD5(newFile));
                 baseService.insertEfile(tableName, eFile);
                 result = eFile.getDid() + "&success";
             } catch (Exception e) {

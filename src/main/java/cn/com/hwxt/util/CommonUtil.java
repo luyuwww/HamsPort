@@ -86,5 +86,19 @@ public class CommonUtil {
         CommonUtil.doHttpGet(urlStr);
     }
 
+    /**
+     * 通过level获取
+     * @param level
+     * @return
+     */
+    public static String getLevelStr(String level){
+        if(level.equalsIgnoreCase("0")){
+            return "D_PRJ";
+        }else if(level.equalsIgnoreCase("1")){
+            return "D_VOL";
+        }else{
+            return "D_FILE";
+        }
+    }
     private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
 }
