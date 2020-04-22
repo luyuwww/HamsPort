@@ -98,7 +98,7 @@ public class SeeYouUtil {
             if(StringUtils.isBlank(validate)){
                 throw new RuntimeException("get SeeyouValidate error");
             }
-            String url =  "http://"+ip+"/seeyon/rest/data/members/"+ URLEncoder.encode(unitName ) +"?token="+validate+"&"+Math.random();
+            String url =  "http://"+ip+"/seeyon/rest/data/members/"+ unitName +"?token="+validate+"&"+Math.random();
             System.out.println(url);
             rslt = HttpClientUtils.doGet(url);
         } catch (Exception e) {
@@ -107,6 +107,7 @@ public class SeeYouUtil {
         if(null != rslt && rslt.getCode() == 200){
             return rslt.getContent();
         }else{
+            log.error(rslt.toString());
             return "";
         }
     }
@@ -119,7 +120,7 @@ public class SeeYouUtil {
             if(StringUtils.isBlank(validate)){
                 throw new RuntimeException("get SeeyouValidate error");
             }
-            String url =  "http://"+ip+"/seeyon/rest/data/departments/"+ URLEncoder.encode(unitName) +"?token="+validate+"&"+Math.random();
+            String url =  "http://"+ip+"/seeyon/rest/data/departments/"+ unitName +"?token="+validate+"&"+Math.random();
             System.out.println(url);
             rslt = HttpClientUtils.doGet(url);
         } catch (Exception e) {
@@ -128,6 +129,7 @@ public class SeeYouUtil {
         if(null != rslt && rslt.getCode() == 200){
             return rslt.getContent();
         }else{
+            log.error(rslt.toString());
             return "";
         }
     }
