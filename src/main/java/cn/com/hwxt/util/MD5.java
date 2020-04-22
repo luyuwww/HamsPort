@@ -24,15 +24,7 @@ public class MD5 {
     }
 
     public static void main(String[] args) throws IOException {
-        long begin = System.currentTimeMillis();
-
-        File big = new File("F:/w2ksp4_cn.exe");
-        String md5 = getFileMD5(big);
-        //String md5 = getMD5String("a");
-        long end = System.currentTimeMillis();
-        System.out.println("md5:" + md5 + " time:" + ((end - begin) / 1000) + "s");
-
-        System.out.println(getMD5String("abcdefghijklmnopqrstuvwxyz"));
+        System.out.println(getMD5String("780adfb183724400"));
 
     }
 

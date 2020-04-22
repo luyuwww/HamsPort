@@ -45,10 +45,10 @@ public class ScheduleServiceImpl extends BaseService implements ScheduleService 
         try {
             List<SBizEepQueue>  queueList = sUserMapper.getSBizEepQueues("STATUS IS NULL OR STATUS=0");
             for (SBizEepQueue queue : queueList) {
-                String rslt = "OK";
+                String rslt = "error";
                 EcidiSimpleEEP ecidiEEP = null;
 
-                        //解析包
+                //解析包
                 SFwqpz fwqpz = sUserMapper.getFwqpzByPzm(queue.getPzm());
                 String relativePath = FilenameUtils.normalize("/BIMEXT/" + queue.getPackagePath().substring(0, queue.getPackagePath().length()-4)
                         +"/"+ queue.getUuid()+"/");//解压相对路径
@@ -60,7 +60,6 @@ public class ScheduleServiceImpl extends BaseService implements ScheduleService 
                 }
                 String metaFileXmlPath = FilenameUtils.normalize(targetPath+"meta_file.xml");
                 String metaFileMd5Path = FilenameUtils.normalize(targetPath+"meta_file.md5");
-                System.out.println(targetPath);
                 try {
                     ZipTool.unZipFiles(zipFfile,  targetPath , "UTF-8");
                     //验证meta_file.xml的MD5
@@ -80,17 +79,13 @@ public class ScheduleServiceImpl extends BaseService implements ScheduleService 
                         }
                     }
 
-                    if(ecidiEEP == null){
-                        throw new RuntimeException("meta_file解析错误,获取eep对象为空");
-                    }
-                    //dual 业务实体 dual 文件实体
+                    //dual 业务实体
                     Integer dFileDid = -1;
 
-                    String bmid = queue.getQzh();
                     String SQL = "";
+                    String bmid = queue.getQzh();
+
                     String eTablename = "E_FILE"+queue.getLibcode();
-
-
                     String dTableName = queue.getLevelStr()+queue.getLibcode();
                     String gdrCode = MapUtils.getString(ecidiEEP.getBizEntity() , "creator_username");
                     StringBuffer fields = new StringBuffer();
@@ -145,9 +140,9 @@ public class ScheduleServiceImpl extends BaseService implements ScheduleService 
                         values.append(bmid).append("','").append(gdrCode).append("',-1,").append(dFileDid);
                         SQL = "insert into " + dTableName + " (" + fields.toString() + ") values ( " + values.toString() + " )";
                         execSql(SQL);
-                    } catch (NumberFormatException e) {
-                        e.printStackTrace();
+                    } catch (Exception e) {
                         dFileDid = -1;
+                        rslt = e.getMessage();
                         throw new RuntimeException(e);
                     }
 
@@ -199,44 +194,59 @@ public class ScheduleServiceImpl extends BaseService implements ScheduleService 
                                     eFile.setMd5(sFile.getMd5());
                                     insertEfile(eTablename, eFile);
                                 } catch (Exception e) {
-                                    e.printStackTrace();
+                                    rslt = e.getMessage();
+                                    jdbcDao.excute("DELETE "+dTableName + " WHERE DID=" +dFileDid);
+                                    jdbcDao.excute("DELETE "+eTablename + " WHERE PID=" +dFileDid);
                                     throw new RuntimeException("插入文件错误:"+e.getMessage() , e);
                                 }
                             }
                         }
+                        rslt = "OK";
                     }else {
                         throw new RuntimeException("档案系统插入文件错误" + queue);
                     }
                 } catch (Exception e) {
-                    log.error(e.getMessage() ,e);
                     rslt = e.getMessage();
-                }
-                //针对结果去处理队列,回调bim系统服务
-                try {
-                    if(rslt.equalsIgnoreCase("OK")){//0 null未处理, 1已经处理,2失败了
-                        queue.setStatus(1);
-                        queue.setMemo("");
-                    }else{
-                        queue.setStatus(2);
-                        queue.setMemo(rslt);
-                    }
-                    queue.setUpdateTime(new Date());
-                    sUserMapper.updateSBizEepQueueById(queue);
-                    //调用bim系统服务
-                    callBimServcie(queue);
-                } catch (Exception e) {
-                    log.error(e.getMessage() ,e );
+                    log.error(e.getMessage()  , e);
+                }finally{
+                    dualRslt(rslt , queue);
                 }
             }
         } catch (Exception e) {
             log.error(e.getMessage() , e);
-            e.printStackTrace();
         }finally {
             working = Boolean.FALSE;
         }
         return msg;
     }
 
+    /***
+     * 更新队列值,回调bim系统
+     * @param rslt
+     * @param queue
+     */
+    private void dualRslt(String rslt , SBizEepQueue queue){
+        try {
+            if(rslt.equalsIgnoreCase("OK")){//0 null未处理, 1已经处理,2失败了
+                queue.setStatus(1);
+                queue.setMemo("");
+            }else{
+                queue.setStatus(2);
+                if(rslt.length() > 1000){//防止错误消息太长
+                    queue.setMemo(rslt.substring(0 ,999));
+                }else{
+                    queue.setMemo(rslt);
+                }
+            }
+            queue.setUpdateTime(new Date());
+            sUserMapper.updateSBizEepQueueById(queue);
+            //调用bim系统服务
+            callBimServcie(queue);
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error(e.getMessage() ,e );
+        }
+    }
 
     /**
      * 调用BIM系统服务
