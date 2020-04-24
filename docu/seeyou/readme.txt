@@ -5,5 +5,5 @@
      *    S_USER  增加 ESBID,ESBCODE
 4. 轮转器和index.jsp都可以触发同步
 5. 如果部门需要排序,请修改lams中S_GROIUP.xml中46后的order by语句 为:ORDER BY GID
-6. 单点提供给致远实施的地址:http://localhost:8887/HamsPort/sso?token=asdfasdfasdfasdf
+6. 单点提供给致远实施的地址:http://localhost:8887/HamsPort/sso?ticket=asdfasdfasdfasdf
 7. 组织机构同步每晚23点同步一次,也可以在index页面中手动触发
