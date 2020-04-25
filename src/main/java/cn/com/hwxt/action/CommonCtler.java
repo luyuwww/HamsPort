@@ -120,14 +120,17 @@ public class CommonCtler {
      * 单点登录
      */
     @RequestMapping(value = "/sso", method = RequestMethod.GET)
-    public String sso(@RequestParam String ticket) {
-        String lamsUrl = "http://" + arcServcieImpl.getLamsIP() + "/Lams/directLogin?usercode=";
-        String usercode = judgeSSO(ticket);
-        if (StringUtils.isNotBlank(usercode)) {//返回0 表示成功
-            lamsUrl = lamsUrl + usercode;
-            log.error("验证成功可以登录档案系统!");
-        } else {
-            log.error("验证失败!");
+    public String sso(HttpServletRequest request) {
+        String ticket = request.getParameter("ticket");
+        String lamsUrl = "http://" + arcServcieImpl.getLamsIP() + "/Lams";
+        if(StringUtils.isNotBlank(ticket)){
+            String usercode = judgeSSO(ticket);
+            if (StringUtils.isNotBlank(usercode)) {//返回0 表示成功
+                lamsUrl = "/directLogin?usercode=" + usercode;
+                log.error("验证成功可以登录档案系统!");
+            } else {
+                log.error("验证失败!");
+            }
         }
         return "redirect:" + lamsUrl;
     }
