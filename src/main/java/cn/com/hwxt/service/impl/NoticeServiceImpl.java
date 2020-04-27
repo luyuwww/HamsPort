@@ -50,7 +50,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
             for (String userCode : userCodeList) {
                 user = sUserMapper.getUserByUsercode(userCode);
                 if (user != null) {
-                    String url = "http://" + lamsIP + "/LamsIFSS/gotoTask";
+                    String url = "http://" + lamsInnerIP + "/LamsIFSS/gotoTask";
                     String content = msgVM;
                     String todoTitle = sendInfoTitle;
 
@@ -110,7 +110,7 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
      */
     private String generatUrl(SUser user, String modName, String modOwner) {
         StringBuffer sb = new StringBuffer();
-        sb.append("http://").append(lamsIP).append("/Lams/autoLogin?card=").append(SeriKeyOper.encrypt(user.getUsercode()));
+        sb.append("http://").append(lamsOuterIP).append("/Lams/autoLogin?card=").append(SeriKeyOper.encrypt(user.getUsercode()));
         sb.append("&serikey=").append(SeriKeyOper.encrypt(user.getPasswd())).append("&moduleName=");
         sb.append(SeriKeyOper.encrypt(modName)).append("&moduleOwner=").append(SeriKeyOper.encrypt(modOwner));
         sb.append("&random=").append(Math.random());
@@ -138,5 +138,8 @@ public class NoticeServiceImpl extends BaseService implements NoticeService {
     @Autowired
     @Value("${sendinfo.todo.title}")
     private String sendInfoTitle;
+    @Autowired
+    @Value("${lams.outer.ip}")
+    protected String lamsOuterIP;
     private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
 }

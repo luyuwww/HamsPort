@@ -20,6 +20,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.PrintWriter;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.List;
 
 @Controller
@@ -122,17 +124,35 @@ public class CommonCtler {
     @RequestMapping(value = "/sso", method = RequestMethod.GET)
     public String sso(HttpServletRequest request) {
         String ticket = request.getParameter("ticket");
-        String lamsUrl = "http://" + arcServcieImpl.getLamsIP() + "/Lams";
-        if(StringUtils.isNotBlank(ticket)){
-            String usercode = judgeSSO(ticket);
-            if (StringUtils.isNotBlank(usercode)) {//返回0 表示成功
-                lamsUrl = "/directLogin?usercode=" + usercode;
-                log.error("验证成功可以登录档案系统!");
-            } else {
-                log.error("验证失败!");
+        System.out.println(ticket);
+        String lamsUrl = null;
+        try {
+            lamsUrl = "http://" + lamsOuterIP + "/Lams";
+            if(StringUtils.isNotBlank(ticket)){
+                String usercode = judgeSSO(ticket);
+                if (StringUtils.isNotBlank(usercode)) {//返回0 表示成功
+                    lamsUrl += ("/directLogin?usercode=" + usercode);
+                    log.error("验证成功可以登录档案系统!");
+                } else {
+                    throw new RuntimeException("验证失败!");
+                }
+            }else{
+                throw new RuntimeException("无法获取OA的安全凭证!");
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+            lamsUrl = "/error?msg="+ URLEncoder.encode(e.getMessage());
         }
         return "redirect:" + lamsUrl;
+    }
+
+    /**
+     * 主页跳转
+     */
+    @RequestMapping(value = {"/error"})
+    public String getError(@RequestParam String msg , Model model) {
+        model.addAttribute("msg" , URLDecoder.decode(msg));
+        return "error.jsp";
     }
 
     /**
@@ -190,8 +210,8 @@ public class CommonCtler {
             out.println("</BODY>");
             out.println("</HTML>");
         } catch (Exception e) {
-            out.println("读取日志错误" + e.getMessage());
-            log.error("读取日志错误" + e.getMessage());
+            e.printStackTrace();
+            log.error("服务调用错误" + e.getMessage());
         } finally {
             out.flush();
             out.close();
@@ -214,5 +234,9 @@ public class CommonCtler {
     private String logHomeAdd;
     @Autowired
     private SyncDepAndUserService syncDepAndUserService;
+
+    @Autowired
+    @Value("${lams.outer.ip}")
+    protected String lamsOuterIP;
     private Logger log = (Logger) LoggerFactory.getLogger(this.getClass());
 }

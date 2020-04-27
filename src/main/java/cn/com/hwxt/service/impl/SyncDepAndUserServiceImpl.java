@@ -41,7 +41,7 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
         //清除无用的用户关系
         execSql("DELETE FROM S_USERROLE WHERE YHID NOT IN (SELECT DID FROM S_USER)");
         //通知lams同步用户
-        CommonUtil.syncActivitUser(lamsIP);
+        CommonUtil.syncActivitUser(lamsInnerIP);
     }
 
     /**
@@ -134,7 +134,7 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
             } else {
                 pid = 0;
             }
-            SGroup group = sGroupMapper.getGroupByDepCode(depCode);
+            SGroup group = sGroupMapper.getGroupByGfzj(gfzj);
             if (group == null) {
                 group = new SGroup();
                 group.setDid(getMaxDid("S_GROUP"));
@@ -176,7 +176,7 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
         //<result column="ESBID" property="esbid" jdbcType="VARCHAR"/>  userid
         //<result column="ESBCODE" property="esbcode" jdbcType="VARCHAR"/> departmentid
         //status  0：试用  1：正式  2：临时  3：试用延期  4：解聘  5：离职  6：退休  7：无效
-        Integer pid = -1;
+        Integer pid = defaultYhGroup;
         Integer did = -1;
         try {
             String username = ub.getTrueName();
@@ -195,8 +195,6 @@ public class SyncDepAndUserServiceImpl extends BaseService implements SyncDepAnd
             }
             if (null != group) {
                 pid = group.getDid();
-            } else {
-                pid = -1;
             }
             SUser user = sUserMapper.getUserByEsbid(esbID);
             //排除有重复的问题，如果oa主键找不到，再用我们主键找一次

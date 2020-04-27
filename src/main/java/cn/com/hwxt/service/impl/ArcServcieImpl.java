@@ -59,9 +59,6 @@ public class ArcServcieImpl extends BaseService implements ArcService {
         return super.getBmidByuserCode(userCode);
     }
 
-    public String getLamsIP() {
-        return super.getLamsIP();
-    }
     public String syncDclassfy(Integer libcode){
         String msg = "";
         Integer num = 0;

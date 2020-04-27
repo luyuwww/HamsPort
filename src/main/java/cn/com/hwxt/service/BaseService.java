@@ -496,7 +496,7 @@ public class BaseService {
             HessianProxyFactory factory = new HessianProxyFactory();
             factory.setOverloadEnabled(true);
             OutInterfaceServcie remote = (OutInterfaceServcie) factory
-                    .create(OutInterfaceServcie.class, "http://" + lamsIP + "/Lams/hs/openInterface.hs");
+                    .create(OutInterfaceServcie.class, "http://" + lamsInnerIP + "/Lams/hs/openInterface.hs");
             maxDid = remote.getMaxDid(tableName);
         } catch (Exception e) {
             log.error("从Lams获取DID出现错误: " + e.getMessage());
@@ -1075,10 +1075,6 @@ public class BaseService {
         return null == fwqpz ? sGroupMapper.getDefaultFwqpz() : fwqpz;
     }
 
-    public String getLamsIP() {
-        return lamsIP;
-    }
-
     public Integer getAttr() {
         return attr;
     }
@@ -1137,8 +1133,8 @@ public class BaseService {
     @Value("${lams.dfile.attr}")
     protected Integer attr;// 归档前后
     @Autowired
-    @Value("${lams.ip}")
-    protected String lamsIP;
+    @Value("${lams.innter.ip}")
+    protected String lamsInnerIP;
 
     @Autowired
     @Value("${lams.dfile.status}")
