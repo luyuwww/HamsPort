@@ -64,17 +64,23 @@ public class ScheduleServiceImpl extends BaseService implements ScheduleService 
                     ZipTool.unZipFiles(zipFfile,  targetPath , "UTF-8");
                     //验证meta_file.xml的MD5
                     File metaFileXml = new File(metaFileXmlPath);
-                    File metaFileMd5 = new File(metaFileMd5Path);
-                    String metaFileMd5Str = FileUtils.readFileToString(metaFileMd5);
-                    if(!MD5.getFileMD5(metaFileXml).equals(metaFileMd5Str)){
+//1                    File metaFileMd5 = new File(metaFileMd5Path);
+//  1                  String metaFileMd5Str = FileUtils.readFileToString(metaFileMd5);
+                    //获取md5串中的随机盐
+                     String randomSalt = MD5.getRandomSalt(queue.getMd5());
+                    System.out.println(MD5.getSaltMD5(MD5.getFileMD5(zipFfile),randomSalt));
+                    if(!MD5.getSaltMD5(MD5.getFileMD5(zipFfile),randomSalt).equals(queue.getMd5())){
                         throw new RuntimeException("meta_file.xml的md5验证失败");
-                    }
+                     }
                     //解析meta_file.xml
                     ecidiEEP = ParseBimXmlUtil.parseBimEEP(metaFileXml);
                     for (EcidiSimpleFile ecidiSimpleFile : ecidiEEP.getFileList()) {
                         File att = new File(targetPath+ecidiSimpleFile.getFileBizName());
                         String md5 = MD5.getFileMD5(att);
-                        if(!md5.equals(ecidiSimpleFile.getMd5())){
+                        //获取48位md5串中的随机盐
+                        String salt = MD5.getRandomSalt(ecidiSimpleFile.getMd5());
+                        String saltMd5 = MD5.getSaltMD5(md5,salt);
+                        if(!saltMd5.equals(ecidiSimpleFile.getMd5())){
                             throw new RuntimeException("数字摘要值验证错误:"+ecidiSimpleFile.getFileBizName());
                         }
                     }
@@ -150,9 +156,10 @@ public class ScheduleServiceImpl extends BaseService implements ScheduleService 
                         List<EcidiSimpleFile> fileList = ecidiEEP.getFileList();
                         for (EcidiSimpleFile sFile : fileList) {
                             File realFile = new File(targetPath+ sFile.getFileBizName());
+                            EFile eFile = null;
                             if(realFile.exists() &&  realFile.isFile()){
                                 try {
-                                    EFile eFile = new EFile();
+                                    eFile = new EFile();
                                     //DID,PID,EFILENAME,TITLE,EXT,PZM,PATHNAME,STATUS,ATTR,ATTREX,CREATOR,CREATETIME,FILESIZE,MD5,CONVERTSTATUS
                                     eFile.setDid(getMaxDid(eTablename));
                                     eFile.setPid(dFileDid);
@@ -170,7 +177,7 @@ public class ScheduleServiceImpl extends BaseService implements ScheduleService 
                                         eFile.setTitle(theTile);
                                         eFile.setBbh(sFile.getRelateionDescription());
                                     }
-                                    eFile.setExt(sFile.getExt().replace(".",""));
+                                    eFile.setExt(FilenameUtils.getExtension(sFile.getFileBizName()));
                                     eFile.setPzm(fwqpz.getPzname());
                                     eFile.setPathname(relativePath);
                                     eFile.setStatus(status);
@@ -180,7 +187,6 @@ public class ScheduleServiceImpl extends BaseService implements ScheduleService 
                                     eFile.setBz("BIM");
                                     eFile.setCreator("BIM");
                                     eFile.setXlh(sFile.getRelationType());
-
                                     if(null == sFile.getCreateTime()){
                                         eFile.setCreatetime(queue.getUpdateTime());
                                     }else{

@@ -239,8 +239,6 @@ public class ParseXmlTest {
                                     theFile.setTitle(fileInfo.getAttribute("default"));
                                 } else if (fileInfo.getAttribute("name").equals("名称(文件名),包含扩展名")) {
                                     theFile.setFileBizName(fileInfo.getAttribute("default"));
-                                } else if (fileInfo.getAttribute("name").equals("类型")) {
-                                    theFile.setExt(fileInfo.getAttribute("default"));
                                 } else if (fileInfo.getAttribute("name").equals("数字摘要值")) {
                                     theFile.setMd5(fileInfo.getAttribute("default"));
                                 } else if (fileInfo.getAttribute("name").equals("创建时间")) {
@@ -279,9 +277,7 @@ public class ParseXmlTest {
                                                             attachment.setTitle(attElement.getAttribute("default"));
                                                         } else if (attElement.getAttribute("name").equals("名称(文件名),包含扩展名")) {
                                                             attachment.setFileBizName(attElement.getAttribute("default"));
-                                                        } else if (attElement.getAttribute("name").equals("类型")) {
-                                                            attachment.setExt(attElement.getAttribute("default"));
-                                                        } else if (attElement.getAttribute("name").equals("数字摘要值")) {
+                                                        }else if (attElement.getAttribute("name").equals("数字摘要值")) {
                                                             attachment.setMd5(attElement.getAttribute("default"));
                                                         } else if (attElement.getAttribute("name").equals("创建时间")) {
                                                             String cDate = attElement.getAttribute("default");

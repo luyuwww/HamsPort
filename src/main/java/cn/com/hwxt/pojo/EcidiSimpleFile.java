@@ -12,7 +12,6 @@ public class EcidiSimpleFile implements Serializable {
     private String title;//标题
     private String size;//大小
     private String fileBizName;//名称(文件名),包含扩展名
-    private String  ext;
     private String md5;//数字摘要值
     private Date createTime;//创建时间
     private String relationType;//关系类型
@@ -50,14 +49,6 @@ public class EcidiSimpleFile implements Serializable {
 
     public void setFileBizName(String fileBizName) {
         this.fileBizName = fileBizName;
-    }
-
-    public String getExt() {
-        return ext;
-    }
-
-    public void setExt(String ext) {
-        this.ext = ext;
     }
 
     public String getMd5() {

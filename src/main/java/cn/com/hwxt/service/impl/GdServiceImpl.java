@@ -31,6 +31,15 @@ public class GdServiceImpl extends BaseService implements GdService {
     //            , @WebParam(name = "levelStr") String levelStr , @WebParam(name = "libcode") Integer libcode,@WebParam(name = "pzm") String pzm
     private String rsltMsg = "<?xml version='1.0' encoding='UTF-8'?><rslt><flag value='#FLAG#'/><msg value='#MSG#'/></rslt>";
     private String rsltJson ="{\"DID\":\"#DID#\",\"MSG\":\"#MSG#\"}";
+
+    /**
+     * BIM-2-6-22-yfgnew
+     * 1. 业务系统名称
+     * 2: 级别数字,2是D_FILE ,1是D_VOL
+     * 3. libocde
+     * 4. qzh
+     * 5. pzm
+     */
     @WebMethod
     public String dataReciveXml(@WebParam(name = "appKey") String appKey  , @WebParam(name = "dataXml") String dataXml
             , @WebParam(name = "pk") String pk , @WebParam(name = "packageMd5") String md5){
